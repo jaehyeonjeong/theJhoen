@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 정사각형으로 만들기 위한 body 태그
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  margin: 100px auto;
+  border: 5px solid black;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, minmax(100px, auto));
+  gap: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+  // 그림자
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  .item {
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+  }
+  .result {
+    grid-column: span 4;
+    background-color: white;
+  }
+
+  .cancel {
+    grid-column: span 3;
+    background-color: red;
+  }
+  .equal {
+    grid-column: span 2;
+  }
+
+  .dot {
+    background-color: lightblue;
+  }
+
+  .multiple,
+  .add,
+  .subtract,
+  .equal {
+    background-color: yellowgreen;
+  }
+}

@@ -1,0 +1,1 @@
+.container{display:flex;background-color:aqua;border:3px solid #000}.container .item{border:3px solid #000;background-color:beige;padding:20px}.container .item01{width:200px;flex-shrink:0;order:2}.container .item02{flex-grow:1;order:3}

@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+
+    <!-- .을 두번 찍어서 ..을 하면 상위폴더로 이동하는 방법이 있다. -->
+    <link rel="stylesheet" href="../css/layout.css" />
+  </head>
+
+  <!-- 두번째 내부 스타일 -->
+  <!-- <style>
+    li {
+      color: purple;
+    }
+
+    div {
+      font-size: 50px;
+      font-family: 바탕;
+    }
+    /* 단점은 페이지 전체의 일관성이 없음(예시 css01.html) */
+  </style> -->
+  <!-- css를 설정할 수 있는 방법은 3가지 -->
+  <body>
+    <img src="../../day03/images/logo-ubasegroup.gif" alt="" />
+    <!-- 첫번째 인라인 스타일 -->
+    <div style="font-size: 30px; color: blue; font-family: 궁서">item01</div>
+    <!-- font-family는 글씨체 -->
+    <div>item02</div>
+    <!-- 인라인은 사용을 잘하지 않음 -->
+    <ul>
+      <li style="color: red">LG 트윈스</li>
+      <li>한화 이글스</li>
+      <li>롯데 자이언츠</li>
+      <li>SSG 랜더스</li>
+      <li>두산 베어스</li>
+      <li>LG 트윈스</li>
+    </ul>
+
+    <div>
+      <a href="../css01.html">css practice</a>
+    </div>
+  </body>
+</html>

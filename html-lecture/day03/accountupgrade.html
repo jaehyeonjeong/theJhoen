@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>account upgrade</title>
+  </head>
+  <body>
+    <form action="">
+      <table border="1" width="500" height="500">
+        <tbody>
+          <colgroup>
+            <col style="width: 25%" />
+            <col style="width: 25%" />
+            <col style="width: 25%" />
+            <col style="width: 25%" />
+          </colgroup>
+          <tr>
+            <th>
+              <label for="userID"
+                >일반회원아이디 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-id"
+                id="userID"
+                style="width: 200px"
+                required
+              />
+              <span style="font-size: 12px; color: gray">
+                <button>icon</button>
+                <span>(중복아이디검색)</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userID"
+                >일반회원이름 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-id"
+                id="userID"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPW"
+                >비밀번호 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="password"
+                name="user-pw"
+                id="userPW"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPWChk"
+                >비밀번호확인 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="password"
+                name="user-pw-chk"
+                id="userPWChk"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPWHint"
+                >비밀번호힌트 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <select name="user-pw-hint" id="userPWHint">
+                <option value="">---------선택하세요--------</option>
+                <option value="1">가족이름</option>
+                <option value="2">애완동물 이름</option>
+                <option value="3">좋아하는 음식</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPWAnswer"
+                >비밀번호 정답 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-pw-answer"
+                id="userPWAnswer"
+                style="width: 250px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userGender">성별구분코드 </label>
+            </th>
+            <td colspan="3">
+              <select name="user-gender" id="userGender">
+                <option value="">---------선택하세요--------</option>
+                <option value="1">남성</option>
+                <option value="2">여성</option>
+                <option value="3">모르겠음</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPhone"
+                >전화번호 <span style="color: red">*</span></label
+              >
+            </th>
+            <td>
+              <input
+                type="text"
+                name="user-phone1"
+                id="userPhone1"
+                style="width: 100%; box-sizing: border-box"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="user-phone2"
+                id="userPhone2"
+                style="width: 100%; box-sizing: border-box"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="user-phone3"
+                id="userPhone3"
+                style="width: 100%; box-sizing: border-box"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userID">팩스번호 </label>
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-id"
+                id="userID"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userCellPhone"
+                >핸드폰번호 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-cell-phone"
+                id="userCellPhone"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userEmail"
+                >이메일주소 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-email"
+                id="userEmail"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userPost"
+                >우편번호 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-post"
+                id="userPost"
+                style="width: 200px"
+                required
+              />
+              <button>icon</button>
+              <span style="font-size: 12px; color: gray">(우편번호 검색)</span>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userEmail">
+                몰라 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-email"
+                id="userEmail"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="userEmail"
+                >이메일주소 <span style="color: red">*</span></label
+              >
+            </th>
+            <td colspan="3">
+              <input
+                type="text"
+                name="user-email"
+                id="userEmail"
+                style="width: 200px"
+                required
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

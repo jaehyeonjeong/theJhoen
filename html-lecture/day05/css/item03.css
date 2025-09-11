@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans KR", "궁서";
+  font-weight: 500;
+  width: 600;
+}
+body .item {
+  width: 400px;
+  border: 2px solid green;
+}
+body .item .image-box img {
+  width: 100%;
+}
+body .item .info .coupon-text {
+  color: red;
+}
+body .item .info .coupon-price {
+  color: gray;
+  text-decoration: line-through;
+}
+body .item .info .sale {
+  color: red;
+  font-size: 18px;
+}
+body .item .info .sale-text {
+  font-weight: 400;
+}
+body .item .info .sale-price {
+  font-weight: 700;
+}
+body .item .info .desc .star-delivery {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 67px;
+  height: 20px;
+  background-image: url("../images/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .item .info .desc .arrive-info {
+  color: blue;
+}
+body .item .info .desc .free,
+body .item .info .desc .amount {
+  color: gray;
+}
+body .item .info .discount {
+  display: inline-block;
+  font-size: 12px;
+  border: 2px solid gray;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-top: 10px;
+}

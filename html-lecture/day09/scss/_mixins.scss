@@ -1,0 +1,21 @@
+@mixin flex($justify, $align, $text) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  text-align: $text;
+}
+
+//프로그래밍에서는 반복을 제어할 수 있다.-> 함수 만드는데 특화 되어 있다.
+// @는 scss에서 정해주는 규칙
+@mixin long-shadow($end: 50, $shadow-color: #000) {
+  $shadow: "";
+  @for $i from 1 through $end - 1 {
+    $shadow: $shadow + $i + "px " + $i + "px 0 " + $shadow-color + ",";
+    // 1px 1px 0 rgba(0, 0, 0, 1); -> 처음에 들어가는 인자
+  }
+  $shadow: $shadow + $end + "px " + $end + "px 0 " + $shadow-color + ";";
+  $shadow: unquote(
+    $shadow
+  ); // 따음표를 업애주는 함수 (scss에서만 존재, scss 내장함수)
+  text-shadow: $shadow;
+}

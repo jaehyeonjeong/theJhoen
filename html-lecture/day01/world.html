@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정재현의 유트브</title> <!--브라우저 제목 -->
+    <!--아이콘 이미지 크기는 상관없음-->
+    <link rel="shortcut icon" href="images/social.png" type="image/x-icon">
+    <script src=""></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<style>
+	.box {
+		width: 100px;
+		height: 100px;
+		background-color: #3498db;
+		border-radius: 50%;
+		margin-right: 20px; /* 박스 사이의 간격 조정 */
+	}
+	.text-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: absolute; /* 절대 위치 지정 */
+		top: 800px; /* 원하는 높이로 조정 */
+		font-size: 36px; /* 큰 font-size 설정 */
+	}
+	.text , .text1 {
+		font-size: 36px; /* 큰 font-size 설정 */
+		font-weight: bold;
+		opacity: 0; /* 초기에 숨겨짐 */
+		margin: 0 10px; /* 텍스트 간의 간격 조정 */
+		color: #e74c3c; /* 텍스트 색상 지정 */
+	}
+</style>
+
+<body>
+    <!--유트브는 자동 재생이 안됨 -->
+    <iframe width="310" height="315" 
+    src="https://www.youtube.com/embed/XStA2_Hthms?si=L79Z7ysXZ5p_o_e8" 
+    title="YouTube video player" frameborder="10" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loop></iframe>
+    <div class="box"></div>
+
+    <!--비디오는 용량이 이미지 보다 많기 때문에 자동재생을 구글에서 막았음-->
+    <!-- <div><video src="videos/232538_small.mp4" autoplay controls></video></div> -->
+    <div><video src="videos/232538_small.mp4" autoplay controls loop></video></div>
+
+    <script>
+        // 자바 스크립트는 브라우저 없이는 쓸 수 없다
+        alert("로그인 해주세요");
+    </script>
+
+
+<div class="box"></div>
+<div class="box"></div>
+<!-- 첫 번째 텍스트 엘리먼트 -->
+<div class="text-container">
+	<div class="text">Hello</div>
+	<div class="text">World</div>
+</div>
+
+<!-- 두 번째 텍스트 엘리먼트 -->
+<div class="text-container" style="top: 880px;"> 
+	<div class="text1">반가워요</div>
+	<div class="text1">즐거운</div>
+	<div class="text1">하루 되길 바랍니다.</div>
+</div>
+<script>
+	// 박스 애니메이션
+	const boxes = document.querySelectorAll('.box');
+	anime({
+		targets: boxes,
+		translateX: [250, -250],
+		translateY: [50, -50],
+		rotate: ['1turn', '2turn'],
+		duration: 2000,
+		easing: 'easeInOutQuad',
+		direction: 'alternate',
+		loop: true
+	});
+
+	// 첫 번째 텍스트 애니메이션
+	const textElements = document.querySelectorAll('.text');
+	anime({
+		targets: textElements,
+		translateY: [-50, 0], // Y 축으로 위로 이동해서 나타나도록 설정
+		opacity: [0, 1], // 투명도 설정
+		delay: anime.stagger(500), // 500ms 간격으로 나타남
+		duration: 1000, // 애니메이션 지속 시간
+		easing: 'easeOutExpo', // 이징 함수 설정
+		loop: true // 무한 반복
+	});
+
+	// 두 번째 텍스트 애니메이션
+	const textElements2 = document.querySelectorAll('.text1');
+	anime({
+		targets: textElements2,
+		translateX: [-100, 0], // 왼쪽에서 오른쪽으로 이동해서 나타나도록 설정
+		opacity: [0, 1], // 투명도 설정
+		delay: anime.stagger(500, { start: 1000 }), // 100ms 간격으로 나타나며 1초 후 시작
+		duration: 5000, // 애니메이션 지속 시간
+		easing: 'easeInOutBack', // 이징 함수 설정
+		loop: true // 무한 반복
+	});
+</script>
+</body>
+</html>

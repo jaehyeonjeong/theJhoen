@@ -1,0 +1,76 @@
+body {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  .item {
+    width: 300px;
+    border: 2px solid green;
+    position: relative;
+    // 부모가 position을 가져야지 자식이 비율을 맞출 수 있다.
+    .rank {
+      position: absolute;
+      background-color: greenyellow;
+      color: white;
+      // width의 비율을 맞추기 위해 부모의 position을 맞출 수 있다.
+      width: 17%;
+      height: 50px;
+      line-height: 50px;
+      font-size: 20px;
+      text-align: center;
+      // border-top-left-radius: 10px;
+      // border-bottom-right-radius: 10px;
+      border-radius: 10px 0px 10px 0px;
+    }
+    .image-box {
+      img {
+        // 이미지는 position이 없어도 비율을 자동으로 맞출 수 있다.
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+    .info {
+      &__title {
+        font-size: 20px;
+      }
+      &__price {
+        font-size: 17px;
+        .price__sale {
+          &__percent {
+            color: red;
+          }
+          &__before {
+            color: gray;
+            text-decoration: line-through;
+          }
+        }
+        .price__info {
+          &__text {
+            font-size: 25px;
+            font-weight: 700;
+          }
+          &__status {
+            display: inline-block;
+            color: skyblue;
+            font-size: 15px;
+            border: 2px solid;
+            border-radius: 100px;
+            padding: 3px 10px;
+            vertical-align: middle;
+            position: relative;
+            top: -5px;
+          }
+        }
+      }
+      &__icon {
+        margin-top: 5px;
+        font-size: 0;
+        // border: 2px solid black;
+        width: 85px;
+        height: 30px;
+        background-image: url(../images/superdil.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 2px, 10px;
+      }
+    }
+  }
+}

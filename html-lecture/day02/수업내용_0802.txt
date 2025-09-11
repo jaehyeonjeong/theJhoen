@@ -1,0 +1,61 @@
+인터넷 웹 페이지의 렌더링 요소들을 태그로 볼 수 있는 방법
+ F12 -> 왼쪽 마우스 포인터 검색 -> 원하는 랜더링을 갖다 대서 어떤 태그로 쓰여있는지 확인
+파일 관리 아이콘 설정 방법
+ Setting -> Themes -> Product Icon Theme -> 원하는 아이콘 옵션으로 세팅
+파일 저장 시 들여쓰기 활성화
+ Setting -> formatter 검색 -> Editor 변경 및  Editor : Format On Save
+마우스 휠로 텍스트 화면 줌인 줌아웃
+ Setting -> Wheel 검색 -> Editor:Mouse Wheel Zoom 활성화
+태그 Wraping, Wraping 해제 하는 방법
+ Setting -> keyboard short cut -> Emmet:Wrap or Remove Tag 를 단축키로 해서 설정
+태그중에 ol, ul 태그를 배우고 그안에 들어갈 자식의 태그들을 배움
+    <ul>
+      <!-- ul이라는 부모태그는 자식으로 li태그를 가진다. -->
+      <!-- 명확한 순서가 있다면 ol, 그렇지 않다면 ul을 사용한다. -->
+      <li><div>한화 이글스</div></li>
+      <!-- 자식의 자식 태그는 뭐가 들어가도 상관없다. -->
+      <li>삼성 라이온즈</li>
+      <li>LG 트윈스</li>
+      <li>SSG 랜더스</li>
+    </ul>
+태그 중 dl이라는 태그도 있음
+<!-- dl: Definition List -->
+    <!-- dt : Definition Title, dd Defnietion Description -->
+    <dl>
+      <dt>front end developer</dt>
+      <dd>사용자와 직접 상호작용하는 웹 페이지의 시각적인 부분입니다.</dd>
+      <dt>Backend</dt>
+      <dd>
+        서버, 데이터베이스, 애플리케이션 로직 등 웹 페이지의 기능적 부분을
+        담당합니다. (데이터 및 사용자 요청 처리 등등)
+      </dd>
+    </dl>
+테이블 테그를 이용한 활용 기능 및 이력서 만들기
+<table border="1">
+      <thead>
+        <!-- tr은 줄 -->
+        <tr>
+          <!-- th는 해더 -->
+          col은 column의 약자 기능은
+          <th scope="col">이름</th>
+          <th scope="col">수학</th>
+          <th scope="col">영어</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- tr은 줄 -->
+        <tr>
+          <!-- td는 내용 -->
+          <td>홍길동</td>
+          <td>90</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>장길산</td>
+          <td>85</td>
+          <td>50</td>
+        </tr>
+      </tbody>
+    </table>
+
+테이블내의 공백 데이터를 채우기 위해서는 &nbps를 사용해서 공간을 확장한다.
