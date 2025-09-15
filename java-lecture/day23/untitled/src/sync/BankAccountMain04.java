@@ -4,7 +4,7 @@ import static utils.ThreadUtil.sleep;
 
 public class BankAccountMain04 {
     public static void main(String[] args) throws InterruptedException {
-        BankAccount04 bankAccount04 = new BankAccount04(1000); // 1000원 적립
+        BankAccount04 bankAccount04 = new BankAccount04(1600); // 1000원 적립
         Thread thread01 = new Thread(new WithdrawTask(bankAccount04, 800), "t1");
         Thread thread02 = new Thread(new WithdrawTask(bankAccount04, 800), "t2");
         thread01.start();

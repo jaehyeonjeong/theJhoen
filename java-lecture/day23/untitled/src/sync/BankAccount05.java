@@ -21,11 +21,11 @@ public class BankAccount05 implements BankAccount {
     public boolean withdraw(int amount) {
         log("거래 시작 : " + getClass().getSimpleName());   // BankAccount01이라는 클래스 이름 출력 // 여긴 임계영역은 아님
 
-        // 검증 시작은 아래 부분(여기서 임계 영역 시작)
         if(!lock.tryLock()) {
             log("[진입 실패] 이미 처리중인 작업이 있습니다.");
             return false;
         }
+        // 검증 시작은 아래 부분(여기서 임계 영역 시작)
 //        lock.unlock();
         try {
             log("[검증 시작] 출금액 " + amount + " , 잔액 : " + balance);
@@ -49,7 +49,7 @@ public class BankAccount05 implements BankAccount {
     }
 
     @Override
-    public synchronized int getBalance() {
+    public int getBalance() {
         lock.lock();
         try {
             return balance;

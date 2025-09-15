@@ -8,6 +8,7 @@ import static utils.ThreadUtil.sleep;
 
 public class BankAccount04 implements BankAccount {
     // lock 인터페이스를 사용해서 lock 메소드를 사용하면 메모리 가시성 문제가 없으니 volatile을 쓰지 않아도 된다.
+    // 또한 lock으로 처리된 인터페이스는 synchronized가 붙지 않아도 된다.
     private int balance;        // 메모리 싱크를 맞추기 위함
 
     private final Lock lock = new ReentrantLock();      // Lock은 인터페이스, 구현체는 ReentrantLock
@@ -46,7 +47,7 @@ public class BankAccount04 implements BankAccount {
     }
 
     @Override
-    public synchronized int getBalance() {
+    public int getBalance() {
         lock.lock();
         try {
             return balance;
