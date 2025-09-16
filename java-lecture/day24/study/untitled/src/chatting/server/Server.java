@@ -11,8 +11,13 @@ public class Server {
     private ServerSocket serverSocket;
 
     // client가 여러개 들어올 수 있다. client Session / SessionManager
-    public Server(int port) {
+    private final SessionManager sessionManager;
+    private final CommandManager commandManager;
+
+    public Server(int port, SessionManager sessionManager, CommandManager commandManager) {
         this.port = port;
+        this.sessionManager = sessionManager;
+        this.commandManager = commandManager;
     }
 
     public void start() throws IOException {
@@ -28,7 +33,7 @@ public class Server {
             while(true) {
                 Socket socket = serverSocket.accept();
                 log("소켓 연결 : " + socket);
-                Session session = new Session(socket);
+                Session session = new Session(socket, commandManager, sessionManager);
                 Thread thread = new Thread(session);
                 thread.start();
             }
