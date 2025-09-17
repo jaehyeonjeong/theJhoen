@@ -1,0 +1,37 @@
+package lambda.method;
+
+public class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person() {
+        this("unknown");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static String greeting() {
+        return "Hello";
+    }
+
+    public static String greetingWithName(String name) {
+        return "Hello" + name;
+    }
+
+    public String introduce() {
+        return "I am " + name;
+    }
+
+    public String introduceWithNumber(int number) {
+        return "I am " + name + "my Number is " + number;
+    }
+}
