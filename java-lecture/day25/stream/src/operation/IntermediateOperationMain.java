@@ -2,7 +2,7 @@ package operation;
 
 import java.util.Comparator;
 import java.util.List;
-
+// 중간연산
 public class IntermediateOperationMain {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(1,2,2,4,4,5,3,8,6,7,9,10);
