@@ -77,4 +77,14 @@ public class Student extends Animal{
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public void sound() {
+
+    }
+
+    @Override
+    public void move() {
+
+    }
 }
