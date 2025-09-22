@@ -41,6 +41,7 @@ INSERT INTO EMP VALUES
 (7788,'SCOTT','ANALYST',7566,to_date('13-7-1987', 'dd-mm-yyyy'),3000,NULL,20);
 INSERT INTO EMP VALUES
 (7839,'KING','PRESIDENT',NULL,to_date('17-11-1981','dd-mm-yyyy'),5000,NULL,10);
+-- 아까 강사님이 키가 겹쳤다고 하시던 말씀이 이미 등록된 키 가 있으므로 insert가 안되는 거였음~
 INSERT INTO EMP VALUES
 (7844,'TURNER','SALESMAN',7698,to_date('8-9-1981','dd-mm-yyyy'),1500,0,30);
 INSERT INTO EMP VALUES
