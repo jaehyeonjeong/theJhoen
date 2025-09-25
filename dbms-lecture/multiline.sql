@@ -110,7 +110,9 @@ ORDER BY deptno, avg DESC;
 
 --- quiz
 --- 0.
-SELECT deptno, avg(sal) AS avgsal, max(sal) AS maxsal, min(sal) AS minsal, count(deptno) AS cnt 
+-- depton 만 단일행이므로 group by 시킴
+--SELECT deptno, floor(avg(sal)) AS avgsal, max(sal) AS maxsal, min(sal) AS minsal, count(deptno) AS cnt --내가 한거
+SELECT deptno, floor(avg(sal)) AS avgsal, max(sal) AS maxsal, min(sal) AS minsal, count(*) AS cnt, sum(sal) AS sum_sal
 FROM emp
 GROUP BY deptno;
 
@@ -118,21 +120,18 @@ GROUP BY deptno;
 SELECT job, count(job) AS cnt
 FROM emp
 GROUP BY job
-HAVING count(job) >= 3;
-
--- 서브 쿼리를 사용하면 단일 행도 출력
-SELECT 
-	ename,
-	hiredate
-FROM emp
-WHERE hiredate = (SELECT max(hiredate) FROM emp);
+HAVING count(job) >= 3; -- group by를 사용하고 조건을 제시할 경우 반드시 having 절을 사용해야함
+-- 즉, where 절에서는 그룹 함수의 조건은 처리 되지 않는다.
 
 ---2.
-SELECT to_char(HIREDATE , 'yyyy') AS hire_year, deptno, count(to_char(HIREDATE , 'yyyy')) AS cnt
+SELECT to_char(HIREDATE , 'yyyy') AS hire_year, deptno, count(*) AS cnt
 FROM emp
-GROUP BY to_char(HIREDATE , 'yyyy'), deptno;
+GROUP BY to_char(HIREDATE , 'yyyy'), deptno
+ORDER BY hire_year; -- order by 에서는 alias를 사용해도 됨.
+-- Group by도 형식에 맞는 그룹을 만들어 줘야함.
+
 
 ---3.
-SELECT nvl2(comm, 'o', 'x') AS exist_comm, count(nvl(comm, 0)) AS cnt 
+SELECT nvl2(comm, 'o', 'x') AS exist_comm, count(*) AS cnt 
 FROM emp
-GROUP BY  nvl2(comm, 'o', 'x') 
+GROUP BY nvl2(comm, 'o', 'x');
