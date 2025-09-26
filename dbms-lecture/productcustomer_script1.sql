@@ -1,112 +1,139 @@
-SELECT * FROM customers;
-SELECT * FROM suppliers;
-SELECT * FROM categories;
-SELECT * FROM products;
-SELECT * FROM shippers;
-SELECT * FROM orders;
-SELECT * FROM order_items;
-SELECT * FROM price_grade;
+SELECT * FROM CUSTOMERS;
+SELECT * FROM SUPPLIERS;
+SELECT * FROM CATEGORIES;
+SELECT * FROM PRODUCTS;
+SELECT * FROM SHIPPERS;
+SELECT * FROM ORDERS;
+SELECT * FROM ORDER_ITEMS;
+SELECT * FROM PRICE_GRADE;
 
 --## 문제 10) 배송사별 발송 주문 수
 --
---**요구:** 배송사(supplier) 기준으로 조인하여 발송된(배송사 지정된) 주문 수 집계
--- supplier-product-order_items
-SELECT s.name, count(s.SHIPPER_ID) AS SHIPPED_ORDERS
-FROM shippers s 
-JOIN orders o ON (s.SHIPPER_ID = o.SHIPPER_ID)
-GROUP BY s.name;
+--**요구:** 배송사(SUPPLIER) 기준으로 조인하여 발송된(배송사 지정된) 주문(orders->order_id 수 집계
+-- SUPPLIER-PRODUCT-ORDER_ITEMS
+SELECT S.NAME, COUNT(O.ORDER_ID) AS SHIPPED_ORDERS
+FROM SHIPPERS S 
+JOIN ORDERS O ON (S.SHIPPER_ID = O.SHIPPER_ID)
+GROUP BY S.NAME;
 
-SELECT * FROM orders;
-SELECT * FROM shippers;
+SELECT * FROM ORDERS;
+SELECT * FROM SHIPPERS;
 
 
 --## 문제 9) 단가 등급 매칭 (NON-EQUI JOIN)
 --
---**요구:** 주문아이템의 **단가(unit_price)** 를 가격대 테이블과 **범위 조인**하여 등급 표시
-SELECT o.ORDER_ID, o.product_id, o.UNIT_PRICE, p.grade
-FROM order_items o
-JOIN price_grade p ON (o.unit_price BETWEEN p.lo AND p.hi)
-ORDER BY o.ORDER_ID, o.PRODUCT_ID;
+--**요구:** 주문아이템의 **단가(UNIT_PRICE)** 를 가격대 테이블과 **범위 조인**하여 등급 표시
+SELECT O.ORDER_ID, O.PRODUCT_ID, O.UNIT_PRICE, P.GRADE
+FROM ORDER_ITEMS O
+JOIN PRICE_GRADE P ON (O.UNIT_PRICE BETWEEN P.LO AND P.HI)
+ORDER BY O.ORDER_ID, O.PRODUCT_ID;
 
 
 --## 문제 8) 공급사 기준 상품 수 (상품 없는 공급사도 포함 가정)
 --
 --**요구:** 공급사별 보유 상품 개수 (LEFT OUTER JOIN + GROUP BY)
 --
---> 현재 샘플 데이터는 모든 공급사가 상품을 보유하지만, 없을 수도 있다는 가정에서 LEFT JOIN 패턴 연습용입니다.
-SELECT s.name, count(p.PRODUCT_ID) AS PRODUCT_COUNT
-FROM SUPPLIERS s
-LEFT OUTER JOIN PRODUCTS p ON (s.SUPPLIER_ID = p.supplier_id)
-GROUP BY s.name;
+--> 현재 샘플 데이터는 모든 공급사가 상품을 보유하지만, 없을 수도 있다는 가정에서 LEFT JOIN 패턴 연습용입니다.(Outer 생략가능)
+SELECT S.NAME, COUNT(P.PRODUCT_ID) AS PRODUCT_COUNT
+FROM SUPPLIERS S
+LEFT JOIN PRODUCTS P ON (S.SUPPLIER_ID = P.SUPPLIER_ID)
+GROUP BY S.NAME;
 
+-- SI는 웬만한건 구축이 되어있음.. (파견) : 실력 늘리기, 
+-- in house : 다양한 경험
+-- 자체적인 서비스를 개발해서 보내는 경우가 있음.
+-- start up : 한 분야만 잘해서는 안되고, 다재다능해야한다.
 
---## 문제 7) 추천인(Referrer)과 피추천인
+--## 문제 7) 추천인(REFERRER)과 피추천인
 --
---**요구:** 고객과 추천인(자기참조 : self-join)을 조인하여 “고객명–추천인명” 형태로 표시(추천인 없으면 NULL)
-SELECT c1.name AS "고객명", c2.name AS "REFERRER"
-FROM customers c1
-LEFT OUTER JOIN customers c2 ON (c2.cust_id = c1.referrer_id)
-ORDER BY c1.name;
+--**요구:** 고객과 추천인(자기참조 : SELF-JOIN)을 조인하여 “고객명–추천인명” 형태로 표시(추천인 없으면 NULL)
+SELECT C1.NAME AS "CUSTOMER", C2.NAME AS "REFERRER"
+FROM CUSTOMERS C1
+LEFT OUTER JOIN CUSTOMERS C2 ON (C2.CUST_ID = C1.REFERRER_ID)
+ORDER BY C1.NAME;
 
-SELECT * FROM customers;
+SELECT * FROM CUSTOMERS;
 
 
 --## 문제 6) 카테고리별 매출 합계
 --
---**요구:** 주문아이템(order_items)→상품(products)→카테고리(categories)로 조인하여 카테고리별 매출
---(금액 합계 : = sum(quantity*unit_price) )
-SELECT c.name, sum(o.quantity*o.unit_price) AS REVENUE
-FROM order_items o
-JOIN products p ON (o.product_id = p.product_id)
-JOIN categories c ON (p.category_id = c.category_id)
-GROUP BY c.name;
+--**요구:** 주문아이템(ORDER_ITEMS)→상품(PRODUCTS)→카테고리(CATEGORIES)로 조인하여 카테고리별 매출
+--(금액 합계 : = SUM(QUANTITY*UNIT_PRICE) )
+SELECT C.NAME AS CATEGORY, SUM(OI.QUANTITY*OI.UNIT_PRICE) AS REVENUE
+FROM ORDER_ITEMS OI
+JOIN PRODUCTS P ON (OI.PRODUCT_ID = P.PRODUCT_ID)
+JOIN CATEGORIES C ON (P.CATEGORY_ID = C.CATEGORY_ID)
+GROUP BY C.NAME
+ORDER BY REVENUE DESC;
+
+-- 일 대 일 : one to one
+-- 일 대 다 : one to many
+-- 다 대 다 : many to many -> 중간 테이블 테이블 만들 떄 다시 설명 (이런 관계를 가지면 안됨)
+
+SELECT * FROM ORDER_ITEMS;
+SELECT * FROM PRODUCTS;
+SELECT * FROM CATEGORIES;
+SELECT * FROM ORDERS;
 
 
---## 문제 5) 고객(customers)의 마지막 주문일(orders: order_date) (주문 없는 고객도 표시, outer)
+---
+WITH TEMP AS (
+SELECT C.NAME AS CATEGORY, OI.ORDER_ID, SUM(OI.QUANTITY*OI.UNIT_PRICE) AS REVENUE
+FROM ORDER_ITEMS OI
+JOIN PRODUCTS P ON (OI.PRODUCT_ID = P.PRODUCT_ID)
+JOIN CATEGORIES C ON (P.CATEGORY_ID = C.CATEGORY_ID)
+GROUP BY C.NAME, OI.ORDER_ID
+ORDER BY REVENUE DESC
+)
+SELECT *
+FROM TEMP;
+--JOIN ORDERS O ON (TEMP.ORDER_ID = O.ORDER_ID);
+
+--## 문제 5) 고객(CUSTOMERS)의 마지막 주문일(ORDERS: ORDER_DATE) (주문 없는 고객도 표시, OUTER)
 --
 --**요구:** 고객명과 마지막 주문일(없으면 NULL)
-SELECT c.name, to_char(to_date(max(o.ORDER_DATE)), 'yyyy-mm-dd') AS last_order
-FROM CUSTOMERS c 
-LEFT OUTER JOIN ORDERS o ON c.CUST_ID = o.CUST_ID
-GROUP BY c.name
-ORDER BY c.name;
---WHERE o.ORDER_DATE = (SELECT max(order_date) FROM orders WHERE order_date = o.ORDER_DATE);
+SELECT C.NAME, TO_CHAR(TO_DATE(MAX(O.ORDER_DATE)), 'YYYY-MM-DD') AS LAST_ORDER_DATE
+FROM CUSTOMERS C 
+LEFT JOIN ORDERS O ON C.CUST_ID = O.CUST_ID -- OUTER 생략 가능(방향이 붙는 순간 OUTER 조인이 되기 떄문에)
+GROUP BY C.NAME
+ORDER BY C.NAME;
+--WHERE O.ORDER_DATE = (SELECT MAX(ORDER_DATE) FROM ORDERS WHERE ORDER_DATE = O.ORDER_DATE);
 
-SELECT max(order_date) FROM orders;
+SELECT MAX(ORDER_DATE) FROM ORDERS;
 
 
 --## 문제 4) 주문 상세 합계 (주문별 품목 수, 금액 합계)
 --
---**요구:** 주문별로 아이템 개수와 총 금액(= sum(quantity*unit_price))
-SELECT order_id, sum(quantity) AS itemcount, sum(quantity*unit_price) AS totalprice
-FROM order_items
-GROUP BY order_id;
+--**요구:** 주문별로 아이템 개수와 총 금액(= SUM(QUANTITY*UNIT_PRICE))
+SELECT ORDER_ID, SUM(QUANTITY) AS ITEMCOUNT, SUM(QUANTITY*UNIT_PRICE) AS TOTALPRICE
+FROM ORDER_ITEMS
+GROUP BY ORDER_ID;
 
-SELECT * FROM order_items;
+SELECT * FROM ORDER_ITEMS;
 
 
---## 문제 3) 상품의(products) 카테고리(categories)와 공급사(suppliers)
---category_id
+--## 문제 3) 상품의(PRODUCTS) 카테고리(CATEGORIES)와 공급사(SUPPLIERS)
+--CATEGORY_ID
 --**요구:** 각 상품명, 카테고리명, 공급사명을 출력
-SELECT p.name, c.name, s.name
-FROM products p 
-JOIN categories c ON (p.CATEGORY_ID  = c.category_id)
-JOIN suppliers s ON (p.SUPPLIER_ID   = s.SUPPLIER_ID);
+SELECT P.NAME, C.NAME, S.NAME
+FROM PRODUCTS P 
+JOIN CATEGORIES C ON (P.CATEGORY_ID  = C.CATEGORY_ID)
+JOIN SUPPLIERS S ON (P.SUPPLIER_ID   = S.SUPPLIER_ID);
 
 
---## 문제 2) 주문 + 배송사 (미배정 주문도 포함 -> outer), orders, shippers
+--## 문제 2) 주문 + 배송사 (미배정 주문도 포함 -> OUTER), ORDERS, SHIPPERS
 --
 --**요구:** 모든 주문을 기준으로 배송사명을 함께 표시(없으면 NULL)
-SELECT o.order_id, o.ORDER_DATE, s.name
-FROM orders o
-LEFT OUTER JOIN shippers s ON o.SHIPPER_ID = s.SHIPPER_ID
-ORDER BY o.order_id;
+SELECT O.ORDER_ID, O.ORDER_DATE, S.NAME
+FROM ORDERS O
+LEFT OUTER JOIN SHIPPERS S ON O.SHIPPER_ID = S.SHIPPER_ID
+ORDER BY O.ORDER_ID;
 
 
 --## 문제 1) 고객별 주문 목록 (고객명, 주문ID, 주문일)
 --
 --**요구:** 고객과 주문을 조인하여 고객명/주문ID/주문일을 오름차순으로 출력
-SELECT c.name, o.order_id, o.order_date
-FROM customers c
-JOIN orders o ON c.cust_id = o.cust_id
-ORDER BY c.name, o.ORDER_DATE ASC; -- 정렬의 기본은 asc
+SELECT C.NAME, O.ORDER_ID, O.ORDER_DATE
+FROM CUSTOMERS C
+JOIN ORDERS O ON C.CUST_ID = O.CUST_ID
+ORDER BY C.NAME, O.ORDER_DATE ASC; -- 정렬의 기본은 ASC
