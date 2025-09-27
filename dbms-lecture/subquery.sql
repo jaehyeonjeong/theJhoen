@@ -139,7 +139,7 @@ SELECT * FROM EMP E WHERE SAL > ANY (SELECT MIN(SAL) FROM EMP WHERE DEPTNO = 30)
 -- 30번 부서의 최소급여보다 적게 받는 사람
 SELECT * FROM EMP E WHERE SAL < ALL (SELECT SAL FROM EMP WHERE DEPTNO = 30); -- 해당하는 급여만 찾음
 -- 30번 부서의 최대급여 보다 많이 받는 사람
-SELECT * FROM EMP E WHERE SAL > ALL (SELECT SAL FROM EMP WHERE DEPTNO = 30); -- 해당하는 급여만 찾음
+SELECT * FROM EMP E WHERE SAL > ALL (SELECT SAL FROM EMP WHERE DEPTNO = 30); -- 해당하는 급여만 찾음	
 
 -- EXISTS(존재 여부) : 하나라도 전부 있으면 TRUE, 아니면 FALSE
 SELECT * FROM EMP WHERE EXISTS(SELECT DNAME FROM DEPT WHERE DEPTNO = 10);
@@ -230,5 +230,71 @@ SELECT E.EMPNO, E.ENAME, E.SAL
 FROM EMP E
 WHERE E.SAL > ALL (SELECT SAL FROM EMP WHERE JOB = 'SALESMAN')
 ORDER BY E.EMPNO;
+
+SELECT a.empno
+     , a.ename
+     , a.deptno
+     , (SELECT dd.dname
+          FROM dept dd
+         WHERE dd.deptno = a.deptno) AS dept_name
+  FROM emp a
+ WHERE a.sal >= 3000
+ 
+ SELECT a.deptno
+     , a.dname
+     , CASE WHEN a.deptno IN (SELECT DISTINCT aa.deptno
+                                FROM emp aa
+                               WHERE aa.job = 'MANAGER')
+            THEN 'Y' END AS manager_yn
+  FROM dept a
+  
+  SELECT a.empno
+     , a.ename
+     , a.job
+     , b.mgr_name
+     , b.mgr_dept
+  FROM emp a
+ INNER JOIN (SELECT a.empno AS mgr_no
+                  , a.ename AS mgr_name
+                  , b.dname AS mgr_dept
+               FROM emp a
+                  , dept b
+              WHERE a.deptno = b.deptno) b
+    ON (a.mgr = b.mgr_no)
+ WHERE a.deptno = 10;
+ 
+ SELECT a.empno AS mgr_no
+                  , a.ename AS mgr_name
+                  , b.dname AS mgr_dept
+               FROM emp a
+                  , dept b
+              WHERE a.deptno = b.deptno;
+ 
+ SELECT a.empno
+     , a.ename
+     , a.deptno
+     , b.dname
+  FROM emp a
+ INNER JOIN dept b
+    ON (a.deptno = b.deptno)
+ WHERE a.job = 'CLERK'
+   AND a.deptno IN (SELECT DISTINCT aa.deptno
+                      FROM emp aa
+                     WHERE aa.job = 'MANAGER')
+ ORDER BY a.deptno;
+ 
+ SELECT * FROM emp;
+ SELECT * FROM dept;
+ 
+SELECT e.ename, d.dname
+FROM emp e
+JOIN dept d ON e.deptno = d.deptno
+WHERE d.dname = 'SALES';
+
+SELECT deptno FROM dept WHERE dname = 'SALES';
+
+SELECT ename
+FROM emp
+WHERE deptno IN (SELECT deptno FROM dept WHERE dname = 'SALES');
 
 
