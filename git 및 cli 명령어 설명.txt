@@ -52,28 +52,30 @@ switch 또는 checkout을 쓰는데 최근에는 switch를 많이 쓴다.
 reset이라는게 있다.
 
 
- git reset --hard : 원하는 헤더로 이동후 master를 v픽한 헤더로 옮김 -> 즉 커밋한 이전 파일들을 삭제하고 전부 리셋  -- 가장 강력
- git reset --soft : soft는 commit만 수정  -- 가장 약함
-git reset --mixed : add, commit을 수정, git reset 자체가 mixed임 -- untracked상태로 만들고 커밋도 날린다.
+github의 repository를 만들고 그 안에 코드를 push하는데 있어 github의 계정이 오래되면 옛날 방식으로 사용할 수 있다.
 
-git revert : 얘는 과거 기록을 남기고 작성한 커밋을 지움
+git merge --ff-only origin/master : 여기서 ff는 패스트 포워드의 약자
 
-git이 한번 추적한거는 복구가 가능하다. reset을 하더라도
-git reflog : 모든 로그 내역
+pull(merge 까지 같이 해준다) / fetch (merge는 안하고 merge해야할 내역을 알려준다.)
 
-reset은 해당 커밋을 완전 삭제 물론 복구는 가능하다. 단, 과거 기록은 남기지 않는다.
-revert는 해당 커밋을 과거 기록을 남기면서 삭제
+다른 방법
+git merge origin/master : origin/master로 병합을 할 수 있다.
 
-아래 파일들은 깃의 추적을 피할 수 있다. -> 중요한 내용이 적혀 있는 파일을 원격에 올리면 다른 사람들에게 노출된다.
-인텔리 제이같은 경우에는 자동으로 만들어 준다.
-필요하면 추가하면 된다. (만약 나중에 .gitignore에 추가되면 계속 추적된다.)
-/github에 올릴 수 있는 파일은 100m 밖에 되지 않는다.
-/asset/ : 이라는 모든 파일은 추적을 피한다.
-.yml(보통 여기에 설정파일들을 쓰는 곳, 프로젝트에 중요한 비번)
-.idea
-.vscode
-.env
-*.log
-/target
-/build
+유의사항으로는 git fetch를 하고 fetch 내역이 아무것도 없으면 여백을 출력한다.
+
+git branch는 현재 가지고 있는 브랜치 명을 출력한다.
+$ git branch feature
+$ git branch
+  feature
+* master -> 현재 작업 브랜치
+
+git branch -r 원격에 있는 브랜치들을 확인한다.
+
+git merge feature : fast foward 방법
+
+hotfix 브랜치를 만들고 file을 만든 다음 master에 병합하고 github에 올리기
+
+git push origin master : 원격으로 push를 하는 경우에는 git push 까지는 같으나  origin master/feature 처럼 구문을 지켜주어야함.
+그리고 원격을 push 하기 전에는 반드시 로컬 브랜치로 병합하는게 좋다.
+
 
