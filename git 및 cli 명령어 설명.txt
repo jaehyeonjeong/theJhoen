@@ -1,0 +1,79 @@
+git 은  vcs의 한 종류 프로그래머가 기본으로 알아야 함.
+github -> git으로 모아둔 클라우드 (대표적)
+
+vcs -> version control system
+
+1. 보고서 초안
+2. 보고서 1-1 버전 표시
+3. 보고서 1.1.1, 1.1.2
+4. 보고서 2. 버전으로 쭉쭉 내려간거
+
+프로그래머는 주로 텍스트를 많이 사용
+1.html 박제 => snap shot 
+2.내용 추가(박제된걸 두고두고 씀)
+3. 만들기 전에 해야하는 일 -> 글로벌 세팅
+
+cli-> 직접 명령어를 작성해서 실행
+
+gui(소스트리)->마우스 클릭
+
+git을 사용할 떄에는 git-bash를 사용
+
+git config --global user.name "jjh0306"
+git config --global user.email "아무이메일"
+
+git init을 시켜줘야함.
+
+git add . 을 하면 폴더안의 모든 파일을 스테이징 한다.
+staging : 박제
+
+git log : 로그 내역
+git log --online : 간단한 로그 내역
+git checkout eea6a73(위치 시킬 헤드 이동)
+git checkout master(마스터 브랜치로 이동)
+
+git status : 상태, 추적이 안되는 파일이 있다. 만약 꺠끗한 상태이면 모두 commit했다는 뜻이 된다.
+새로운 파일이나 기존의 파일 내용을 수정하고 commit이 안되면 추적을 할 수 있다.
+
+git commit --amend : 커밋의 내용을 수정하는 명령어
+
+vim 에디터 화면
+esc + :q 수정안한 상태에서 그냥 빠져나가기
+esc + :wq 저장하고 빠져나가기
+esc + :q! 수정된 채로 강제로 빠져나가기 그러면 내용은 저장이 안됨
+
+git commit --amend -m "editor modify"
+일반 commit --amend 와는 달리 vim을 들어가지 않고 직접 커밋 메시지를 저장
+
+git switch --detach
+git switch master 를 하면 git checkout과 같은 기능을 할 수 있다.
+
+switch 또는 checkout을 쓰는데 최근에는 switch를 많이 쓴다.
+reset이라는게 있다.
+
+
+ git reset --hard : 원하는 헤더로 이동후 master를 v픽한 헤더로 옮김 -> 즉 커밋한 이전 파일들을 삭제하고 전부 리셋  -- 가장 강력
+ git reset --soft : soft는 commit만 수정  -- 가장 약함
+git reset --mixed : add, commit을 수정, git reset 자체가 mixed임 -- untracked상태로 만들고 커밋도 날린다.
+
+git revert : 얘는 과거 기록을 남기고 작성한 커밋을 지움
+
+git이 한번 추적한거는 복구가 가능하다. reset을 하더라도
+git reflog : 모든 로그 내역
+
+reset은 해당 커밋을 완전 삭제 물론 복구는 가능하다. 단, 과거 기록은 남기지 않는다.
+revert는 해당 커밋을 과거 기록을 남기면서 삭제
+
+아래 파일들은 깃의 추적을 피할 수 있다. -> 중요한 내용이 적혀 있는 파일을 원격에 올리면 다른 사람들에게 노출된다.
+인텔리 제이같은 경우에는 자동으로 만들어 준다.
+필요하면 추가하면 된다. (만약 나중에 .gitignore에 추가되면 계속 추적된다.)
+/github에 올릴 수 있는 파일은 100m 밖에 되지 않는다.
+/asset/ : 이라는 모든 파일은 추적을 피한다.
+.yml(보통 여기에 설정파일들을 쓰는 곳, 프로젝트에 중요한 비번)
+.idea
+.vscode
+.env
+*.log
+/target
+/build
+
