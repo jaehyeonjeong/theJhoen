@@ -1,0 +1,105 @@
+* {
+  // *은 모든 태그에 해당, maring, padding 값 안주겠다는 뜻
+  margin: 0;
+  padding: 0;
+}
+li {
+  // 기본 리스트 스타일을 지우는 콘텐츠
+  list-style: none;
+}
+
+a {
+  text-decoration: none; // a태그의 밑줄 형태를 지우는 컨텐츠
+  // a 태그는 부모의 영향을 받지 않기 떄문에 아래와 같은 콘텐츠를 사용한다.
+  color: inherit;
+}
+
+body {
+  min-height: 2000px; // 최소 높이
+}
+
+.header {
+  // width: 1920px; // 세상에 모니터의 종류가 많으니 px은 냅둬
+
+  position: fixed; // fixed는 margin이 적용되지 않는다.
+  backdrop-filter: blur(10px);
+  width: 100%;
+
+  top: 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto; // 상하 좌우
+    height: 100px;
+
+    // margin-top: 0
+    // margin-left: auto;
+    // margin-bottom: 0;
+    // margin-right: auto;
+    // left, right 모두 auto로 두면 1600보다 너비가 크면 좌우 margin을 정확히 나눈다.
+    // margin: 0 auto 0 auto;
+    // margin: 0 auto 0; // 상 좌우 하
+
+    // margin: auto; // 좌우
+    // align-items: start;
+
+    // absolute는 기준을 잡을 때 절대 좌표로 잡는다.
+    // 단점은 브라우저의 레이아웃 기준에서 빠진다. 없는애 취급을 당한다.
+
+    .logo {
+      img {
+        width: 150px;
+        // height: 80px;
+      }
+    }
+  }
+
+  .gnb {
+    // display: flex;
+    &-list {
+      display: flex;
+      li {
+        a {
+          // padding은 자식이 가질 수 있는 크기 이지만 margin은 가질 수 없다.
+          // margin: 0 50px;
+          display: flex;
+          height: 100px;
+          align-items: center;
+          padding: 0 50px;
+          // border: 1px solid black;
+        }
+      }
+    }
+  }
+  .util {
+    // display: flex;
+    &-list {
+      display: flex;
+      li {
+        a {
+          display: flex;
+          height: 100px;
+          align-items: center;
+          padding: 0 50px;
+          // border: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+.main-visual {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 50vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+}

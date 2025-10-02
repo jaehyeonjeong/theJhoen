@@ -1,0 +1,40 @@
+/* 세번째 외부 스타일(가장 많이 CSS를 적용하는 스타일) */
+/* body {
+  font-size: 100px;
+  color: goldenrod;
+} */
+
+/* 단 a태그는 부모의 컬러를 상속받지 않는다 만약 상속받게 하기 위해서는 아래처럼 설정해야한다.*/
+
+/* 부모의 컬러를 상속받는다 */
+/* a {
+  
+  color: inherit; 
+} */
+/* cascading 방식 ! : 상위의 스타일을 적용하면 하위 스타일도 상위 스타일로 적용한다 */
+/* 그러나 자식에 적용된 스타일은 우선 적용되어서 css를 수정해도 html에 적용된 스타일은 변경되지 않는다. */
+
+/* C:\Windows\Fonts는 윈도우에서 공유되는 폰트 양식(그러나 이런 폰트는 막 쓰면 안된다) */
+div {
+  font-family: "Do Hyeon", "돋움";
+  font-size: 25px;
+}
+
+body {
+  font-family: "YeongwolTTF-Regular";
+}
+
+/* 눈누라는 사이트에서 폰트를 다운받을 수 있음.(거의 한글 전용) */
+@font-face {
+  font-family: "YeongwolTTF-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2507-2@1.0/YeongwolTTF-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* .title : class, #title : id */
+.title {
+  font-family: "Noto Sans KR", "돋움";
+}
+
+/* https://fonts.google.com/ 구글에서 제공하는 폰트 */

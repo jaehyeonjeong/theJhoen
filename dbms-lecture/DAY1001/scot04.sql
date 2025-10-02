@@ -1,0 +1,590 @@
+CREATE TABLE dept ( 
+	deptno NUMBER(2) CONSTRAINT dept_deptno_pk PRIMARY KEY,
+	dname varchar2(14),
+	loc varchar2(13)
+);
+
+DROP TABLE EMP;
+
+CREATE TABLE emp (
+	empno NUMBER(4)	CONSTRAINT emp_empno_pk PRIMARY KEY,	-- 정수 4자리, 제약 사항(primary key -> unique, not null)
+	ENAME VARCHAR2(10),
+	JOB VARCHAR2(9),
+	MGR NUMBER(4),
+	HIREDATE DATE,
+	SAL NUMBER(7, 2),
+	COMM NUMBER(7, 2),
+	DEPTNO NUMBER(2) CONSTRAINT emp_deptno_fk REFERENCES dept(deptno) 	-- 부서번호 외래키
+);
+
+CREATE TABLE bonus ( 
+	ename varchar2(20), 
+	job varchar2(9),
+	sal NUMBER,
+	comm NUMBER
+);
+
+CREATE TABLE salgrade (
+	grade NUMBER,
+	losal NUMBER,
+	hisal NUMBER
+);
+
+-- DEPT 테이블 데이터 입력
+INSERT INTO dept (deptno, dname, loc) VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO dept VALUES (20, 'RESEARCH', 'DALLAS');
+INSERT INTO dept VALUES (30, 'SALES', 'CHICAGO');
+INSERT INTO dept VALUES (40, 'OPERATIONS', 'BOSTON');
+
+-- EMP 테이블 데이터 입력
+INSERT INTO EMP VALUES (7369,'SMITH','CLERK',7902,to_date('17-12-1980','dd-mm-yyyy'),800,NULL,20);
+INSERT INTO EMP VALUES (7499,'ALLEN','SALESMAN',7698,to_date('20-2-1981','dd-mm-yyyy'),1600,300,30);
+INSERT INTO EMP VALUES (7521,'WARD','SALESMAN',7698,to_date('22-2-1981','dd-mm-yyyy'),1250,500,30);
+INSERT INTO EMP VALUES (7566,'JONES','MANAGER',7839,to_date('2-4-1981','dd-mm-yyyy'),2975,NULL,20);
+INSERT INTO EMP VALUES (7654,'MARTIN','SALESMAN',7698,to_date('28-9-1981','dd-mm-yyyy'),1250,1400,30);
+INSERT INTO EMP VALUES (7698,'BLAKE','MANAGER',7839,to_date('1-5-1981','dd-mm-yyyy'),2850,NULL,30);
+INSERT INTO EMP VALUES (7782,'CLARK','MANAGER',7839,to_date('9-6-1981','dd-mm-yyyy'),2450,NULL,10);
+INSERT INTO EMP VALUES (7788,'SCOTT','ANALYST',7566,to_date('13-JUL-87')-85,3000,NULL,20);
+INSERT INTO EMP VALUES (7839,'KING','PRESIDENT',NULL,to_date('17-11-1981','dd-mm-yyyy'),5000,NULL,10);
+INSERT INTO EMP VALUES (7844,'TURNER','SALESMAN',7698,to_date('8-9-1981','dd-mm-yyyy'),1500,0,30);
+INSERT INTO EMP VALUES (7876,'ADAMS','CLERK',7788,to_date('13-JUL-87')-51,1100,NULL,20);
+INSERT INTO EMP VALUES (7900,'JAMES','CLERK',7698,to_date('3-12-1981','dd-mm-yyyy'),950,NULL,30);
+INSERT INTO EMP VALUES (7902,'FORD','ANALYST',7566,to_date('3-12-1981','dd-mm-yyyy'),3000,NULL,20);
+INSERT INTO EMP VALUES (7934,'MILLER','CLERK',7782,to_date('23-1-1982','dd-mm-yyyy'),1300,NULL,10);
+
+-- SALGRADE 데이터 입력
+INSERT INTO SALGRADE VALUES (1,700,1200);
+INSERT INTO SALGRADE VALUES (2,1201,1400);
+INSERT INTO SALGRADE VALUES (3,1401,2000);
+INSERT INTO SALGRADE VALUES (4,2001,3000);
+INSERT INTO SALGRADE VALUES (5,3001,9999);
+
+SELECT * FROM EMP;
+
+COMMIT; -- 박제
+
+SELECT * FROM DEPT;
+
+SELECT * FROM SALGRADE;
+
+
+-- 1. 단일행 함수
+SELECT * FROM EMP;
+SELECT EMPNO, ENAME FROM EMP WHERE EMPNO = 7369; -- 특정 컬럼만 도출하는 방법(2개의 컬럼과 WHERE 조건에 맞는 인스턴스 도출)
+SELECT * FROM EMP WHERE EMPNO = 7369; 
+SELECT * FROM EMP WHERE JOB = 'SALESMAN' AND DEPTNO = 30; -- && (AND 조건)
+SELECT * FROM EMP WHERE JOB = 'CLERK' OR DEPTNO = 30
+ORDER BY DEPTNO, JOB; -- || (OR 조건)
+
+SELECT * FROM EMP WHERE SAL = 3000; -- SAL이 3000인 사람
+SELECT * FROM EMP WHERE SAL <= 3000; -- SAL이 3000 이상인 사람 
+SELECT * FROM EMP WHERE SAL >= 3000; -- SAL이 3000 이히인 사람
+SELECT * FROM EMP WHERE SAL != 3000; -- SAL이 3000 이 아닌 사람 
+SELECT * FROM EMP WHERE SAL <> 3000; -- SAL이 3000 이 아닌 사람 != 와 같음
+ SELECT * FROM EMP WHERE JOB IN('SALESMAN', 'CLERK', 'MANAGER');
+
+SELECT * FROM EMP WHERE deptno IN(10, 20, 30) ORDER BY deptno, sal desc;
+SELECT * FROM EMP WHERE sal >= 2000 AND sal <= 3000;
+SELECT * FROM EMP WHERE sal BETWEEN 2000 AND 3000;  --- 위의 부등호 and 조건과 같다.
+
+SELECT * FROM EMP WHERE deptno NOT IN(10, 20, 30) ORDER BY deptno, sal desc;
+SELECT * FROM EMP WHERE sal NOT BETWEEN 2000 AND 3000 ORDER BY sal;  --- not을 쓰면서 나머지 인스턴스를 출력할 수 있다.
+
+-- like 글자 매칭
+SELECT * FROM emp WHERE ename LIKE 'S%'; -- ename이 S로 시작하는 모든 사람 검색
+SELECT * FROM emp WHERE ename LIKE '%S%'; -- ename이 S가 들어가는 모든 사람
+SELECT * FROM emp WHERE ename LIKE '_____'; -- ename이 5글자인 사람 검색
+SELECT * FROM emp WHERE ename LIKE '____S'; -- ename이 5글자인 사람 검색(특수한 검색 같은 경우는 복잡함)
+
+
+SELECT * FROM emp WHERE comm IS NULL; -- null 은 = 로 비교 불가
+SELECT * FROM emp WHERE comm IS NOT NULL; -- null의 반대인 경우는 not null
+
+-- union intersect (사실 이건 join으로 처리가 가능함)
+-- 단일행 function : single row function vs group function 
+SELECT  lower(ename) FROM emp;
+SELECT  upper(lower(ename)) FROM emp;
+SELECT  initcap(ename) FROM emp;
+
+
+SELECT  lower(ename) AS ename_lower, upper(lower(ename)) AS ename_upper, initcap(ename) AS ename_initcap FROM emp;
+SELECT * FROM emp WHERE upper(ename) LIKE upper('%s%'); -- upper를 모두 lower 로 바꿔서 select 할 수 있다.
+SELECT ename, length(ename) FROM emp WHERE length(ename) > 5;
+SELECT '한글', length('한글'), lengthb('한긓'), length('abc'), lengthb('abc') FROM dual; -- 한글은 1글자에 3바이트 먹음, 영어는 1바이트
+SELECT 'oracle', substr('oracle', 1, 2) FROM dual;
+SELECT ename, substr(ename, 1, 2) FROM emp; -- 글자를 추출할 떄에는 substr 함수를사용해서 단일행 마다 원하는 자리를 추출할 수 있다.
+SELECT substr('210101-1233203', -7) AS birth FROM dual; 		-- 뒤에서 찾는 방법
+SELECT substr('210101-1233203', 1, 6) AS birth FROM dual;		-- 앞에서 찾는 방법
+SELECT instr('oracle', 'r') FROM dual; ---찾고자 라는 문자의 index, r이 처음 등장하는 자릿수
+SELECT instr('hello oracle', 'l', 5) FROM dual;			-- 5번째 글자 이후에 나오는 l의 자릿수
+SELECT instr('hello oracle', 'l', -1) FROM dual;			-- 뒤에서 등장하는 자리부터 l을 찾음
+SELECT instr('hello oracle', 'ㄹ') FROM dual;			-- 글자를 찾을 떄 없으면 0이 나옴
+
+-- sdaabcd.pdf에서 파일내임만 출력
+SELECT substr('sdaabcd.pdf', 1, instr('sdaabcd.pdf', '.') - 1) AS filename FROM dual;		-- 파일 네임
+SELECT substr('sdaabcd.pdf', -3, instr('sdaabcd.pdf', '.') - 1) FROM dual;		-- 확장자
+SELECT substr('sdaabcd.pdf', 1, instr('sdaabcd.pdf', '.') - 1) AS filename,
+substr('sdaabcd.pdf', instr('sdaabcd.pdf', '.') + 1) AS extension FROM dual;		-- 확장자
+
+-- lpad, rpad 문자 채우기
+SELECT rpad('250306-', 14, '*') FROM dual; -- 지정된 자리수에서 뒤(오른쪽)로 채우기
+SELECT lpad('250306-', 14, '*') FROM dual; -- 지정된 자리수에서 앞(왼쪽)으로 채우기
+--SELECT lpad('250306-', 14) FROM dual; -- 없으면 공백으로 채움 (잘쓰지 않음)
+SELECT concat(empno, ename), empno||ename FROM emp; -- 글자 합치기 단, ||는 오라클에서만 사용할 수 있으므로 주의
+SELECT '   abc        ' , ltrim('   abc        '), rtrim('   abc        ' ), trim('   abc        ' ) FROM dual; -- 공백 지우기 이것도 표준은 아님
+SELECT '   abc        ', 
+		trim(LEADING FROM  '   abc        ' ), 		-- ltrim 처럼 왼쪽 공백 지우기
+		trim(TRAILING FROM  '   abc        ' ), 	-- rtrim 처럼 오른쪽 공백 지우기
+		trim(BOTH FROM  '   abc        ' )			-- 양쪽 공백 지우기 BOTH FROM 붙이는 거 까지 표준
+FROM dual; -- 표준 공백 지우기
+
+
+--- 
+SELECT round(1234.5678) FROM dual;
+SELECT round(1234.5678, 1) FROM dual;
+SELECT round(1234.5678, 2) FROM dual;
+SELECT round(1234.5678, -1) FROM dual; -- -1은 1의 자리에서 반올림 진행
+SELECT ceil(1234.5678) FROM dual; --  올림
+SELECT floor(1234.5678) FROM dual; -- - 버림
+SELECT mod(99, 4) FROM dual; -- 나머지
+
+SELECT sysdate AS today, sysdate + 1 AS tomorrow, sysdate - 1 AS yesterday FROM dual;
+SELECT sysdate, sysdate + 30 AS month_later FROM dual;
+SELECT sysdate, add_months(sysdate, 1) FROM dual;
+-- 날짜 데이터를 문자열로 전환
+SELECT to_char(sysdate, 'YYYY-MM-DD DAY HH:MI:SS', 'NLS_DATE_LANGUAGE=KOREAN') AS "DATE" FROM dual;
+-- 문자열을 날짜 데이터로 전환
+SELECT TO_DATE('2025-10-01', 'YYYY-MM-DD') FROM DUAL;
+SELECT TO_DATE('2025/10/01', 'YYYY/MM/DD') FROM DUAL;
+
+--- NULL 처리 함수 NVL(), NVL2()
+SELECT ENAME, COMM, NVL(COMM, 0), NVL2(COMM, 'O','X') FROM EMP;
+-- NVL(): NULL이면 초기값으로 수정, NVL2는 NULL이면 왼쪽 파라미터 치환 아니면 오른쪽 파라미터로 치환
+SELECT EMPNO, ENAME, JOB, SAL,
+FLOOR (CASE JOB
+ WHEN 'MANAGER' THEN SAL * 1.1
+ WHEN 'CLERK' THEN SAL * 1.5
+ ELSE SAL * 1.25
+END) AS UPSAL
+FROM EMP;
+
+-- 다중행 함수 -> 여러개의 결과를 하나로 압축해서 쓰기 위함.
+SELECT SUM(SAL) AS SUM FROM EMP;
+
+SELECT SUM(COMM) AS SUM FROM EMP; -- NULL이 있으면 제외된 값을 더함
+SELECT COUNT(SAL) AS COUNT FROM EMP;
+SELECT COUNT(COMM) AS COUNT FROM EMP; -- 마찬가지로 COMM도 NULL인 값을 제외하고 카운팅
+
+SELECT MAX(SAL) MAX_SAL, MIN(SAL) MIN_SAL, MAX(SAL) - MIN(SAL) DIFF_SAL FROM EMP;
+SELECT ROUND(AVG(SAL), 2) AVG_SAL FROM EMP;
+
+-- GROUP BY 일 떄에는 WHERE 절을 사용할 수 없다. 오로지 HAVING을 사용할 수 밖에 없다.
+SELECT DEPTNO, SUM(SAL), MAX(SAL), MIN(SAL), AVG(SAL) FROM EMP
+GROUP BY DEPTNO
+HAVING AVG(SAL) >= 2000
+ORDER BY DEPTNO; -- GROUP BY는 항상 ASC가 기본
+
+SELECT SUM(SAL), MAX(SAL), MIN(SAL), AVG(SAL) FROM EMP
+WHERE SAL >= 2000; -- SAL이 2000이상인 경우에서만 조회
+
+
+-- JOIN 가로 확장
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
+
+-- ANSI JOIN
+SELECT E.EMPNO, E.ENAME, E.JOB, E.SAL, D.DEPTNO, D.DNAME, D.LOC 
+FROM EMP E 
+INNER JOIN DEPT D ON E.DEPTNO = D.DEPTNO; -- ON 뒤는 JOIN의 조건
+
+
+SELECT E.EMPNO, E.ENAME, E.JOB, E.SAL, DEPTNO, D.DNAME, D.LOC -- 같은 속성은 테이블 변수를 제거해야 한다.
+FROM EMP E 
+NATURAL INNER JOIN DEPT D; -- NATURAL JOIN은 알아서 같은 컬럼을 매칭
+
+-- 비등가조인
+SELECT E.EMPNO, E.ENAME, E.JOB, E.DEPTNO, E.SAL, S.GRADE-- 같은 속성은 테이블 변수를 제거해야 한다.
+FROM EMP E 
+INNER JOIN SALGRADE S ON  E.SAL BETWEEN S.LOSAL AND S.HISAL; -- NATURAL JOIN은 알아서 같은 컬럼을 매칭
+-- E.SAL옆에 가로로 확장 보통 생략을 함
+
+-- OUTER JOIN 
+SELECT E.EMPNO, E.ENAME, E.JOB, E.SAL, D.DEPTNO, D.DNAME, D.LOC 
+FROM EMP E
+RIGHT OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO; -- OUTER는 생략이 가능하다.
+-- RIGHT를 LEFT로 바꾸면 EMP 기준으로 데이터들을 출력한다.
+
+SELECT E.EMPNO, E.ENAME, E.JOB, E.SAL, D.DEPTNO, D.DNAME, D.LOC 
+FROM EMP E
+FULL OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO; -- 왼쪽 오른쪽 모두 교차해서 출력
+
+SELECT E.EMPNO, E.ENAME, E.JOB, E.SAL, D.DEPTNO, D.DNAME, D.LOC 
+FROM EMP E
+CROSS JOIN DEPT D; -- 데카르트 연산, 카타시안 곱 -> 잘 쓰이진 않음
+
+SELECT * FROM DEPT;
+
+
+--- EMP 테이블에 JOB이 CLERK인 직원의 이름과 부서명을 출력
+-- 부서 정보는 DEPT 테이블을 가져오심
+SELECT E.EMPNO, E.ENAME, D.DNAME, E.JOB
+FROM EMP E
+JOIN DEPT D ON E.DEPTNO = D.DEPTNO
+WHERE JOB = 'CLERK';
+
+-- 부서별로 직원수를 출력 부서 이름
+SELECT D.DNAME, COUNT(*) AS DEPTNO_COUNT
+FROM EMP E
+JOIN DEPT D ON E.DEPTNO = D.DEPTNO
+GROUP BY D.DNAME;
+
+-- JOIN을 잘하기 위해서는 설계와 내부구조를 잘 파악해야함..
+-- EMP, SALGRADE, DEPT JOIN을 해서 매니저와 부서명 급여 등급 까지 다 출력
+SELECT DISTINCT E1.EMPNO, E1.ENAME, D.DNAME, D.DEPTNO, E1.SAL, S.GRADE
+FROM EMP E
+RIGHT JOIN EMP E1 ON E1.EMPNO = E.MGR
+RIGHT JOIN DEPT D ON E1.DEPTNO = D.DEPTNO
+RIGHT JOIN SALGRADE S ON E1.SAL BETWEEN S.LOSAL AND S.HISAL;
+
+SELECT E.EMPNO, E.ENAME, E.MGR, E.SAL, D.DEPTNO, D.DNAME, S.GRADE, E2.EMPNO, E2.ENAME
+FROM EMP E 
+RIGHT JOIN DEPT D ON E.DEPTNO = D.DEPTNO
+LEFT JOIN SALGRADE S ON E.SAL BETWEEN S.LOSAL AND S.HISAL
+LEFT JOIN EMP E2 ON E.MGR = E2.EMPNO;
+
+
+-- 사원이 없는 부서 명과 부서번호 EMPNO 출력
+SELECT D.DNAME, D.DEPTNO, E.EMPNO
+FROM EMP E
+RIGHT JOIN DEPT D ON D.DEPTNO = E.DEPTNO
+WHERE E.EMPNO IS NULL;
+
+-- SUBQUERY 쿼리안에 새로운 쿼리를 작성
+SELECT SAL FROM EMP 
+WHERE ENAME = 'JONES';
+
+SELECT * FROM EMP
+WHERE SAL > (SELECT SAL FROM EMP WHERE ENAME = 'JONES')
+ORDER BY SAL;
+-- JONES 보다 높은 급여 받는사람
+
+-- SCOTT의 입사일 보다 빠른 친구
+SELECT HIREDATE FROM EMP WHERE ENAME = 'SCOTT';
+
+SELECT * FROM EMP
+WHERE HIREDATE < (SELECT HIREDATE FROM EMP WHERE ENAME = 'SCOTT'); -- DATE 속성 끼리는 부등호로 비교가 가능하다.
+
+-- 부서별로 최고 급여를 받는 사람
+SELECT MAX(SAL) FROM EMP;
+SELECT MAX(E.SAL)
+FROM EMP E
+JOIN DEPT D ON D.DEPTNO = E.DEPTNO
+GROUP BY D.DNAME;
+
+SELECT *
+FROM EMP
+WHERE SAL IN (
+SELECT MAX(E.SAL)
+FROM EMP E
+JOIN DEPT D ON D.DEPTNO = E.DEPTNO
+GROUP BY D.DNAME);
+
+ -- 위와 아래는 같은 결과를 출력
+SELECT *
+FROM EMP
+WHERE SAL IN (
+SELECT MAX(E.SAL)
+FROM EMP E GROUP BY DEPTNO);
+
+-- 서브 쿼리를 잘 사용하면 비용(코드 연결 시간)을 줄일 수 있음
+
+-- ANY, SOME(ANY랑 같음) == 하나라도 만족하면 TRUE, ALL == 모두 만족해야 TRUE
+
+
+SELECT *
+FROM EMP
+WHERE SAL >= ANY (
+SELECT MAX(E.SAL)
+FROM EMP E GROUP BY DEPTNO); -- 3중 하나라도 만족해야함.
+-- 부서별 최고 급여보다 큰 사람 출력 
+
+
+SELECT *
+FROM EMP
+WHERE SAL <= SOME (
+SELECT MIN(E.SAL)
+FROM EMP E GROUP BY DEPTNO); -- 3중 하나라도 만족해야함.
+-- 부서별 최저 급여보다 작은 사람 출력
+
+
+SELECT *
+FROM EMP
+WHERE SAL >= ALL (
+SELECT MAX(E.SAL)
+FROM EMP E GROUP BY DEPTNO); -- 3개 모두 만족해야함.
+
+-- ANY, ALL 작성시에는 (부등호 ANY OR ALL)
+-- 즉 JOIN과 SUBQUERY를 잘 하는게 중요하다.
+
+-- DML : MANUFLATION
+CREATE TABLE DEPT_TEMP AS SELECT * FROM DEPT;
+CREATE TABLE DEPT_TEMP AS SELECT * FROM DEPT WHERE 1 = 0; -- 헤드 컬럼(흔히 껍데기)만 생성 
+
+INSERT INTO DEPT_TEMP ( DNAME, LOC, DEPTNO)
+VALUES ('MOBILE', 'BUSAN', 60);
+COMMIT;
+SELECT * FROM DEPT_TEMP;
+
+
+DROP TABLE DEPT_TEMP;
+
+
+--QUIZ , EMP 복제 후 2025-09-30의 입사한 사원 입력
+CREATE TABLE EMP_TEMP AS SELECT * FROM EMP;
+INSERT INTO EMP_TEMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
+VALUES (9000, 'JJH', NULL, 7839, TO_DATE('2025-09-30', 'YYYY-MM-DD'), 4500, NULL, 40);
+
+SELECT  * FROM EMP_TEMP;
+
+COMMIT;
+
+-- 테이블 내에 데이터를 수정하는 방법은 UPDATE (테이블 명) SET 이후에 바꾸고 싶은 값, 조건을 작성해준다.
+UPDATE EMP_TEMP SET HIREDATE = SYSDATE WHERE EMPNO = 9000;
+COMMIT;
+
+
+-- DELETE 테이블 인스턴스 삭제 키워드
+DELETE FROM EMP_TEMP WHERE EMPNO = 9000;
+
+
+ROLLBACK;
+
+--- 트렌젝션 ROLLBACK, COMMIT;
+
+
+-- TABLE LOCK이 있고 ROW LOCK이 있다.
+UPDATE EMP_TEMP SET HIREDATE = SYSDATE WHERE EMPNO = 7369;
+ROLLBACK;
+COMMIT;
+
+-- TABLE LOCK이 있고 ROW LOCK이 있는데 언제 걸리느냐
+-- ROW LOCK은 같은 ROW에 동시에 접근을 할 때 LOCK이 걸린다. UPDATE, DELETE, INSERT 할때 발생한다.
+--- 트렌젝션 TRANSACTION 일의 한 묶음, 접근을 막는다. ROW에 LOCK이 생긴다.
+-- INSERT, UPDATE, DELETE 구문을 사용하면 자동으로 ROW LOCK이 걸린다.
+-- 다른곳에서 접근이 안되고 COMMIT, ROLLBACK을 해야만 LOCK이 해제된다.
+LOCK TABLE EMP_TEMP IN EXCLUSIVE MODE; -- 이렇게 하면 다른 섹션에 업데이트 할 수 없게 된다. 
+COMMIT;
+
+
+-- 테이블 만들기 ddl : DATA DEFINITION LANGUAGE CREATE, DROP, ALTER
+CREATE TABLE EMP_DDL ( 
+	EMPNO NUMBER(4),
+	ENAME VARCHAR2(10),
+	JOB VARCHAR2(10),
+	MGR NUMBER(4),
+	HIREDATE DATE,
+	SAL NUMBER(7, 2),
+	COMM NUMBER(7, 2),
+	DEPTNO NUMBER(2) 	
+);
+
+DROP TABLE EMP_DDL;
+TRUNCATE TABLE EMP_DDL; -- 얘는 데이터만 지우기 ROLL_BACK 안됨
+
+SELECT * FROM EMP_DDL;
+
+ALTER TABLE EMP_DDL
+ADD HP VARCHAR2(20);
+
+ALTER TABLE EMP_DDL
+RENAME COLUMN HP TO TEL; -- 컬럼 이름 바꾸기
+
+ALTER TABLE EMP_DDL
+MODIFY EMPNO NUMBER(3); -- 데이터가 아예 없을 때는 타입 사이즈 변경 가능
+
+ALTER TABLE EMP_DDL
+DROP COLUMN TEL;		-- DROP도 RENAME처럼 COLUMN을 붙여야 삭제가 됨.
+
+RENAME EMP_DDL TO EMP_RENAME; -- 테이블 명을 바꿈
+
+RENAME EMP_RENAME TO EMP_DDL;
+
+SELECT * FROM EMP_RENAME;
+SELECT * FROM EMP_DDL;
+
+DROP TABLE EMP_DDL;
+
+COMMIT;
+
+
+-- BIGO 추가, 이름을 REMARK로 변경,타입 변경 VARCHAR2(30)
+ALTER TABLE EMP_DDL
+ADD BIGO VARCHAR2(20);
+
+
+ALTER TABLE EMP_DDL
+RENAME COLUMN BIGO TO REMARK;
+
+ALTER TABLE EMP_DDL
+MODIFY REMARK VARCHAR2(30);
+
+ALTER TABLE EMP_DDL
+DROP COLUMN REMARK;
+
+SELECT * FROM EMP_DDL;
+ROLLBACK;
+
+DROP TABLE EMP_DDL;
+
+-- 수정한 테이블의 컬럼 이름과 데이터 타입, 길이를 출력하는 쿼리문
+-- 단 해당 구문은 표준이 없고 DBMS마다 찾는 방법이 다른 점을 유의해야한다.
+SELECT column_name, data_type, data_length
+FROM user_tab_columns
+WHERE table_name = 'EMP_DDL';
+
+COMMIT;
+
+-- 무결성이 꺠지면 안됨... 
+-- TABLE을 만들 떄 주의 사항
+DROP TABLE MEMBERS;
+CREATE TABLE MEMBERS01 (
+	USERID VARCHAR2(100) CONSTRAINT MEMBERS01_USERID_PK PRIMARY KEY,
+	USERPW VARCHAR2(100) CONSTRAINT MEMBERS01_USERPW_NN NOT NULL,
+	REFDATE DATE,
+	EMAIL VARCHAR2(100) CONSTRAINT MEMBERS01_EMAIL_UNQ UNIQUE
+);
+
+CREATE TABLE MEMBERS02 (
+	USERID VARCHAR2(100) ,
+	USERPW VARCHAR2(100) ,
+	REFDATE DATE,
+	EMAIL VARCHAR2(100),
+	CONSTRAINT MEMBERS02_USERID_PK PRIMARY KEY (USERID),
+	CONSTRAINT MEMBERS02_USERPW_NN CHECK (USERPW IS NOT NULL),
+	CONSTRAINT MEMBERS02_EMAIL_UNQ UNIQUE (EMAIL)
+);
+
+INSERT INTO MEMBERS01 VALUES ('BBB', '1234', SYSDATE, 'BBB@BBB.COM');
+INSERT INTO MEMBERS02 VALUES ('CCC', '1234', SYSDATE, 'CCC@CCC.COM');
+
+SELECT * FROM MEMBERS01;
+SELECT * FROM MEMBERS02;
+
+SELECT * FROM USER_CONSTRAINTS;
+
+-- BOARD TABLE을 만드는데 BOARDID(NUM(10) PK), TITLE(VAR(4000)), CONTENT(CLOB), REGDATE(DATE), WRITER(VAR2(100) 레퍼런스의 MEMBERS01의 USERID), HIT(NUMBER)
+
+DROP TABLE BOARD;
+
+CREATE TABLE BOARD (
+	BOARDID NUMBER(30) CONSTRAINT BOARD_BOARDID_PK PRIMARY KEY,
+	BOARDNO NUMBER(30),
+	TITLE VARCHAR2(4000),
+	CONTENT CLOB,
+	REGDATE DATE,
+	HIT NUMBER
+	WRITER VARCHAR2(100) CONSTRAINT BOARD_WRITER_FK REFERENCES MEMBERS01(USERID),
+);
+
+CREATE TABLE BOARD (
+	BOARDID NUMBER(30) CONSTRAINT BOARD_BOARDID_PK PRIMARY KEY,
+	BOARDNO NUMBER(30),
+	TITLE VARCHAR2(4000),
+	CONTENT CLOB,
+	REGDATE DATE,
+	WRITER VARCHAR2(100),
+	HIT NUMBER,
+	CONSTRAINT BOARD_WRITER_FK FOREIGN KEY(WRITER) REFERENCES MEMBERS01(USERID) -- 만약 아래로 외래키를 추가할 떄는 FOREIGN KEY를 붙여야 한다.
+);
+
+SELECT * FROM BOARD;
+
+SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'BOARD';
+
+SELECT COLUMN_NAME, DATA_TYPE, DATA_LENGTH FROM USER_TAB_COLUMNS
+WHERE TABLE_NAME = 'BOARD'; 
+
+INSERT INTO BOARD VALUES(2, 32, '제목 02', '내용 03', SYSDATE, 'BBB', 1111);
+
+SELECT * FROM USER_TAB_COLUMNS
+WHERE TABLE_NAME = 'BOARD'; -- NUMBER 타입은 DATA_LENGTH가 아닌 DATA_PRECISION으로 사이즈를 볼 수 있다.
+
+COMMIT;
+
+
+-- quiz
+-- 제품 테이블, 주문 테이블, 주문 상세 테이블
+CREATE TABLE PRODUCT ( 
+	PRODUCT_ID NUMBER(10) CONSTRAINT PRODUCT_PRODUCT_ID_PK PRIMARY KEY,
+	PNAME VARCHAR2(4000) CONSTRAINT PRODUCT_PNAME_NN NOT NULL,
+	PRICE NUMBER(10,2) CONSTRAINT PRODUCT_PRICE_CHK CHECK (PRICE > 0)
+);
+
+INSERT INTO PRODUCT
+VALUES (1, 'COMPUTER', 1000000);
+
+INSERT INTO PRODUCT
+VALUES (2, 'MONITOR', 300000);
+
+INSERT INTO PRODUCT
+VALUES (3, 'KEYBOARD', 10000);
+
+-- 상태를 나타내는 STATUS안에  상태를 아무렇게 넣을 수 없다.
+CREATE TABLE ORDERS (
+	ORDERS_ID NUMBER(10) CONSTRAINT ORDERS_ORDERS_ID_PK PRIMARY KEY,
+	ORDER_DATE DATE DEFAULT SYSDATE, -- 사용하지 않으면 현재 시간을 넣어줌
+	STATUS VARCHAR2(30) DEFAULT '준비중'
+	CONSTRAINT ORDER_STATUS CHECK(STATUS IN ('준비중', '결제완료', '취소')) -- 세가지 선택
+);
+
+-- JAVA 에서는 ENUM으로 처리가 가능하다.
+INSERT INTO ORDERS
+VALUES (1001, SYSDATE, '준비중');
+
+
+INSERT INTO ORDERS
+VALUES (1002, SYSDATE, '취소');
+
+INSERT INTO ORDERS
+VALUES (1003, SYSDATE, '결제완료');
+
+SELECT * FROM ORDERS;
+
+
+-- 복합PK : PK가 하나만 있을 수는 없다.
+-- 만약에 복합키를 PRIMARY KEY는 TABLE 단위에서의 제약조건으로만 가능하다.
+CREATE TABLE ORDER_ITEMS (
+	PRODUCT_ID NUMBER(20), 
+	ORDERS_ID NUMBER(20),
+	QUANTATIY NUMBER(10) CONSTRAINT ORDER_ITEM_QUANTATIY_CHK CHECK (QUANTATIY > 0),
+	TOTAL_PRICE NUMBER(10, 2) CONSTRAINT ORDER_ITEMS_TOTAL_PRICE_CHK CHECK (TOTAL_PRICE >= 0),
+	CONSTRAINT ORDER_ITEMS_PK PRIMARY KEY (ORDERS_ID, PRODUCT_ID),
+	CONSTRAINT ORDER_ITEMS_PRODUCT_ID_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCT(PRODUCT_ID), -- 삭제될 떄 연결된걸 같이 지워라
+	CONSTRAINT ORDER_ITEMS_ORDERS_ID_FK FOREIGN KEY (ORDERS_ID) REFERENCES ORDERS(ORDERS_ID) ON DELETE CASCADE -- 삭제될 떄 연결된걸 같이 지워라
+);
+
+INSERT INTO ORDER_ITEMS VALUES(1, 1001, 2, 9900);
+INSERT INTO ORDER_ITEMS VALUES(1, 1002, 2, 9900);
+INSERT INTO ORDER_ITEMS VALUES(1, 1001, 2, 9900);
+
+DELETE PRODUCT;
+DELETE ORDERS;
+
+DROP TABLE PRODUCT;
+DROP TABLE ORDERS;
+DROP TABLE ORDERS_ITEM;
+
+SELECT * FROM PRODUCT;
+SELECT * FROM ORDERS;
+SELECT * FROM ORDERS_ITEM;
+
+-- GIT 수업 이후에 서버 SPRING(ULTIMATE VERSION) 수업
+
+COMMIT;
+
+
+
+
+
+
+

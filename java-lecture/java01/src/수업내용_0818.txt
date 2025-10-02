@@ -1,0 +1,22 @@
+1. tjoeunis.atosoft.kr : 더조은 컴퓨터학원 개인 정보 웹페이지 사이트
+
+입실 및 퇴실 시에 국민내일배움카드로 꼭 체크를 해야함..
+입퇴실 시간 : 오전 9시 40분 / 오후 5시 50분
+
+2. java Oracle 사이트에서 jdk 21버전 설치 -> exe 파일 실행 후 설치 완료
+
+3. java는 컴파일 언어이다..
+인터프리팅 언어 : javascript (중간에 오류가 나도 실행, 동시통역)
+
+컴파일 언어 : java (중간에 오류가 나면 중단하여 문제되는 것을 지적, 번역)
+
+자바의 동작원리
+자바: java(원본 파일 소스) ->{컴파일} .class(동작 소스)
+
+4.자바의 장점 WORA
+Write Once Run Antwhere : 한번 작성된 코드는 모든 플랫폼에서 바로 실행(class가 동작)
+-> os HW에 상관없이 자바 프로그램이 동일하게 실핼
+특징 : JVM(Java Virtual Machine) 이 있는 곳이라면 어느 곳이든 컴파일이 가능하다.
+
+5. intelij (java)에서 main은 모든 시작 진입 지점이다. 없으면 실행이 안된다.
+public static void main(String[] args)

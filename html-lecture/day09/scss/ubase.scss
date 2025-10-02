@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import "./vass";
+@import "./mixins";
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  min-height: 7000px;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.header {
+  //기준을 잡을때 절대좌표로 잡을떄
+  //브라우져의 레이아웃 기준에서 빠진다.
+  position: fixed; //는 margin 적용 안된다.
+  backdrop-filter: blur(20px);
+  top: 0;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    //align-items: start;
+    height: 100px;
+    align-items: center;
+    /*
+      margin-top:0;
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: auto;
+  */
+    //margin: 0 auto 0 auto;
+    //margin: 0 auto 0;
+    //margin: auto;
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .util {
+      &-list {
+        display: flex;
+        li {
+          a {
+            display: flex;
+            height: 100px;
+            align-items: center;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gnb {
+  display: flex;
+  &-list {
+    display: flex;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        padding: 0 50px;
+        //border: 1px solid #000;
+      }
+    }
+  }
+}
+
+.main-visual {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 50vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+}
+
+.main-content {
+  &-01__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &-text {
+      // border: 3px solid red;
+      position: sticky;
+      top: 150px;
+      p {
+        strong {
+          font-size: 1.5rem;
+          color: #999;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    h2 {
+      // color: red;
+      font-size: 2rem; //rem : root em의 약자이고, html 따라서 같이 움직인다.
+      border-bottom: 2px solid #999;
+      padding-bottom: 30px; // 내거를 늘릴 떄
+      margin-bottom: 30px; // 남의 것을 늘릴 떄
+      font-weight: 900;
+    }
+    &-banner {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        li {
+          width: 500px;
+          aspect-ratio: 1 / 1;
+          // border: 0.2rem solid #ccc;
+          border-radius: 30px;
+          padding: 2rem;
+          background-size: cover;
+          p {
+            font-size: 2rem;
+            font-weight: 800;
+          }
+        }
+      }
+      &-01 {
+        background-image: url("../images/no01_1.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: $border-color-blue;
+      }
+      &-02 {
+        background-image: url("../images/no01_2.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: white;
+        text-align: right;
+        color: white;
+        border: 2px solid black;
+      }
+      &-03 {
+        display: flex;
+        background-image: url("../images/no01_3.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 2px solid black;
+      }
+    }
+    padding-bottom: 500px;
+  }
+  &-02__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &-text {
+      // border: 3px solid red;
+      position: sticky;
+      top: 150px;
+      p {
+        strong {
+          font-size: 1.5rem;
+          color: #999;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    h2 {
+      // color: red;
+      font-size: 2rem; //rem : root em의 약자이고, html 따라서 같이 움직인다.
+      border-bottom: 2px solid #999;
+      padding-bottom: 30px; // 내거를 늘릴 떄
+      margin-bottom: 30px; // 남의 것을 늘릴 떄
+      font-weight: 900;
+    }
+    &-banner {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        li {
+          width: 500px;
+          aspect-ratio: 1 / 1;
+          // border: 0.2rem solid #ccc;
+          border-radius: 30px;
+          padding: 2rem;
+          background-size: cover;
+          p {
+            font-size: 2rem;
+            font-weight: 800;
+          }
+        }
+      }
+      &-01 {
+        background-image: url("../images/no02_1.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        // background-color: #007dff;
+        border: 2px solid black;
+        strong {
+          color: purple;
+        }
+      }
+      &-02 {
+        background-image: url("../images/no02_2.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        color: white;
+        // border: 2px solid black;
+      }
+      &-03 {
+        display: flex;
+        // background-image: url("../images/no01_3.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: $border-color-green;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        // border: 2px solid black;
+        text-align: center;
+        span {
+          font-size: 50px;
+          strong {
+            color: black;
+          }
+        }
+      }
+    }
+    padding-bottom: 500px;
+  }
+  &-03__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &-text {
+      // border: 3px solid red;
+      position: sticky;
+      top: 150px;
+      p {
+        strong {
+          font-size: 1.5rem;
+          color: #999;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    h2 {
+      // color: red;
+      font-size: 2rem; //rem : root em의 약자이고, html 따라서 같이 움직인다.
+      border-bottom: 2px solid #999;
+      padding-bottom: 30px; // 내거를 늘릴 떄
+      margin-bottom: 30px; // 남의 것을 늘릴 떄
+      font-weight: 900;
+    }
+    &-banner {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        li {
+          width: 500px;
+          aspect-ratio: 1 / 1;
+          // border: 0.2rem solid #ccc;
+          border-radius: 30px;
+          padding: 2rem;
+          background-size: cover;
+          p {
+            font-size: 2.4rem;
+            font-weight: 800;
+          }
+        }
+      }
+      &-01 {
+        background-image: url("../images/no03_1.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        // background-color: #007dff;
+        // border: 2px solid black;
+        text-align: center;
+        background-color: rgb(183, 224, 241);
+        font-weight: 700;
+        strong {
+          color: purple;
+        }
+      }
+      &-02 {
+        background-image: url("../images/no03_2.png");
+        // background는 영역으로 잡히지 않는다. 말그대로 배경 처리
+        // 단 부모의 넓이를 가져야지만 배경으로 잡힌다.
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: black;
+        border: 2px solid black;
+      }
+      &-03 {
+        display: flex;
+        background-color: #333;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 2px solid black;
+        text-align: center;
+        p {
+          span {
+            color: yellowgreen;
+          }
+        }
+      }
+    }
+    padding-bottom: 500px;
+  }
+  .center {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // text-align: center;
+    @include flex(center, center, center);
+    @include long-shadow(100, lighten($border-color-green, 20));
+    font-size: 5rem;
+    // align-items: center; justify-content: center;를 지금까지 많이 사용하고 있음.
+    font-weight: 600;
+
+    span {
+      color: darken($border-color-green, 10);
+    }
+    margin-bottom: 600px;
+  }
+  .banner-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: lighten($border-color-blue, 45);
+    width: 100vw;
+    h2 {
+      display: flex;
+      height: 200px;
+      align-items: end;
+      justify-content: center;
+    }
+    p {
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, minmax(100px, auto));
+      gap: 30px;
+      margin: 100px 100px;
+      padding-top: 100px;
+
+      .item {
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 20px;
+        background-color: white;
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        //position: relative;
+        transition: all 0.25s ease; // ease-in, ease-out 이렇게 있다.
+        &:hover {
+          // 가상 선택자
+          // 사용자가 마우스를 올려놨다고 가장하고 css 쓴다.
+          // margin-top: -10px;
+          // margin-bottom: 10px;
+          transform: translateY(-10px);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+        img {
+          width: 200px;
+          aspect-ratio: 1 / 1;
+          // border: 2px solid black;
+        }
+
+        p {
+          text-align: center;
+          color: #444;
+        }
+      }
+    }
+  }
+  .promise-tag {
+    background-color: lighten(#007aff, 40);
+    @include flex(center, center, center);
+    flex-direction: column;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .notice-box {
+    @include flex(center, center, center);
+    flex-direction: column;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      width: 100%;
+      height: 100vh;
+      padding: 50px, 50px;
+      gap: 40px;
+      margin-left: 200px;
+      margin-right: 200px;
+      .item {
+        border: 3px solid $border-color-green;
+        border-radius: 20px;
+      }
+      .item01 {
+        grid-row: span 2;
+      }
+    }
+  }
+}

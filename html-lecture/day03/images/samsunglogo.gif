@@ -1,0 +1,3130 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="_csrf" content="4d53d77f-0d90-46c8-905a-9350ea0cc3dd"/>
+<meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+<meta name="naver-site-verification" content="15cf653cbf333577dbfb353d19478c774e5a5c56"/>
+<meta name="google-site-verification" content="aYQYOuk02oJ_74mXyJ3T0l2VekG8K4cwUUnzHIupBr0" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.samsungena.com">
+<meta property="og:image" content="https://www.samsungena.com/resources/kr/images/common/og_img_ena_v2.jpg">
+<meta property="og:site_name" content="SAMSUNG E&A">
+<meta property="og:title" content="삼성E&A">
+<meta property="og:description" content="삼성E&A는 글로벌 에너지 종합 솔루션 기업입니다.">
+<link rel="shortcut icon" type="image/x-icon" href="/resources/kr/images/common/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/resources/kr/css/plugin/swiper-4.5.1.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/kr/css/plugin/lightbox.min.css">
+<!-- 메인개편추가 -->
+<link rel="stylesheet" type="text/css" href="/resources/kr/css/plugin/splitting.css">
+<link rel="stylesheet" type="text/css" href="/resources/kr/css/main.min.css">
+<!-- // 메인개편추가 -->
+<!-- <script>
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="_csrf"]').attr('content')
+    }
+});
+</script> -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",
+"name": "SAMSUNG E&A",
+"alternateName": ["삼성이앤에이", "삼성E&A", "samsungena.com"],
+"url": "https://www.samsungena.com"
+}
+</script>
+<meta name="keywords" content="삼성E&A, 삼성E&A 소개, 삼성E&A 사업, 삼성E&A 비즈니스, 삼성E&A 소식, 삼성E&A 채용, 삼성E&A 프로젝트, 삼성E&A 뉴스, 엔지니어링">
+<meta name="description" content="삼성E&A는 글로벌 에너지 종합 솔루션 기업입니다.">
+<title>삼성E&A</title>
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap" class="wrap main-header">
+    
+
+<!-- header -->
+<div id="header" class="header">
+    <div class="header_wrap" data-fixed="none">
+        <div class="header_inner">
+            <h1 class="logo"><a href="/kr/" onclick="gtag('event', 'CI', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span class="blind">삼성E&amp;A</span></a></h1>
+            <a href="javascript:void(0);" class="btn_nav"><span class="blind">메뉴 보기</span></a>
+			<a href="javascript:void(0);" class="btn_global"><span class="blind">지법인 바로가기</span></a>
+            <div class="gnb_wrap">
+                <!-- util_menu -->
+                <div class="util_menu">
+                    <div class="lang_menu">
+                        <a href="javascript:void(0);" class="lang">KR</a>
+                        <div class="lang_list_inner">
+                            <ul class="lang_list">
+                                <li class="on"><a href="javascript:void(0);" onclick="gtag('event', 'Language_KR', {'event_category':'GNB', 'event_label':'SECL_KR'});">KR</a></li>
+                                <li><a href="javascript:void(0);" onclick="gtag('event', 'Language_EN', {'event_category':'GNB', 'event_label':'SECL_KR'});">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="btn_global"><span class="blind">지법인 바로가기</span></a>
+                    <a href="javascript:void(0);" class="btn_search"><span class="blind" onclick="gtag('event', 'Search', {'event_category':'GNB', 'event_label':'SECL_KR'});">검색하기</span></a>
+                    <a href="javascript:void(0);" class="btn_nav_close"><span class="blind">메뉴 닫기</span></a>
+                </div>
+                <!-- //util_menu -->
+
+				
+
+<!-- integrated_search_wrap -->
+<!-- [D] : header, container 각각 사용 -->
+<div class="integrated_search_wrap">
+    <div class="search_inner">
+        <div class="search_wrap">
+            <h2>통합검색</h2>
+            <form action="/kr/search" name="integratedSearch" id="integratedSearch">
+                <div class="search_wrap">
+                    <div class="input_area">
+                        <input type="text" id="integratedSrchTxt" name="keyword" value="" placeholder="검색어를 입력하세요.">
+                        <button type="submit" class="search_icon" title="검색" onclick="SECL.integratedSearchGtag('integratedSrchTxt','Search_Btn_','GNB');"></button>
+                    </div>
+                </div>
+                <div class="quicklinks_wrap">
+                    <p class="tit">Quicklinks</p>
+                    <div class="quicklinks_list">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="btn_integrated_search"><span class="blind">통합검색 닫기</span></a>
+    <div class="search_dim"></div>
+</div>
+<!-- //[D] : header, container 각각 사용 -->
+<!-- //integrated_search_wrap -->
+
+                <!-- gnb -->
+                <div class="gnb_scroll">
+                    <ul id="gnb" class="gnb">
+                        <li class="depth1">
+                            <a href="/kr/about-us/company/overview" class="depth1_link" onclick="gtag('event', 'AboutUs', {'event_category':'GNB', 'event_label':'SECL_KR'});">기업정보</a>
+                            <div class="sub_gnb about_us">
+                                <ul class="depth2_list">
+                                    <li class="depth2">
+                                        <a href="/kr/about-us/company/overview" class="depth2_link" onclick="gtag('event', 'AboutUs_Company', {'event_category':'GNB', 'event_label':'SECL_KR'});">회사소개</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/about-us/company/overview" class="depth3_link" onclick="gtag('event', 'AboutUs_Company_Overview', {'event_category':'GNB', 'event_label':'SECL_KR'});">회사개요</a></li>
+                                            <li class="depth3"><a href="/kr/about-us/company/vision" class="depth3_link" onclick="gtag('event', 'AboutUs_Company_Vision', {'event_category':'GNB', 'event_label':'SECL_KR'});">비전</a></li>
+                                            <li class="depth3"><a href="/kr/about-us/company/history" class="depth3_link" onclick="gtag('event', 'AboutUs_Company_History', {'event_category':'GNB', 'event_label':'SECL_KR'});">연혁</a></li>
+<!--                                             <li class="depth3"><a href="/kr/about-us/company/ci" class="depth3_link" onclick="gtag('event', 'AboutUs_Company_CIGuide', {'event_category':'GNB', 'event_label':'SECL_KR'});">CI 가이드</a></li> -->
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/about-us/leadership" class="depth2_link" onclick="gtag('event', 'AboutUs_Leadership', {'event_category':'GNB', 'event_label':'SECL_KR'});">경영진</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/about-us/global-office" class="depth2_link" onclick="gtag('event', 'AboutUs_GlobalOffices', {'event_category':'GNB', 'event_label':'SECL_KR'});">글로벌 오피스</a>
+                                    </li>
+                                    <li class="depth2 singleDepth banner">
+                                        <ul class="depth2_banner">
+                                            <li>
+                                                <a href="https://www.youtube.com/@Samsungena" target="_blank" onclick="gtag('event', 'Goto_Youtube', {'event_category':'GNB', 'event_label':'SECL_KR'});">
+                                                    <span class="txt_box">
+                                                        <span class="sub_tit">SAMSUNG E&amp;A</span>
+                                                        <span class="tit"><span class="ico_arrow">유튜브</span></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/kr/business/innovation/project-delivery-solution" class="depth1_link" onclick="gtag('event', 'Business', {'event_category':'GNB', 'event_label':'SECL_KR'});">사업영역</a>
+                            <div class="sub_gnb business">
+                                <ul class="depth2_list">
+                                    <li class="depth2 innovation">
+                                        <a href="/kr/business/innovation/project-delivery-solution" class="depth2_link" onclick="gtag('event', 'Business_Innovation', {'event_category':'GNB', 'event_label':'SECL_KR'});">솔루션</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/business/innovation/project-delivery-solution" class="depth3_link" onclick="gtag('event', 'Business_Innovation_ProjectDeliverySolution', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>Project Delivery Solution</span></a></li>
+                                            <li class="depth3"><a href="/kr/business/innovation/beyond-epc-solution" class="depth3_link" onclick="gtag('event', 'Business_Innovation_BeyondEPCSolution', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>Technology Solution</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/business/service" class="depth2_link" onclick="gtag('event', 'Business_Service', {'event_category':'GNB', 'event_label':'SECL_KR'});">서비스</a>
+                                    </li>
+                                    <li class="depth2 business_project">
+                                       <div class="depth2 depth2_banner">
+                                            <a href="/kr/business/business-project/oil-gas" class="depth2_link" onclick="gtag('event', 'Business_BusinessProject', {'event_category':'GNB', 'event_label':'SECL_KR'});">비즈니스/프로젝트</a>
+                                            <ul class="depth3_list">
+                                                <li class="depth3"><a href="/kr/business/business-project/oil-gas" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_OilGasProcessing', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>오일 &amp; <em class="block">가스 프로세싱</em></span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/refinery" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_Refinery', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>정유</span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/petrochemicals" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_Petrochemicals', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>석유화학</span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/green-solution" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_GreenSolution', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>Energy Transition</span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/environmental" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_Environmental', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>환경</span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/industrial" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_Industrial', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>산업설비</span></a></li>
+                                                <li class="depth3"><a href="/kr/business/business-project/bio" class="depth3_link" onclick="gtag('event', 'Business_BusinessProject_BIO', {'event_category':'GNB', 'event_label':'SECL_KR'});"><span>바이오</span></a></li>
+                                            </ul>
+                                       </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/kr/sustainability/overview" class="depth1_link" onclick="gtag('event', 'Sustainability', {'event_category':'GNB', 'event_label':'SECL_KR'});">지속가능경영</a>
+                            <div class="sub_gnb sustainability">
+                                <ul class="depth2_list">
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/sustainability/overview" class="depth2_link" onclick="gtag('event', 'Sustainability_Overview', {'event_category':'GNB', 'event_label':'SECL_KR'});">개요</a>
+                                    </li>
+                                    <li class="depth2">
+                                        <a href="/kr/sustainability/environmental/environment" class="depth2_link" onclick="gtag('event', 'Sustainability_Environmental', {'event_category':'GNB', 'event_label':'SECL_KR'});">환경</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/sustainability/environmental/environment" class="depth3_link" onclick="gtag('event', 'Sustainability_Environmental_Environment', {'event_category':'GNB', 'event_label':'SECL_KR'});">환경경영</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2">
+                                        <a href="/kr/sustainability/social/safety" class="depth2_link" onclick="gtag('event', 'Sustainability_Social', {'event_category':'GNB', 'event_label':'SECL_KR'});">사회</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/sustainability/social/safety" class="depth3_link" onclick="gtag('event', 'Sustainability_Social_Safety', {'event_category':'GNB', 'event_label':'SECL_KR'});">안전(S.A.Y)</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/social/quality" class="depth3_link" onclick="gtag('event', 'Sustainability_Social_quality', {'event_category':'GNB', 'event_label':'SECL_KR'});">품질</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/social/human-rights" class="depth3_link" onclick="gtag('event', 'Sustainability_Social_HumanRights', {'event_category':'GNB', 'event_label':'SECL_KR'});">인권</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/social/partnership" class="depth3_link" onclick="gtag('event', 'Sustainability_Social_Partnership', {'event_category':'GNB', 'event_label':'SECL_KR'});">상생</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/social/corporate-social-responsibility" class="depth3_link" onclick="gtag('event', 'Sustainability_Social_CorporateSocialResponsibility', {'event_category':'GNB', 'event_label':'SECL_KR'});">나눔</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2">
+                                        <a href="/kr/sustainability/governance/corporate-governance" class="depth2_link" onclick="gtag('event', 'Sustainability_Governence', {'event_category':'GNB', 'event_label':'SECL_KR'});">지배구조</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/sustainability/governance/corporate-governance" class="depth3_link" onclick="gtag('event', 'Sustainability_Governence_CorporateGovernance', {'event_category':'GNB', 'event_label':'SECL_KR'});">기업지배구조</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/governance/ethics-compliance" class="depth3_link" onclick="gtag('event', 'Sustainability_Governence_EthicsCompliance', {'event_category':'GNB', 'event_label':'SECL_KR'});">윤리·준법</a></li>
+                                            <li class="depth3"><a href="/kr/sustainability/governance/information-security" class="depth3_link" onclick="gtag('event', 'Sustainability_Governence_InformationSecurity', {'event_category':'GNB', 'event_label':'SECL_KR'});">정보보호</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 singleDepth banner">
+                                        <ul class="depth2_banner">
+                                            <li>
+                                                <a href="/filesview/kr/sustainability" target="_blank" onclick="gtag('event', 'Banner_SustainabilityReport_Download', {'event_category':'GNB_Sustainability', 'event_label':'SECL_KR'});">
+                                                    <span class="txt_box">
+                                                        <span class="tit"><span class="ico_download"><span class="block">지속가능경영보고서</span></span></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/kr/ir/overview" class="depth1_link" onclick="gtag('event', 'IR', {'event_category':'GNB', 'event_label':'SECL_KR'});">IR</a>
+                            <div class="sub_gnb">
+                                <ul class="depth2_list">
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/ir/overview" class="depth2_link" onclick="gtag('event', 'IR_Overview', {'event_category':'GNB', 'event_label':'SECL_KR'});">개요</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/ir/event-earnings" class="depth2_link" onclick="gtag('event', 'IR_IREventsEarningsData', {'event_category':'GNB', 'event_label':'SECL_KR'});">IR일정/실적자료</a>
+                                        <!-- <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/ir/event-earnings" class="depth3_link">IR일정/실적자료</a></li>
+                                            <li class="depth3"><a href="/kr/ir/event-earnings/earnings-release" class="depth3_link">실적발표 자료</a></li>
+                                            <li class="depth3"><a href="/kr/ir/event-earnings/ir-presentation" class="depth3_link">IR Presentation 자료</a></li> 
+                                        </ul> -->
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/ir/disclosure" class="depth2_link" onclick="gtag('event', 'IR_Disclosure', {'event_category':'GNB', 'event_label':'SECL_KR'});">공시정보</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/ir/notice/list" class="depth2_link" onclick="gtag('event', 'IR_Notice', {'event_category':'GNB', 'event_label':'SECL_KR'});">전자공고</a>
+                                    </li>
+                                    <li class="depth2">
+                                        <a href="/kr/ir/financial-info/financial-snapshot" class="depth2_link" onclick="gtag('event', 'IR_FinancialInfo', {'event_category':'GNB', 'event_label':'SECL_KR'});">재무정보</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/ir/financial-info/financial-snapshot" class="depth3_link" onclick="gtag('event', 'IR_FinancialInfo_FinancialSnapshot', {'event_category':'GNB', 'event_label':'SECL_KR'});">요약재무제표</a></li>
+                                            <li class="depth3"><a href="/kr/ir/financial-info/credit-rating" class="depth3_link" onclick="gtag('event', 'IR_FinancialInfo_CreditRating', {'event_category':'GNB', 'event_label':'SECL_KR'});">신용등급</a></li>
+                                            <li class="depth3"><a href="/kr/ir/financial-info/report" class="depth3_link" onclick="gtag('event', 'IR_FinancialInfo_AuditBusinessReport', {'event_category':'GNB', 'event_label':'SECL_KR'});">감사/사업보고서</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2">
+                                        <a href="/kr/ir/stock-info/listing-info" class="depth2_link" onclick="gtag('event', 'IR_StockInfo_ListingInfo', {'event_category':'GNB', 'event_label':'SECL_KR'});">주식정보</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/ir/stock-info/listing-info" class="depth3_link" onclick="gtag('event', 'IR_StockInfo_StockChart', {'event_category':'GNB', 'event_label':'SECL_KR'});">기본정보</a></li>
+                                            <li class="depth3"><a href="/kr/ir/stock-info/stock-chart" class="depth3_link" onclick="gtag('event', 'IR_StockInfo_Owner-Structure', {'event_category':'GNB', 'event_label':'SECL_KR'});">주가정보</a></li>
+                                            <!-- <li class="depth3"><a href="/kr/ir/stock-info/valuation" class="depth3_link">주가지표</a></li> -->
+                                            <li class="depth3"><a href="/kr/ir/stock-info/owner-structure" class="depth3_link" onclick="gtag('event', 'IR_StockInfo_OwnerStructure', {'event_category':'GNB', 'event_label':'SECL_KR'});">주주구성</a></li>
+                                            <li class="depth3"><a href="/kr/ir/stock-info/shareholder-return" class="depth3_link" onclick="gtag('event', 'IR_StockInfo_ShareholderReturn', {'event_category':'GNB', 'event_label':'SECL_KR'});">주주환원</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/ir/shareholders-meeting" class="depth2_link" onclick="gtag('event', 'IR_ShareholdersMeeting', {'event_category':'GNB', 'event_label':'SECL_KR'});">주주총회</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/kr/careers/job-description" class="depth1_link" onclick="gtag('event', 'Careers', {'event_category':'GNB', 'event_label':'SECL_KR'});">인재채용</a>
+                            <div class="sub_gnb careers">
+                                <ul class="depth2_list">
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/careers/talent-development" class="depth2_link" onclick="gtag('event', 'Careers_TalentDevelopment', {'event_category':'GNB', 'event_label':'SECL_KR'});">인재양성</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/careers/company-life" class="depth2_link" onclick="gtag('event', 'Careers_CompanyLife', {'event_category':'GNB', 'event_label':'SECL_KR'});">복리후생</a>
+                                    </li>
+                                   
+                                    <li class="depth2">
+                                        <a href="/kr/careers/join-us/job-opening/list" class="depth2_link" onclick="gtag('event', 'Careers_JoinUs', {'event_category':'GNB', 'event_label':'SECL_KR'});">채용정보</a>
+                                        <ul class="depth3_list">
+                                            <li class="depth3"><a href="/kr/careers/join-us/job-opening/list" class="depth3_link" onclick="gtag('event', 'Careers_JoinUs_JobOpening', {'event_category':'GNB', 'event_label':'SECL_KR'});">채용공고</a></li>
+                                            <li class="depth3"><a href="/kr/careers/join-us/recruitment-process" class="depth3_link" onclick="gtag('event', 'Careers_JoinUs_RecruitmentProcess', {'event_category':'GNB', 'event_label':'SECL_KR'});">채용절차</a></li>
+                                            <li class="depth3"><a href="/kr/careers/join-us/careers-faq" class="depth3_link" onclick="gtag('event', 'Careers_JoinUs_CareersFAQ', {'event_category':'GNB', 'event_label':'SECL_KR'});">채용FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth2 singleDepth banner">
+                                        <ul class="depth2_banner">
+                                            <li>
+                                                <a href="https://www.samsungcareers.com" target="_blank" title="새 창 열림" onclick="gtag('event', 'Banner_SamsungCareers', {'event_category':'GNB_Careers', 'event_label':'SECL_KR'});">
+                                                    <span class="txt_box">
+                                                        <span class="tit"><span class="ico_arrow"><span class="block">삼성그룹 인재채용</span> 사이트 바로가기</span></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/kr/newsroom/overview" class="depth1_link" onclick="gtag('event', 'Newsroom', {'event_category':'GNB', 'event_label':'SECL_KR'});">뉴스룸</a>
+                            <div class="sub_gnb news_room">
+                                <ul class="depth2_list">
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/newsroom/overview" class="depth2_link" onclick="gtag('event', 'Newsroom_Overview', {'event_category':'GNB', 'event_label':'SECL_KR'});">개요</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/newsroom/news/list" class="depth2_link" onclick="gtag('event', 'Newsroom_CorporateNews', {'event_category':'GNB', 'event_label':'SECL_KR'});">기업뉴스</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/newsroom/video/list" class="depth2_link" onclick="gtag('event', 'Newsroom_YouTube', {'event_category':'GNB', 'event_label':'SECL_KR'});">유튜브</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/newsroom/publications" class="depth2_link" onclick="gtag('event', 'Newsroom_Publications', {'event_category':'GNB', 'event_label':'SECL_KR'});">출판물</a>
+                                    </li>
+                                    <li class="depth2 singleDepth">
+                                        <a href="/kr/newsroom/project-gallery/list" class="depth2_link" onclick="gtag('event', 'Newsroom_ProjectLibrary', {'event_category':'GNB', 'event_label':'SECL_KR'});">프로젝트 라이브러리</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //gnb -->
+                <div class="gnbDim"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- //header -->
+<!-- global brand -->
+<div id="globalBranch" class="global-branch" data-lenis-prevent>
+	<div class="branch_inner">
+		<button type="button" id="branchClose" class="branchClose"><span class="blind">close</span></button>
+		<div class="branch_img">
+			<div class="branch_title">
+				<!-- 지법인 바로가기 텍스트 수정 -->
+				<span>Country Websites</span>
+			</div>
+			<i class="earth_img"></i>
+		</div>
+
+		<div class="branch_list">
+			<ul>
+				<li class="item">
+					<a href="https://india.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">India <i></i></span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://mexico.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">Mexico <i></i></span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://saudi.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">Saudi Arabia <i></i></span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://thailand.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">Thailand <i></i></span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://uae.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">UAE <i></i></span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://america.samsungena.com/kr" target="_blank" title="새창으로 열림">
+						<span class="name">United States <i></i></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="global-dim" id="globeDim"></div>
+<!-- // global brand -->
+    <!-- container -->
+    <div class="main renewal">
+		<div class="sec_visual">
+			<div class="loading_dim"><div class="dim_title"></div></div>
+			<div class="video_trigger"></div>
+			<div class="sticky">
+				<div class="bg_dim"></div>
+				<div class="m_sticky">
+					<div class="swiper-container slider_wrap">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide1">
+								<div class="inner">
+									<div class="txt">
+										<p>
+											Enabling a Sustainable<br>
+											Future AHEAD
+										</p>
+										<strong>앞선 기술로 더 나은 미래를 구현하는 엔지니어링 회사가 되겠습니다.</strong>
+									</div>
+								</div>
+								<div class="video">
+									<!-- 250428_메인수정 -->
+									<video muted playsinline data-video-src="main_visual01_video">
+										<source type="video/mp4">
+									</video>
+								</div>
+							</div>
+							<div class="swiper-slide slide2">
+								<div class="inner">
+									<div class="txt">
+										<p>
+											Shorten the Construction <br>
+											Period and Minimize Risks
+										</p>
+										<strong>삼성E&A는 다양한 기술을 고도화하고 지속적인 고객 만족을 위해 최선을 다하겠습니다.</strong>
+									</div>
+								</div>
+								<div class="video">
+									<!-- 250428_메인수정 -->
+									<video muted playsinline data-video-src="main_visual02_video">
+										<source type="video/mp4">
+									</video>
+								</div>
+							</div>
+							<div class="swiper-slide slide3">
+								<div class="inner">
+									<div class="txt">
+										<!-- <p>
+											Enabling a Sustainable<br>
+											Future AHEAD
+										</p>
+										<strong>앞선 기술로 더 나은 미래를 구현하는 엔지니어링 회사가 되겠습니다.</strong> -->
+									</div>
+								</div>
+								<div class="video">
+									<!-- 250428_메인수정 -->
+									<video muted playsinline data-video-src="main_visual03_video">
+										<source type="video/mp4">
+									</video>
+								</div>
+							</div>
+						</div>
+						<div class="controller">
+							<div class="pagination"></div>
+						</div>
+					</div>
+					<!-- news_wrap -->
+					<div class="news_wrap">
+						
+						
+						
+						<div class="top">
+							<a href="/kr/newsroom/news/view?idx=15725">
+								<div class="img_area">
+									
+									
+										<img src="/upload/news/07b3bc62b0e64e3487e8d89dc7bfbe4a.jpg" alt="">
+									
+									
+									
+								</div>
+								<div class="txt_area">
+									<p class="tit">삼성E&A, 탄소중립 · 에너지전환 · 기술혁신 박차</p>
+									<p class="date">2025.07.28</p>
+								</div>
+							</a>
+						</div>
+						
+						
+						
+						<div class="bot">
+							<ul>
+								<li class="img">
+									<a href="javascript:void(0);" data-popup data-vimeo-id="1077505544?h=8e613cab32">
+										<img src="/resources/kr/images/main/sec_visual_news_wrap_img2.png" alt="">
+									</a>
+								</li>
+								<li class="video">
+									<a href="/kr/about-us/global-office" title="글로벌 오피스 바로가기">
+										<div class="bg_video">
+											<video muted playsinline autoplay loop>
+												<source src="/resources/kr/video/main/sec_visual_news_wrap_globe.mp4" type='video/mp4;'/>
+											</video>
+										</div>
+										<div class="txt">
+											<p>Global<br>Offices</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 메인 팝업 -->
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- 메인 팝업 -->
+				</div>
+				<div class="cont_wrap">
+					<div class="inner">
+						
+							
+								<div class="row">
+									<div class="box">
+										<div class="tit">
+											<p>기업뉴스</p>
+											<a href="/kr/newsroom/news/list" class="btn arrow">더보기<i></i></a>
+										</div>
+										<div class="news_area">
+											<ul>
+												
+													<li>
+														<a href="/kr/newsroom/news/view?idx=15722">
+															<div class="img_area">
+																
+																	
+																	
+																		<img src="/resources/kr/images/main/sec_visual_news_wrap_default.png" alt="">
+																	
+																
+															</div>
+															<div class="txt_area">
+																<p class="tit">삼성E&A, 2분기 영업이익 1,809억원</p>
+																<p class="date">2025.07.24</p>
+															</div>
+														</a>
+													</li>
+												
+													<li>
+														<a href="/kr/newsroom/news/view?idx=15715">
+															<div class="img_area">
+																
+																	
+																		<img src="/upload/news/d4e2086cba9a4343bbe733e8438c178e.jpg" alt="">
+																	
+																	
+																
+															</div>
+															<div class="txt_area">
+																<p class="tit">삼성E&A, ‘글로벌 에너지 기술 리딩 기업’ 도약</p>
+																<p class="date">2025.06.23</p>
+															</div>
+														</a>
+													</li>
+												
+													<li>
+														<a href="/kr/newsroom/news/view?idx=15711">
+															<div class="img_area">
+																
+																	
+																		<img src="/upload/news/9e51ccafc67245c1ba2ad52a40d2bc6a.jpg" alt="">
+																	
+																	
+																
+															</div>
+															<div class="txt_area">
+																<p class="tit">글로벌 에너지 혁신 기업 총출동…20일 삼성E&A 테크 포럼 개최</p>
+																<p class="date">2025.06.16</p>
+															</div>
+														</a>
+													</li>
+												
+													<li>
+														<a href="/kr/newsroom/news/view?idx=15708">
+															<div class="img_area">
+																
+																	
+																		<img src="/upload/news/2714a58730dd42e4bb6fda59caedf46a.jpg" alt="">
+																	
+																	
+																
+															</div>
+															<div class="txt_area">
+																<p class="tit">삼성E&A, 그린수소 생산 솔루션 '컴퍼스H2' 출시, 글로벌 수소시장 본격 공략</p>
+																<p class="date">2025.05.22</p>
+															</div>
+														</a>
+													</li>
+												
+													<li>
+														<a href="/kr/newsroom/news/view?idx=15701">
+															<div class="img_area">
+																
+																	
+																	
+																		<img src="/resources/kr/images/main/sec_visual_news_wrap_default.png" alt="">
+																	
+																
+															</div>
+															<div class="txt_area">
+																<p class="tit">삼성E&A, 1분기 영업이익 1,573억원</p>
+																<p class="date">2025.04.24</p>
+															</div>
+														</a>
+													</li>
+												
+											</ul>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+								</div>
+							
+							
+						
+						<div class="row">
+							<div class="box">
+								<div class="tit">
+									<p>인재채용</p>
+								</div>
+								<div class="life_area_container">
+									<a href="/kr/careers/talent-development" class="life_area">
+										<p>인재양성</p>
+										<button type="button" class="btn arrow">더보기<i></i></button>
+										<div class="swiper-slide">
+											<img src="/resources/kr/images/main/sec_visual_life_career_img01.jpg" alt="">
+										</div>
+									</a>
+									<a href="/kr/careers/company-life" class="life_area">
+										<p>복리후생</p>
+										<button type="button" class="btn arrow">더보기<i></i></button>
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img01.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img02.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img03.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img04.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img05.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img06.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img07.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img08.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img09.jpg" alt="">
+												</div>
+												<div class="swiper-slide">
+													<img src="/resources/kr/images/main/sec_visual_life_img10.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							
+							
+							
+							<div class="box">
+								<div class="tit">
+									<p>유튜브</p>
+									<a href="/kr/newsroom/video/list" class="btn arrow">더보기<i></i></a>
+								</div>
+								<div class="youtube_area">
+									<a href="javascript:void(0);" data-popup data-youtube-id="E_envkXlW90">
+										
+										
+										<p class="img"><img src="/upload/pr/8f9763d0f51040af89a7f0984cf174f2.jpg" alt=""></p>
+										
+										
+										
+									</a>
+								</div>
+							</div>
+							
+							
+							
+						</div>
+						<div class="row">
+							<div class="box">
+								<div class="tit">
+									<p>IR</p>
+									<a href="/kr/ir/overview" class="btn arrow">더보기<i></i></a>
+								</div>
+								<div class="ir_area">
+									
+									
+									
+									<div class="board">
+										<div class="sub_tit">
+											<p>2025년 2분기 실적자료</p>
+											<span>2025.07.24</span>
+										</div>
+										<ul>
+											
+											
+											
+											<li>
+											<a href="javascript:fn_download(291)" onclick="downloadFile('ir',291); gtag('event', 'Download_Btn_2025년 2분기 실적자료_실적자료 다운로드', {'event_category':'IR_IREventsEarningsData', 'event_label':'SECL_KR'});" class="button download" title="실적자료 다운로드">
+												<span class="txt">실적자료 다운로드</span>
+												<i></i>
+											</a>
+											</li>
+											
+											
+											<li>
+											<a href="javascript:fn_download(292)" onclick="downloadFile('ir',292); gtag('event', 'Download_Btn_2025년 2분기 실적자료_Fact Sheet 다운로드', {'event_category':'IR_IREventsEarningsData', 'event_label':'SECL_KR'});" class="button download" title="Fact Sheet 다운로드">
+												<span class="txt">Fact Sheet 다운로드</span>
+												<i></i>
+											</a>
+											</li>
+											
+										</ul>
+									</div>
+									
+									
+									
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="tit">
+									<p>출판물</p>
+								</div>
+								<div class="report_area">
+									<ul>
+										<li>
+											<a href="/filesview/kr/sustainability">
+												<div class="img">
+													<img src="/resources/kr/images/main/sec_visual_cont_wrap_report_img1.png" alt="지속가능경영">
+												</div>
+												<div class="txt">
+													<p>지속가능경영</p>
+													<div class="btn arrow">더보기<i></i></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="/filesview/CompassH2%20Brochure.pdf?folder=%2fupload%2fpublishing%2f&storedfile=926eba5148a749e78e44757febc191e0.pdf">
+												<div class="img">
+													<img src="/resources/kr/images/main/sec_visual_cont_wrap_report_img2_1.jpg" alt="CompassH2">
+												</div>
+												<div class="txt">
+													<p>CompassH2</p>
+													<div class="btn arrow">더보기<i></i></div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec_solution">
+			<div class="cont_wrap">
+				<div class="con con1">
+					<div class="mask_trigger"></div>
+					<div class="sticky">
+						<div class="txt_area">
+							<div class="inner">
+								<div class="tit" data-m-motion>
+									<strong>
+										Project Delivery<br>
+										Solution
+									</strong>
+									<p>
+										삼성E&A는 디지털 트랜스포메이션에 기반한 EPC 전 분야의<br>
+										프로젝트 수행 혁신을 통해 고객의 가치 제고에 기여하겠습니다.
+									</p>
+								</div>
+								<div class="m_video">
+									<div class="video video1">
+										<!-- 250428_메인수정 -->
+										<video muted playsinline loop data-video-src="sec_solution_con01_video">
+											<source type="video/mp4">
+										</video>
+										<!-- <div class="text">
+											<p>Our Solution</p>
+											<i><img src="/resources/kr/images/main/sec_solution_con01_video_logo.svg" alt=""></i>
+										</div> -->
+									</div>
+								</div>
+								<div class="list" data-m-motion>
+									<div class="acco_area active">
+										<div class="top">
+											<button type="button">Design<img src="/resources/kr/images/main/sec_solution_con01_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc" style="display:block;">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content1"><p>EDP</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content2"><p>S-PEpC</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content3"><p>L-EPC</p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="acco_area">
+										<div class="top">
+											<button type="button">Build<img src="/resources/kr/images/main/sec_solution_con01_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content4"><p>EP+F</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content7"><p>Smart Shop</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content5"><p>Modularization</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content8"><p>3D Printing</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content6"><p>Precast Concrete</p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="acco_area">
+										<div class="top">
+											<button type="button">Integrate<img src="/resources/kr/images/main/sec_solution_con01_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content11"><p>SPP</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content9"><p>S-AWP</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/project-delivery-solution?page=content10"><p>S-ARMS</p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="img_area pc_video">
+							<div class="video video1">
+								<!-- 250428_메인수정 -->
+								<video muted playsinline loop data-video-src="sec_solution_con01_video">
+									<source type="video/mp4">
+								</video>
+								<!-- <div class="text">
+									<p>Our Solution</p>
+									<i><img src="/resources/kr/images/main/sec_solution_con01_video_logo.svg" alt=""></i>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="con con2">
+					<div class="mask_trigger"></div>
+					<div class="sticky">
+						<div class="txt_area">
+							<div class="inner">
+								<div class="tit" data-m-motion>
+									<strong>
+										Technology<br>
+										Solution
+									</strong>
+									<p>
+										삼성E&A는 에너지 패러다임의 대전환을 맞아<br>
+										탄소관리, 탄소중립, 환경인프라 등 친환경 비즈니스를 확대해 나가고 있습니다.
+									</p>
+								</div>
+								<div class="m_video">
+									<div class="video video2">
+										<!-- 250428_메인수정 -->
+										<video muted playsinline loop data-video-src="sec_solution_con02_video">
+											<source type="video/mp4">
+										</video>
+										<div class="text">
+											<i><img src="/resources/kr/images/main/sec_solution_con02_video_logo_R.svg" alt=""></i>
+										</div>
+									</div>
+								</div>
+								<div class="list" data-m-motion>
+									<div class="acco_area active">
+										<div class="top">
+											<button type="button">Low<img src="/resources/kr/images/main/sec_solution_con02_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc" style="display:block;">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content3"><p>Carbon Capture</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content14"><p>Blue H<sub>2</sub> &amp; NH<sub>3</sub></p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content15"><p>Bio SAF</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content16"><p>Efficien-C<sup>TM</sup></p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content21"><p>Intelligen-C<sup>TM</sup></p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="acco_area">
+										<div class="top">
+											<button type="button">Zero<img src="/resources/kr/images/main/sec_solution_con02_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content17"><p>Green H<sub>2</sub> &amp; NH<sub>3</sub></p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content18"><p>e-SAF</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content19"><p>e-Methanol</p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="acco_area">
+										<div class="top">
+											<button type="button">Circle<img src="/resources/kr/images/main/sec_solution_con02_acco_area_logo_R.svg" alt=""><i></i></button>
+										</div>
+										<div class="desc">
+											<ul data-lenis-prevent>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content11"><p>수처리</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content6"><p>폐기물</p><i></i></a></li>
+												<li><a href="/kr/business/innovation/beyond-epc-solution?page=content5"><p>대기방지</p><i></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="img_area pc_video">
+							<div class="video video2">
+								<!-- 250428_메인수정 -->
+								<video muted playsinline loop data-video-src="sec_solution_con02_video">
+									<source type="video/mp4">
+								</video>
+								<div class="text">
+									<i><img src="/resources/kr/images/main/sec_solution_con02_video_logo_R.svg" alt=""></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec_business">
+			<div class="sticky">
+				<div class="btn_area">
+					<p class="sub_tit pc">Business</p>
+					<button type="button" class="m_select_btn">오일&가스 프로세싱</button>
+					<ul>
+						<li class="active"><button type="button" data-con="con1">오일&가스 프로세싱</button></li>
+						<li><button type="button" data-con="con2">정유</button></li>
+						<li><button type="button" data-con="con3">석유화학</button></li>
+						<li><button type="button" data-con="con4">에너지 트렌지션</button></li>
+						<li><button type="button" data-con="con5">환경</button></li>
+						<li><button type="button" data-con="con6">산업설비</button></li>
+						<li><button type="button" data-con="con7">바이오</button></li>
+						<!-- <li><button type="button" data-con="popup">Local Projects</button></li> -->
+					</ul>
+				</div>
+				<div class="cont_area">
+					<div class="con active" data-con="con1">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con1_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">오일&가스 프로세싱</p>
+								<a href="/kr/business/business-project/oil-gas" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=46" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>Algeria</li>
+														
+													</ol>
+													<p class="tit">TIMIMOUN Gas Field Development GOSP Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/44dbef43e6a74849ba865d8ac9f2f226.png" alt="TIMIMOUN Gas Field Development GOSP Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=95" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>Thailand</li>
+														
+													</ol>
+													<p class="tit">PTT Wangnoi Compressor Station Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/0ba13486cba54b378819de9312dd175b.jpg" alt="PTT Wangnoi Compressor Station Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=45" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2017</li>
+														
+														
+														<li>Iraq </li>
+														
+													</ol>
+													<p class="tit">Eni Zubair Oil Field Development GOSP Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/75d6f9a0fdd54f42a02212ca3745385a.png" alt="Eni Zubair Oil Field Development GOSP Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=80" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2017</li>
+														
+														
+														<li>Malaysia</li>
+														
+													</ol>
+													<p class="tit">Petronas Carigali Terengganu Gas Terminal (TGAST) Development Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/f7484bf550bb4c9bb66312db7a574a0e.jpg" alt="Petronas Carigali Terengganu Gas Terminal (TGAST) Development Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=82" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2017</li>
+														
+														
+														<li>Iraq</li>
+														
+													</ol>
+													<p class="tit">Gazprom Badra GSP Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/1bb83c3daec04362857713c24d2b817b.jpg" alt="Gazprom Badra GSP Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=58" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2016</li>
+														
+														
+														<li>Indonesia</li>
+														
+													</ol>
+													<p class="tit">MCL Banyu Urip GOSP Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/255f07c099d141779e7ef6c84ea328b0.jpg" alt="MCL Banyu Urip GOSP Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con2">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con2_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">정유</p>
+								<a href="/kr/business/business-project/refinery" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=76" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2022</li>
+														
+														
+														<li>Oman</li>
+														
+													</ol>
+													<p class="tit">DRPIC Duqm Refinery Package#2 Project </p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/cc98dfdc1d2f46a59397a8b41128beeb.jpg" alt="DRPIC Duqm Refinery Package#2 Project ">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=78" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2023</li>
+														
+														
+														<li>UAE</li>
+														
+													</ol>
+													<p class="tit">ADNOC Refining Crude Flexibility Project(CFP)</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/5d4c2660322843149f06b3545f2d3463.jpg" alt="ADNOC Refining Crude Flexibility Project(CFP)">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=49" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>Kuwait</li>
+														
+													</ol>
+													<p class="tit">KNPC Clean Fuel Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/c47332612354488da6e7698beb6c4ca9.png" alt="KNPC Clean Fuel Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=53" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>UAE</li>
+														
+													</ol>
+													<p class="tit">TAKREER Carbon Black & Delayed Coker(CBDC) Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/b363ddde27ea4260a96b4f27345b0107.png" alt="TAKREER Carbon Black & Delayed Coker(CBDC) Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=62" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>UAE </li>
+														
+													</ol>
+													<p class="tit">TAKREER RRE Package#3 U&O Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/1b3e74c2517d4a42a109cc4c4f294c59.jpg" alt="TAKREER RRE Package#3 U&O Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=51" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2016</li>
+														
+														
+														<li>Saudi Arabia</li>
+														
+													</ol>
+													<p class="tit">Luberef Yanbu Refinery Expansion Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/a5f25e4cd7f54712aa7c1fbab1fde3b0.png" alt="Luberef Yanbu Refinery Expansion Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con3">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con3_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">석유화학</p>
+								<a href="/kr/business/business-project/petrochemicals" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=79" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2021</li>
+														
+														
+														<li>Saudi Arabia </li>
+														
+													</ol>
+													<p class="tit">JUPC UNITED EO/EG III Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/3a6877f4e1404b1facaa996aea914d9f.jpg" alt="JUPC UNITED EO/EG III Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=77" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>Thailand </li>
+														
+													</ol>
+													<p class="tit">PTTGC Olefins Reconfiguration Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/833f3913ecbc423db6d9eedf1cd52727.jpg" alt="PTTGC Olefins Reconfiguration Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=74" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>Malaysia </li>
+														
+													</ol>
+													<p class="tit">Petronas RAPID Package#6A LLDPE Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/8dcc4fe51f814a1e9bf6486df16d5e24.png" alt="Petronas RAPID Package#6A LLDPE Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=71" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>Malaysia</li>
+														
+													</ol>
+													<p class="tit">Petronas RAPID Package#11 EO/EG Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/2531bac925874ca39e33853fd0aa4070.jpg" alt="Petronas RAPID Package#11 EO/EG Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=67" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>Azerbaijan</li>
+														
+													</ol>
+													<p class="tit">SOCAR Ammonia/Urea Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/cf0f7c44877847899b3f6d5561bd6db4.jpg" alt="SOCAR Ammonia/Urea Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=70" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>USA</li>
+														
+													</ol>
+													<p class="tit">Lotte Chemical MEG-1 Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/62af150467b24a888edfd5868772ecc5.jpg" alt="Lotte Chemical MEG-1 Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con4">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con4_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">에너지 트렌지션</p>
+								<a href="/kr/business/business-project/green-solution" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=117" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2027</li>
+														
+														
+														<li>Malaysia</li>
+														
+													</ol>
+													<p class="tit">Malaysia Sarawak H2biscus Project</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/9d5138f1702d401b92df937d9455ab14.jpg" alt="Malaysia Sarawak H2biscus Project">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con5">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con5_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">환경</p>
+								<a href="/kr/business/business-project/environmental" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=101" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>China</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 중국 시안 X2 유틸리티 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/0bf6e8b3e38346fdbbba33b1110da447.jpg" alt="Samsung Electronics 중국 시안 X2 유틸리티 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=109" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>Korea</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 평택 P2 Phase 1 수처리 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/8a20f20cb7cd4c7a9fcfee36780c4147.jpg" alt="Samsung Electronics 평택 P2 Phase 1 수처리 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=103" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>Korea</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 평택 P 공정용수처리 Phase 1 공사</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/f2f5e2feeaf1471f8a5397179ab7ac39.jpg" alt="Samsung Electronics 평택 P 공정용수처리 Phase 1 공사">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=107" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>Korea</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 화성 E 폐수처리공사</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/e3cd72d121fc4b67b3b83e7f168ae6ed.png" alt="Samsung Electronics 화성 E 폐수처리공사">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=98" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2017</li>
+														
+														
+														<li>Korea </li>
+														
+													</ol>
+													<p class="tit">아산시 아산지하수처리 및 재사용 사업</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/0db757f285e246a89104e29c3c8027b9.jpg" alt="아산시 아산지하수처리 및 재사용 사업">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=93" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2015</li>
+														
+														
+														<li>China</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 중국 X1 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/c87ac1ba177349dd8a2f28a65b9828dc.jpg" alt="Samsung Electronics 중국 X1 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con6">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con6_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">산업설비</p>
+								<a href="/kr/business/business-project/industrial" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=97" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2021</li>
+														
+														
+														<li>Hungary</li>
+														
+													</ol>
+													<p class="tit">롯데 알루미늄 헝가리 H 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/722c87f60afb4f919000732f220ff2d8.jpg" alt="롯데 알루미늄 헝가리 H 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=99" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>Hungary</li>
+														
+													</ol>
+													<p class="tit">Volta 헝가리 전지박 공장 Phase 1~2 공사</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/4772703bcacc4d758c92ace30bdbe8a4.jpg" alt="Volta 헝가리 전지박 공장 Phase 1~2 공사">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=102" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2020</li>
+														
+														
+														<li>Korea</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 평택 고덕 P2 UT동 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/7fa223c1ba6c4edea32db6e6064d5628.jpg" alt="Samsung Electronics 평택 고덕 P2 UT동 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=112" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2019</li>
+														
+														
+														<li>Czech</li>
+														
+													</ol>
+													<p class="tit">넥센 타이어 체코 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/5c0af23da40347179b4a88a76007660d.jpg" alt="넥센 타이어 체코 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=104" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>Korea</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 평택 고덕 P1 UT동 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectdetail/627a757f7ccf434e8798ad690a827b06.png" alt="Samsung Electronics 평택 고덕 P1 UT동 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=106" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2018</li>
+														
+														
+														<li>Vietnam</li>
+														
+													</ol>
+													<p class="tit">Samsung Electronics 베트남 SEHC CE 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/9709dcbb68f448628c2131898fea6b36.jpg" alt="Samsung Electronics 베트남 SEHC CE 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="con" data-con="con7">
+						<div class="bg" style="background-image:url('/resources/kr/images/main/sec_business_con7_bg.jpg');"></div>
+						<div class="inner">
+							<div class="tit">
+								<p class="sub_tit mo">Business</p>
+								<p data-splitting="chars">바이오</p>
+								<a href="/kr/business/business-project/bio" class="btn more">바로가기<i></i></a>
+							</div>
+							<div class="slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=100" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2021</li>
+														
+														
+														<li>Korea </li>
+														
+													</ol>
+													<p class="tit">이연제약 에버그린 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/5fc1cba3197e4da4a5c6c240ebc7eeff.jpg" alt="이연제약 에버그린 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="/kr/newsroom/project-gallery/view?idx=96" class="item">
+												<div class="txt_area">
+													<ol>
+														
+														<li>2025</li>
+														
+														
+														<li>Korea </li>
+														
+													</ol>
+													<p class="tit">삼성바이오로직스 Phase 1~6 프로젝트</p>
+												</div>
+												<div class="img_area">
+                                                        
+                                                        
+                                                        <img src="/upload/projectgallery/b1d0866fec874ec5b83722dc06502da9.jpg" alt="삼성바이오로직스 Phase 1~6 프로젝트">
+                                                        
+                                                        
+                                                        
+                                                        
+													<p>
+														
+													</p>
+												</div>
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="careers" class="sec_careers">
+			<div class="mask_motion_trigger"></div>
+			<div class="video_trigger"></div>
+			<div class="sticky">
+				<div class="bg">
+					<div class="video">
+						<!-- 250428_메인수정 -->
+						<video muted playsinline loop data-video-src="sec_careers_bg">
+							<source type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="inner">
+					<div class="txt_wrap">
+						<span>Careers</span>
+						<strong>
+							창의적이고 도전적인 여러분과 함께<br>
+							더 큰 미래를 만들어갑니다
+						</strong>
+					</div>
+					<div class="list_wrap">
+						<div class="acco_area">
+							<div class="top">
+								<button type="button" class="button">
+									<i class="lottie" id="lottie1"></i>
+									<i class="icon"></i>
+									직무 인터뷰
+								</button>
+							</div>
+							<div class="desc">
+								<ul data-lenis-prevent>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075168810?h=a2cfb93000">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_01.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>사업개발</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075169745?h=82ea63b8ee">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_02.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>사업관리</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075243170?h=6dd48e10b5">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_03.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>설계</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075175819?h=bb1424542d">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_04.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>시공관리</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075162903?h=ed999168f4">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_13.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>시운전</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075169921?h=f244499305">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_05.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>안전관리</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075171197?h=dced087982">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_06.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>조달</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075173679?h=f8829fe8eb">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_07.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>품질관리</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075167262?h=356fbfbeef">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_08.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>영업&마케팅</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075163929?h=b43afa00c7">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_09.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>인사</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075175091?h=f647d8f2a7">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_10.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>홍보</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075164939?h=c73fa28236">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_11.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>재무</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" data-popup data-vimeo-id="1075161752?h=a42e1c02d2">
+											<div class="img_area">
+												<img src="/resources/kr/images/main/interview_thumb_12.jpg" alt="">
+											</div>
+											<div class="txt_area">
+												<p>금융</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="acco_area">
+							<div class="top">
+								<a href="/kr/careers/talent-development" class="button">
+									<i class="lottie" id="lottie2"></i>
+									<i class="icon"></i>
+									인재양성
+								</a>
+							</div>
+						</div>
+						<div class="acco_area">
+							<div class="top">
+								<a href="/kr/careers/company-life" class="button">
+									<i class="lottie" id="lottie3"></i>
+									<i class="icon"></i>
+									복리후생
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec sec_esg" data-motion>
+			<div class="sticky">
+				<div class="bg_wrap">
+					<div class="bg">
+						<ul>
+							<li class="active">
+								<div class="bg" style="background-image:url('/resources/kr/images/main/sec_esg_bg1.jpg')"></div>
+							</li>
+							<li>
+								<div class="bg" style="background-image:url('/resources/kr/images/main/sec_esg_bg2.jpg')"></div>
+							</li>
+							<li>
+								<div class="bg" style="background-image:url('/resources/kr/images/main/sec_esg_bg3.jpg')"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="overlay_bg">
+						<div class="grid"></div>
+						<div class="grid">
+							<div class="txt_area">
+								<p class="txt1">E</p>
+								<div class="desc hide">
+									<p class="txt2"><br></p>
+									<p class="txt3"><br><br></p>
+								</div>
+							</div>
+						</div>
+						<div class="grid">
+							<div class="txt_area">
+								<p class="txt1">S</p>
+								<div class="desc hide">
+									<p class="txt2"><br></p>
+									<p class="txt3"><br><br></p>
+								</div>
+							</div>
+						</div>
+						<div class="grid">
+							<div class="txt_area">
+								<p class="txt1">G</p>
+								<div class="desc hide">
+									<p class="txt2"><br></p>
+									<p class="txt3"><br><br></p>
+								</div>
+							</div>
+						</div>
+						<div class="grid"></div>
+					</div>
+					<div class="overlay_text">
+						<div class="txt_area">
+							<p class="txt1 hide">ESG</p>
+							<div class="desc">
+								<p class="txt2" data-splitting="chars">Sustainability</p>
+								<p class="txt3" data-splitting="chars">
+									AHEAD 기반 ESG 체계로<br>
+									지속가능한 사회를 실현합니다
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="list_wrap">
+					<div class="con">
+						<div class="inner">
+							<p class="small">E</p>
+							<div class="top">
+								<p class="big">E</p>
+								<div class="desc">
+									<h4>환경</h4>
+									<p><b>E</b>nvironmental</p>
+									<a href="/kr/sustainability/environmental/environment" class="btn more">바로가기<i></i></a>
+								</div>
+							</div>
+							<div class="bot">
+								<div class="txt_area">
+									<p>EPC 전 과정에 걸친 친환경 활동을 기반으로 한 지속가능한 사회를 건설합니다.</p>
+									<ul>
+										<li><a href="/kr/sustainability/environmental/environment">#환경경영 비전</a></li>
+										<li><a href="/filesview/kr/sustainability">#지속가능경영보고서</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="con">
+						<div class="inner">
+							<p class="small">S</p>
+							<div class="top">
+								<p class="big">S</p>
+								<div class="desc">
+									<h4>사회</h4>
+									<p><b>S</b>ocial</p>
+									<a href="/kr/sustainability/social/safety" class="btn more">바로가기<i></i></a>
+								</div>
+							</div>
+							<div class="bot">
+								<div class="txt_area">
+									<p>안전을 가장 소중한 가치로 여기며 국내외 현장에서 다양한 활동을 전개하고 있습니다.</p>
+									<ul>
+										<li><a href="/kr/sustainability/social/safety">#안전(S.A.Y)</a></li>
+										<li><a href="/kr/sustainability/social/quality">#품질</a></li>
+										<li><a href="/kr/sustainability/social/human-rights">#인권</a></li>
+										<li><a href="/kr/sustainability/social/partnership">#상생</a></li>
+										<li><a href="/kr/sustainability/social/corporate-social-responsibility">#나눔</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="con">
+						<div class="inner">
+							<p class="small">G</p>
+							<div class="top">
+								<p class="big">G</p>
+								<div class="desc">
+									<h4>지배구조</h4>
+									<p><b>G</b>overnance</p>
+									<a href="/kr/sustainability/governance/corporate-governance" class="btn more">바로가기<i></i></a>
+								</div>
+							</div>
+							<div class="bot">
+								<div class="txt_area">
+									<p>건전하고 투명한 지배구조로 책임 경영을 실천하고 소통 체계를 강화하고 있습니다.</p>
+									<ul>
+										<li><a href="/kr/sustainability/governance/corporate-governance">#기업지배구조</a></li>
+										<li><a href="/kr/sustainability/governance/ethics-compliance">#윤리·준법</a></li>
+										<li><a href="/kr/sustainability/governance/information-security">#정보보호</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec_board">
+			<div class="top" data-motion>
+				<div class="sticky">
+					<div class="inner">
+						<div class="tit">
+							<p data-splitting="chars">삼성E&A의 생생한 소식을 확인하세요.</p>
+						</div>
+						<div class="list">
+						
+						
+						
+							<div class="left">
+								<a href="javascript:;" data-popup data-youtube-id="E_envkXlW90">
+									<div class="img_area">
+									
+									
+									<p class="img"><img src="/upload/pr/8f9763d0f51040af89a7f0984cf174f2.jpg" alt=""></p>
+									
+									
+									
+									</div>
+									<div class="txt_area">
+										<span>2025.07.30</span>
+										<p>삼성E&amp;A의 14번째 지속가능경영보고서를 소개합니다🤗 (ENG SUB)</p>
+									</div>
+								</a>
+							</div>
+						
+						
+						
+						
+						
+							<div class="right">
+								<ul data-lenis-prevent>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="EtQ5cB00BEo">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/EtQ5cB00BEo/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[EPC위키📖 EP.12] EPC 산업에서의 '품질'이란?!🌐👀 (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="EewxMV49rAg">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/EewxMV49rAg/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													 2025 세계 환경의 날 with 삼성E&amp;A 🌏😊 (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="7PurTBgZYEo">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/7PurTBgZYEo/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													 [EPC위키📖 EP.11] EPC 안전보호구 가이드🔍 안전ootd (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="IjxLmHXy9lY">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/IjxLmHXy9lY/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[EPC실시간트렌드💡 EP.04] 탄소 중립의 게임 체인저, '탄소포집'🌎 (ENG SUB) 
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="SJc26U4MXuE">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/SJc26U4MXuE/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[Quick터뷰 EP.04] 삼성에서 살아남는 법, 알려드림👀 feat. 3N년차 임원즈│장기 근속자 편✨ (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="ZhHtjM5YfMQ">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/ZhHtjM5YfMQ/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													2025년 상반기 신입사원, 블록으로 쌓아 올린 우리의 꿈!⭐ (feat. 레고 시리어스 플레이)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="fWEwBl7MMNE">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/fWEwBl7MMNE/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[EPC위키📖 EP.10] EPC 프로젝트에서 도면이란?! 👀 (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="duLVHzi3jG8">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/duLVHzi3jG8/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[EPC위키📖 EP.09] EPC 산업에서의 &#39;안전&#39;이란?!👀 (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="-jGGho7YxnY">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/-jGGho7YxnY/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[EPC위키📖 EP.08] EPC 프로젝트의 입찰 과정은?!👀 (ENG SUB) 
+												</p>
+											</div>
+										</a>
+									</li>
+									
+									<li>
+										<a href="javascript:;" data-popup data-youtube-id="tH4ehbCX0O4">
+											<div class="img_area">
+
+
+
+
+
+												<p class="img"><img src="https://img.youtube.com/vi/tH4ehbCX0O4/0.jpg" alt=""></p>
+
+
+											</div>
+											<div class="txt_area">
+												<p>
+													[SAMSUNG E&A] ADIPEC 2024 삼성E&A 부스 한눈에 보기!👀 (ENG SUB)
+												</p>
+											</div>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						
+						
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot">
+				<div class="inner">
+					<div class="tab_btn">
+						<div class="scroll">
+							<ul>
+								<li class="active"><button type="button" data-tab="con1">EPC 인사이트</button></li>
+								<li><button type="button" data-tab="con2">E&A 인사이드</button></li>
+								<li><button type="button" data-tab="con3">Enabling ESG</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab_con">
+						<div class="con con1 active">
+							<div class="list slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="EtQ5cB00BEo">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/EtQ5cB00BEo/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="7PurTBgZYEo">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/7PurTBgZYEo/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="IjxLmHXy9lY">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/IjxLmHXy9lY/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="fWEwBl7MMNE">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/fWEwBl7MMNE/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="duLVHzi3jG8">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/duLVHzi3jG8/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="-jGGho7YxnY">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/-jGGho7YxnY/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="0YgYAvExK98">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/0YgYAvExK98/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="p3-gbtCtbnQ">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/p3-gbtCtbnQ/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="JRsQrrldJBc">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/JRsQrrldJBc/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="qeX3aYHL4jU">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/qeX3aYHL4jU/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+						<div class="con con2">
+							<div class="list slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="SJc26U4MXuE">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/SJc26U4MXuE/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="ZhHtjM5YfMQ">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/ZhHtjM5YfMQ/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="KGvhc9bLAeo">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/KGvhc9bLAeo/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="VjLATeJeM4c">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/VjLATeJeM4c/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="sagZJrVV-dU">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/sagZJrVV-dU/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="TfaiiNyOZdM">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/TfaiiNyOZdM/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="LaVh_S9_AY0">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/LaVh_S9_AY0/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="sSH--AXqYGY">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/sSH--AXqYGY/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="Lkvp42oTdNk">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/Lkvp42oTdNk/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="oXX7yEqFr4w">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/oXX7yEqFr4w/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+						<div class="con con3">
+							<div class="list slider_wrap">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="E_envkXlW90">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/E_envkXlW90/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="EewxMV49rAg">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/EewxMV49rAg/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="Y6AyPN6xiVE">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/Y6AyPN6xiVE/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="arUlXj0uyEQ">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/arUlXj0uyEQ/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="HbF6l1b32vA">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/HbF6l1b32vA/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										<div class="swiper-slide">
+											<a href="javascript:;" data-popup data-youtube-id="6SmzFxKx4yM">
+
+
+
+
+
+											<img src="https://img.youtube.com/vi/6SmzFxKx4yM/0.jpg" alt="">
+
+
+											</a>
+										</div>
+										
+										
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layer_popup">
+			<div class="dim"></div>
+			<div class="cont">
+				<button type="button" class="close_btn">팝업 닫기</button>
+				<div id="videoView" class="youtube_view"></div>
+			</div>
+		</div>
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    
+<!-- footer -->
+<div id="footer" class="footer">
+    <div class="footer_inner">
+		<div class="top">
+			<div class="menu_list">
+				<span><a href="/kr/privacy" onclick="gtag('event', 'PrivacyPolicy', {'event_category':'FOOTER', 'event_label':'SECL_KR'});"><strong>개인정보처리방침</strong></a></span>
+				<span><a href="javascript:void(0);" id="btnEmailPopup" onclick="gtag('event', 'EmailSecurity', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">이메일무단수집거부</a></span>
+				<span><a href="/kr/cctv" onclick="gtag('event', 'cctv', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">영상정보처리기기 운영관리방침</a></span>
+				<span><a href="/kr/contact-us" onclick="gtag('event', 'YourMessage', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">고객의 소리</a></span>
+				<span><a href="/kr/site-map" onclick="gtag('event', 'Sitemap', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">사이트맵</a></span>
+				<br>
+				<span><a href="/kr/legal-notice" onclick="gtag('event', 'LegalNotice', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">법적고지</a></span>
+				<span><a href="/kr/security-report" onclick="gtag('event', 'SecurityReportCenter', {'event_category':'FOOTER', 'event_label':'SECL_KR'});">보안신고센터</a></span>
+				<span><a href="http://www.audit.samsungena.com" target="_blank" title="새창으로 열림">윤리경영/제보</a></span>
+				<span><a href="https://partner.samsungena.co.kr" target="_blank" title="새창으로 열림">파트너포털</a></span>
+				<span><a href="https://project.samsungena.co.kr" target="_blank" title="새창으로 열림">프로젝트포털</a></span>
+				<span><a href="https://enself.v-pass.net:8097/" target="_blank" title="새창으로 열림">내방신청</a></span>
+			</div>
+		</div>
+		<div class="bot">
+			<div class="box">
+				<div class="btn_wrap">
+					<a href="https://www.youtube.com/@Samsungena" target="_blank" title="새창으로 열림" class="link1" onclick="gtag('event', 'Goto_Youtube', {'event_category':'FOOTER', 'event_label':'SECL_KR'});"><span class="blind">유튜브</span></a>
+					<a href="https://www.facebook.com/SAMSUNGEnA" target="_blank" title="새창으로 열림" class="link2" onclick="gtag('event', 'Goto_Facebook', {'event_category':'FOOTER', 'event_label':'SECL_KR'});"><span class="blind">페이스북</span></a>
+					<a href="https://www.linkedin.com/company/samsungena" target="_blank" title="새창으로 열림" class="link3" onclick="gtag('event', 'Goto_Linkedin', {'event_category':'FOOTER', 'event_label':'SECL_KR'});"><span class="blind">in</span></a>
+					<a href="http://www.e-gen.co.kr" target="_blank" title="새창으로 열림" class="link5" onclick="gtag('event', 'Goto_Ecogeneration', {'event_category':'FOOTER', 'event_label':'SECL_KR'});"><span class="blind">꿈나무 푸른교실</span></a>
+				</div>
+			</div>
+			<div class="box">
+				<a href="/kr/" class="logo"><span class="blind">삼성E&amp;A</span></a>
+				<div class="address_area">
+					<p class="address">서울특별시 강동구 상일로6길 26 삼성E&amp;A <span>(05288) 대표전화 +82-2-2053-3000</span></p>
+					<p class="copyright">Copyright. SAMSUNG E&amp;A All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+<!-- //footer -->
+<div id="topBtn" style="display: none;">
+    <button type="button"><span class="blind">상단으로 바로가기</span></button>
+</div>
+
+<!-- 이메일무단수집거부 팝업 -->
+<div id="emailPopup" class="popup_wrap email">
+    <div class="pop_inner inner">
+        <div class="popup">
+            <button type="button" class="pop_close_btn"><span class="blind">팝업 닫기</span></button>
+            <h5 class="bottom_line">이메일무단수집거부</h5>
+            <p class="p2">본 홈페이지에서 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적인 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+            이를 위반시 <span class="point_blue">「정보통신망이용촉진 및 정보보호 등에 관한 법률」에 의해 형사처벌 됨</span>을 유념하시기 바랍니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- profilePopup -->
+<div id="profilePopup" class="profile_popup"></div>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0XTPQ0DR68"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0XTPQ0DR68');
+</script>
+<script src="/resources/kr/js/plugin/jquery-3.5.1.min.js"></script>
+<script src="/resources/kr/js/plugin/swiper-4.5.1.min.js"></script>
+<script src="/resources/kr/js/plugin/gsap-3.9.1.min.js"></script>
+<script src="/resources/kr/js/plugin/ScrollTrigger-3.9.1.min.js"></script>
+<script src="/resources/kr/js/plugin/ScrollMagic.min.js"></script>
+<script src="/resources/kr/js/plugin/animation.gsap.min.js"></script>
+<script src="/resources/kr/js/plugin/lightbox-plus-jquery.min.js"></script>
+<script src="/resources/kr/js/common.js"></script>
+<script src="/resources/kr/js/application.js"></script>
+<!-- 메인개편추가 -->
+<script src="/resources/kr/js/plugin/lenis.min.js"></script>
+<script src="/resources/kr/js/plugin/splitting.min.js"></script>
+<script src="/resources/kr/js/plugin/bodymovin_5.12.2_lottie.min.js"></script>
+<!-- // 메인개편추가 -->
+<script src='/resources/kr/js/main.js'></script>
+
+<form id="commonForm" name="commonForm" method="get"></form>
+<script>
+	//250428_메인수정
+	main.utils.deviceCheckVideo();
+	
+	function fn_download(idx) {
+		if(!confirm('다운로드 하시겠습니까?')){return;}
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("/kr/filedownload/ir");
+		comSubmit.addParam("idx", idx);
+		comSubmit.addParam("_csrf", $('meta[name="_csrf"]').attr('content'));
+		comSubmit.setMethod("POST")
+		comSubmit.submit();
+	}
+	function onLoadProject(){
+		const prj_country = ['Algeria','Angola','Australia','Azerbaijan','Bahrain','Belgium','Bolivia','Brazil','Canada','Chile','China','Cuba','Czech','Egypt','Germany','Hungary','India','Indonesia','Iran','Iraq','Japan','Kazakhstan','Korea','Kuwait','Malaysia','Mexico','Mongolia','Mozambique','Nigeria','Oman','Pakistan','Philippines','Poland','Qatar','Russia','Saudi Arabia','Singapore','Slovakia','Sweden','Taiwan','Thailand','Trinidad and Tobago','Turkiye','UAE','USA','Uzbekistan','Venezuela','Vietnam'];
+		const sel_country = 'Saudi Arabia';
+		let pjt_option = '';
+		prj_country.forEach((country, index) => {
+			pjt_option += '<li data-country="'+country+'"><a href="javascript:void(0);">'+country+'</a></li>';
+		});
+		$('#pjt_option').html(pjt_option).on('click', 'li', function(){
+			fn_selectCountry($(this).data('country'));
+		});
+		fn_selectCountry(sel_country);
+	}
+	function fn_selectCountry(country){
+		$('#pjt_option li').removeClass('active');
+		$('#pjt_list li').removeClass("active");
+		$('.country-name').html(country);
+		$('#pjt_option li[data-country="'+country+'"]').addClass('active');
+		$('#pjt_list li[data-location="'+country+'"]').addClass("active");
+
+		if($('#pjt_list li[data-location="'+country+'"]').length > 0){
+			$('#pjt_list li.nodata').removeClass("active");
+		} else{
+			$('#pjt_list li.nodata').addClass("active");
+		}
+	}
+
+	$(document).ready(function(){
+		onLoadProject();
+
+		$(document).on("click", ".sec_business .popup_area .close_btn", function(){
+			setTimeout(function(){
+				fn_selectCountry('Saudi Arabia');
+			},400)
+		})
+		
+	});
+</script>
+</body>
+</html>

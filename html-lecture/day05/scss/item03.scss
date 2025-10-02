@@ -1,0 +1,70 @@
+body {
+  font-family: "Noto Sans KR", "궁서";
+  font-weight: 500;
+  width: 600;
+
+  .item {
+    width: 400px;
+    border: 2px solid green;
+    .image-box {
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      .coupon {
+        // &는 바로위에 있는 부모를 가리킴
+        &-text {
+          color: red;
+        }
+        &-price {
+          color: gray;
+          // 글자를 수평으로 그을 때 사용하는 옵션
+          text-decoration: line-through;
+        }
+      }
+      .sale {
+        color: red;
+        font-size: 18px;
+        &-text {
+          font-weight: 400;
+        }
+        &-price {
+          font-weight: 700;
+        }
+      }
+      .desc {
+        .star-delivery {
+          // 컴파일 안되는 주석
+          // 블럭인데 인라인 처럼 동작을 가지는 옵션
+          display: inline-block;
+          // 가운데로 맞추기 위한 옵션
+          vertical-align: middle;
+          font-size: 0;
+          width: 67px;
+          height: 20px;
+          //background-color: red;
+          background-image: url("../images/star.png");
+          background-size: contain; // 비율 유지 반대는 cover
+          background-repeat: no-repeat;
+        }
+        .arrive-info {
+          color: blue;
+        }
+        .free,
+        .amount {
+          color: gray;
+        }
+      }
+      .discount {
+        display: inline-block;
+        font-size: 12px;
+        border: 2px solid gray;
+        // 위 아래 padding 3px, 왼쪽 오른쪽 padding 10px
+        padding: 3px 10px;
+        border-radius: 100px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

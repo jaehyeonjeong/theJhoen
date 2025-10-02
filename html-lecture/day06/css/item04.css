@@ -1,0 +1,71 @@
+body {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+}
+body .item-list {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+body .item {
+  width: 300px;
+  border: 2px solid green;
+  position: relative;
+}
+body .item .rank {
+  position: absolute;
+  background-color: greenyellow;
+  color: white;
+  width: 17%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px 0px 10px 0px;
+}
+body .item .image-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+body .item .info__title {
+  font-size: 20px;
+}
+body .item .info__price {
+  font-size: 17px;
+}
+body .item .info__price .price__sale__percent {
+  color: red;
+}
+body .item .info__price .price__sale__before {
+  color: gray;
+  text-decoration: line-through;
+}
+body .item .info__price .price__info__text {
+  font-size: 25px;
+  font-weight: 700;
+}
+body .item .info__price .price__info__status {
+  display: inline-block;
+  color: skyblue;
+  font-size: 15px;
+  border: 2px solid;
+  border-radius: 100px;
+  padding: 3px 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -5px;
+}
+body .item .info__icon {
+  margin-top: 5px;
+  font-size: 0;
+  width: 85px;
+  height: 30px;
+  background-image: url(../images/superdil.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 2px, 10px;
+}

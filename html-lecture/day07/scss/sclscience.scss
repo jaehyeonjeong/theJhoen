@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 2000px;
+  // background-color: black;
+}
+
+.Banner {
+  position: fixed;
+  //backdrop-filter: blur(10px);
+  width: 100%;
+  top: 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100px;
+    svg {
+      width: 140px;
+      order: -1;
+    }
+  }
+  .util {
+    &-list {
+      display: flex;
+      li {
+        a {
+          color: white;
+          display: flex;
+          height: 100px;
+          padding: 0 50px;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .language {
+    select {
+      padding: 0 10px;
+      height: 50px;
+      width: 120px;
+      background-color: transparent;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
+.main-visual {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center; // 무조건 세로축은 align
+  //justify-content: center;
+  &_items {
+    // 100%로 하는 이유는 웹페이지의 너비를 vertical scroll이 보이지 않기 위해서이다.
+    width: 100%;
+  }
+}

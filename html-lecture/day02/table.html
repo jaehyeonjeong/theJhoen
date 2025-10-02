@@ -1,0 +1,177 @@
+<!-- table.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+  </head>
+
+  <body>
+    <!-- 테이블 테그를 만들건데 이것도 부모 자식 관계가 있다. -->
+    <!-- 이름과 수학 영어 점수를 표시하는 table 태그 만들기 -->
+    <table border="1">
+      <thead>
+        <!-- tr은 줄 -->
+        <tr>
+          <!-- th는 해더 -->
+          col은 column의 약자 기능은
+          <th scope="col">이름</th>
+          <th scope="col">수학</th>
+          <th scope="col">영어</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- tr은 줄 -->
+        <tr>
+          <!-- td는 내용 -->
+          <td>홍길동</td>
+          <td>90</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>장길산</td>
+          <td>85</td>
+          <td>50</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- alt의 역할은 해당 태그의 부연 설명을 역할을 할 수 있다. -->
+    <img
+    src="https://i.namu.wiki/i/W7CFmIBmu0_MKkymEyxicgbfcl9tAGscIKt92SKsgVdvDq_-4hSwDRX0epl3sfomlNjEDvSiO_cYW_RhCgEQHw.webp"
+    alt="리처드 스톨만의 이미지"" />
+
+    <table border="1">
+      <tbody>
+        <tr>
+          <th scope="row">기업명</th>
+          <td>(주) 유한양행</td>
+          <th>설립</th>
+          <td>1926.06.20</td>
+        </tr>
+        <tr>
+          <th scope="row">대표이사</th>
+          <td>사장 조욱재</td>
+          <th>상장일</th>
+          <td>1962.11.01</td>
+        </tr>
+        <tr>
+          <!-- 같은 줄에 colspan을 넣어서 문단을 분리함-->
+          <!-- 반대로 행을 합치는 옵션은 rowspan이다. -->
+          <th scope="row">주소</th>
+          <td colspan="3">서울특별시 동작구 노량진로 74</td>
+        </tr>
+        <tr>
+          <th scope="row">전화번호</th>
+          <td colspan="3">02-828-0181</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <td rowspan="3">사진</td>
+          <th colspan="3">이력서</th>
+        </tr>
+        <tr>
+          <td rowspan="2">성명</td>
+          <td rowspan="2"></td>
+          <td>생년월일</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>집주소</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>연락처</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <th>기간</th>
+          <th colspan="2">이력사항</th>
+          <th>비고</th>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>기간</th>
+          <th colspan="2">경력 및 자격시행 정</th>
+          <th>비고</th>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr border="none">
+          <td colspan="4">위의 내용과 사실이 틀림없음을 확인합니다.</td>
+        </tr>
+        <tr border="none">
+          <td colspan="4">20 년 월 일</td>
+        </tr>
+        <tr border="none">
+          <td colspan="4">지원자 : (인)</td>
+        </tr>
+      </thead>
+    </table>
+  </body>
+</html>

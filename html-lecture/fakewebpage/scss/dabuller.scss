@@ -1,0 +1,125 @@
+@import "./_vass";
+@import "./mixins";
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+ul {
+  display: flex;
+}
+
+video.bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+header {
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    .logo_image {
+      img {
+        height: 80px;
+        //clip-path: inset(0, 70px, 0, 70px); /*위 오른쪽 아래 왼쪽*/
+        margin-left: -30px;
+        margin-right: -50px;
+      }
+    }
+    .logo_text {
+      align-self: flex-end; // 나머지 자식 이외의 본인태그만 해당 align에 있겠다는 뜻
+      color: $text-base-color;
+      padding-bottom: 20px;
+      margin-right: 70px;
+      font-size: 0.7rem;
+    }
+    .icon_list {
+      display: flex;
+      gap: 20px;
+      li {
+        list-style: none;
+        img {
+          height: 40px;
+          border: 1px solid #666;
+          border-radius: 10px;
+          background-color: #ddd;
+          aspect-ratio: 1.2 / 1;
+        }
+      }
+    }
+    .banner_02 {
+      margin-right: 60px;
+      .buttons {
+        font-size: 1.2rem;
+        color: $text-base-color;
+        gap: 50px;
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  background-color: #666;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 2px solid white;
+
+  .listcontainer {
+    display: flex;
+    color: $text-base-color;
+    justify-content: space-evenly;
+    font-size: 1.1rem;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.slider {
+  color: $text-base-color;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  p {
+    span {
+      font-weight: 800;
+      color: blue;
+    }
+  }
+  .slidertext-01 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 75vh;
+    left: 20%;
+
+    @include align(center, center);
+    .sliderlist {
+      padding-top: 50px;
+      flex-direction: column;
+      padding-left: 20px;
+      li {
+        list-style: disc;
+        list-style-position: inside;
+        padding-bottom: 15px;
+      }
+    }
+  }
+  .slidertext-02 {
+    padding-left: 40px;
+    font-size: 1.6rem;
+    top: -50px;
+  }
+}

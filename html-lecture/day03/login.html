@@ -1,0 +1,103 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+  </head>
+  <body>
+    <form action="주소" method="get">
+      <table width="500" height="300">
+        <tbody>
+          <colgroup>
+            <col style="width: 50%" />
+            <col style="width: 50%" />
+          </colgroup>
+          <tr>
+            <th colspan="2"><h1 style="text-align: center">로그인</h1></th>
+          </tr>
+          <!-- 아이디나 비밀번호를 입력하는 표시를 나타낼 때 placeholder를 사용할 수 있음 -->
+          <!-- box-siziong: border-box; : 박스 사이징을 적용하여 테두리까지 포함
+                  width: 100%; : 너비를 100%로 설정
+                  padding: 10px; : 패딩을 추가하여 입력 필드의 여백을 설정
+                  border: none; : 테두리를 제거
+                  border-radius: 5px; : 모서리를 둥글게 처리 (5px 만큼) -->
+          <tr>
+            <td colspan="2">
+              <p style="size: align-self">
+                <input
+                  type="text"
+                  name="user-login-id"
+                  id="userLoginId"
+                  placeholder="아이디"
+                  style="
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                  "
+                />
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p style="size: align-self">
+                <input
+                  type="password"
+                  name="user-login-pw"
+                  id="userLoginPw"
+                  placeholder="비밀번호"
+                  style="
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                  "
+                />
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p style="text-align: right">
+                <input type="checkbox" name="check-Safety" id="checkSafety" />
+                <label for="checkSafety">보안접속</label>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p style="vertical-align: middle; text-align: center">
+                <button
+                  type="submit"
+                  style="
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #1976d2;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                  "
+                >
+                  로그인
+                </button>
+              </p>
+            </td>
+          </tr>
+          <!-- 아이디 찾기와 비밀번호 찾기를 위한 페이지를 보여주기 위해 a를 사용한다. -->
+          <tr>
+            <td>
+              <a href=""><p style="text-align: center">아이디 찾기</p></a>
+            </td>
+            <td>
+              <a href=""><p style="text-align: center">비밀번호 찾기</p></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

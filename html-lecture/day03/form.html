@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- html에서는 get, post 방식밖에 사용할 수 없다. -->
+    <form action="받아서 처리할 서버 주소" method="get">
+      <!-- <form action="받아서 처리할 서버 주소" method="post"> -->
+      <!-- input 태그는 인라인 테그이다. -->
+      <div>
+        <label for="user-id">id</label>
+        <input type="text" id="user-id" name="user-id" />
+      </div>
+      <div>
+        <label for="user-pw">password</label>
+        <input type="password" id="user-pw" name="user-pw" />
+      </div>
+      <div>성별을 고르시오</div>
+      <!-- 라디오를 구성할 떄 type, name, id요소를 맞춰줘야한다. -->
+      <!-- 라벨을 사용하여 접근성을 높여준다 -->
+      <div>
+        <input type="radio" name="gender" id="female" />
+        <label for="female">여성</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="male" />
+        <label for="male">남성</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="none" />
+        <label for="">모름</label>
+      </div>
+      <!-- 체크박스도 마찬가지로 라디오처럼 레이블을 사용해서 접근성을 높여준다. -->
+      <div>관심 사항을 선택하세요</div>
+      <div>
+        <input type="checkbox" name="favorite" id="movie" />
+        <label for="movie">영화</label>
+        <input type="checkbox" name="favorite" id="badock" />
+        <label for="badock">바둑</label>
+        <input type="checkbox" name="favorite" id="baseball" />
+        <label for="baseball">야구</label>
+        <input type="checkbox" name="favorite" /> 해축
+      </div>
+
+      <div>생년월일을 입력하세요.</div>
+      <!-- datepicker 사이트 참조 -->
+      <!-- <div><label for="">date</label><input type="date" /></div> -->
+      <div>
+        <label for="">datetime-local</label
+        ><input type="datetime-local" name="birth" />
+      </div>
+      <!-- 브라우저마다 datetime 태그가 다르게 동작 -->
+      <!-- deprecated : 더 이상 권장하지 않는 다는 의미-->
+      <!-- <div><input type="datetime" /></div> -->
+
+      <!-- 콤보박스의 일종으로 화살표 버튼을 클릭하여 목록을 나타낼 수 있다. -->
+      <div>
+        <select name="region" id="">
+          <option value="">지역 선택</option>
+          <option value="">서울</option>
+          <option value="">경기</option>
+          <option value="">부산</option>
+        </select>
+      </div>
+
+      <div>
+        <textarea name="desc" id="" aria-setsize="5"></textarea>
+      </div>
+      <div><button>전송</button></div>
+    </form>
+
+    <!-- form 바깥에 기능들을 추가할 수는 있음을 확인 -->
+    <!-- 그리고 바깥으로 나온 input 태그의 라디오 버튼들은 form 내부의 이름과는 별개의 그룹으로 나눠지는 것을 확인 -->
+    <!-- 그러나 label에서는 form 내부의 input id가 외부의 레이블 for 문단과 같으면 form 내부의 라디오로 체크되는 것을 확인 -->
+    <div>form 바깥으로 나온 라디오 input 태그들</div>
+    <div>
+      <input type="radio" name="gender" id="male2" />
+      <label for="male2">남성</label>
+    </div>
+    <div>
+      <input type="radio" name="gender" id="none2" />
+      <label for="none">모름</label>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Account2</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <div>
+      <label for="userId">
+      <span style="color: red;">*</span> 아이디
+      </label>
+      <input type="text" name="user-id" id="userId" required></input>
+      <button>중복확인</button>
+    </div>
+    <div>
+      <label for="userPw"><span style="color: red">* </span>비밀번호</label>
+      <input type="password" name="user-pw" id="userPw" required>
+    </div>
+    <div>
+      <input type="password" name="user-pw-chk" id="userPwChk" placeholder="비밀번호 재확인">
+    </div>
+    <div>
+      <label for="userName"><span style="color: red">* </span>이름</label>
+      <input type="text" name="user-name" id="userName">
+    </div>
+    <div>
+      <label for="userAddress1"><span style="color: red">* </span>주소</label>
+      <input type="text" style="width: 50px" name="user-address1" id="userAddress1">
+      <span>-</span>
+      <input type="text" style="width: 50px" name="user-address2" id="userAddress2">
+      <button>우편번호</button>
+      <p><input type="text" name="user-address-line1" id="userAddressLine1"></p>
+      <p><input type="text" name="user-address-line2" id="userAddressLine2"></p>
+    </div>
+    <div>
+      <label for="userCellPhone1"><span style="color: red">* </span>휴대전화</label>
+      <select name="user-cell-phone" id="userCellPhone1">
+        <option value="">010</option>
+        <option value="">011</option>
+        <option value="">070</option>
+      </select>
+      <input type="text" name="user-cell-phone2" id="userCellPhone2" style="width: 40px">
+      <input type="text" name="user-cell-phone3" id="userCellPhone3" style="width: 40px">
+    </div>
+    <div>
+      <label for="userLocalPhone1"><span style="color: red">* </span>전화번호</label>
+      <select name="user-local-phone" id="userLocalPhone1">
+        <option value="">010</option>
+        <option value="">011</option>
+        <option value="">070</option>
+      </select>
+      <input type="text" name="user-local-phone2" id="userLoacalPhone2" style="width: 40px">
+      <input type="text" name="user-local-phone3" id="userLoacalPhone3" style="width: 40px">
+    </div>
+    <div>
+      <label for="userEmail"><span style="color: red">* </span>이메일</label>
+      <input type="text" name="user-email" id="userEmail" style="width: 80px">
+      <select name="" id="">
+        <option value="">@naver.com</option>
+        <option value="">@daum.net</option>
+        <option value="">@gmail.com</option>
+      </select>
+    </div>
+    <div>
+      <label for="userBirthYang"><span style="color: red;">* </span>생년월일</label>
+      <input type="radio" name="user-birth" id="userBirthYang"><label for="userBirthYang">양</label>
+      <input type="radio" name="user-birth" id="userBirthEum"><label for="userBirthEum">음</label>
+      <p><input type="date"></p>
+    </div>
+    <input type="checkbox" name="user-chk-email" id="userChkEmail">
+  </body>
+</html>

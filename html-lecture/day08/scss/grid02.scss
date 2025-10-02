@@ -1,0 +1,41 @@
+.container {
+  display: grid;
+  padding: 10px;
+  border: 5px solid red;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  // grid template area에서 "(큰 따옴표)를 넣으면 격자가 생기지 않을수 있으니 주의
+  grid-template-areas:
+    "header header header"
+    "gnb main aside"
+    "footer footer footer";
+
+  .item {
+    border: 3px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .gnb {
+    grid-area: gnb;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .aside {
+    grid-area: aside;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
