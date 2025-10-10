@@ -78,4 +78,6 @@ hotfix 브랜치를 만들고 file을 만든 다음 master에 병합하고 githu
 git push origin master : 원격으로 push를 하는 경우에는 git push 까지는 같으나  origin master/feature 처럼 구문을 지켜주어야함.
 그리고 원격을 push 하기 전에는 반드시 로컬 브랜치로 병합하는게 좋다.
 
+터미널을 하면 좋은점은 가시성은 떨어지지만 갖가지 명령어들을 알면 컨트롤하기 용이하고 강력한 명령어가 내포되어있다.
+
 
