@@ -30,7 +30,7 @@ public class HomeController {
         return "request";
     }
 
-    @GetMapping ("/result")
+    @PostMapping ("/result")
 //    @ResponseBody
     // binding
     // Map<String, String>

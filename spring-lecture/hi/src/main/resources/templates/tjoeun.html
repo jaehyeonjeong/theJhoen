@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>더조은 일산캠퍼스</title>
+</head>
+<body>
+<!--from 테그를 통해서 연결하고자 하는 html을 get 할 수 있음.-->
+<h1>100% 무료 상담으로 나에게 딱 맞는 취업 전략을 확인</h1>
+<form action="form-tjoeun-result" method="get">
+    <div>캠퍼스 <span style="color:blue">*</span>
+        <label>
+            <div><input type="radio" name="campus" value="gangnam"><span>강남</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="jongro"><span>종로</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="sinchone"><span>신촌</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="gouro"><span>구로</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="incheon"><span>인천</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="ilsan"><span>일산</span></div>
+        </label>
+        <label>
+            <div><input type="radio" name="campus" value="jeonju"><span>전주</span></div>
+        </label>
+    </div>
+    <div>이름<span style="color:blue">*</span> <input type="text" name="userName"></div>
+    <div>
+        <label for="phone1">연락처<span style="color:blue">*</span></label>
+        <select id="phone1" name="phone1">
+            <option value="010">010</option>
+            <option value="041">041</option>
+            <option value="031">031</option>
+            <option value="043">043</option>
+            <option value="016">016</option>
+            <option value="070">070</option>
+        </select> -
+        <input type="text" id="phone2" name="phone2" maxlength="4" size="4" pattern="\d{3,4}" required> -
+        <input type="text" id="phone3" name="phone3" maxlength="4" size="4" pattern="\d{4}" required>
+    </div>
+    <div>
+        관심분야<span style="color:blue">*</span>
+        <select name="userFavorite">
+            <option value="K-디지털">K-디지털</option>
+
+            <option value="프로그래밍">프로그래밍</option>
+
+            <option value="데이터분석">데이터분석</option>
+
+            <option value="AI">AI</option>
+
+            <option value="정보보안">정보보안</option>
+
+            <option value="클라우드">클라우드</option>
+
+            <option value="디자인(웹·편집·영상)">디자인(웹·편집·영상)</option>
+
+            <option value="건축·기계·제품디자인">건축·기계·제품디자인</option>
+
+            <option value="CG·VR·게임">CG·VR·게임</option>
+
+            <option value="자격증">자격증</option>
+        </select>
+    </div>
+    <div>문의사항
+        <div><textarea name="message" rows="5" cols="40" placeholder="여기에 내용을 입력하세요"></textarea></div>
+    </div>
+    <div>
+        <input type="checkbox" name="privacy" value="on">
+        <span>개인 및 정보수집 동의</span>
+    </div>
+    <div>
+        <button>전송</button>
+    </div>
+</form>
+</body>
+</html>
