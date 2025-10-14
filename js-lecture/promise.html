@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Practice</title>
+  </head>
+  <body>
+    <script>
+      let num = 10;
+      const pi = 3.14;
+      console.log(10 + num);
+      console.log(10 * num);
+      console.log(10 / 5);
+      console.log(10 % 3);
+
+      // 자바의 list와 같다
+      const animals = ["rabbit", "lion", "bear", 10, true];
+      console.log(animals[0]);
+      console.log(animals[3]);
+      console.log(animals[4]);
+
+      const person = {
+        name: "정재현",
+        age: 29,
+      };
+      console.log(person);
+
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+      }
+      // 구조분해 할당
+      const fruits = ["apple", "peach", "plum"]; // 배열을 구조분해 할당해서
+      let [f01, f02, f03] = fruits; // 변수 명칭 부여
+      console.log(f01);
+      console.log(f02);
+      console.log(f03);
+      console.log(f01, f02, f03);
+      const { name, age } = person;
+      console.log(name, age);
+
+      // spread 연산자...
+      const copyfruits = fruits; // fruits 메모리 주소 공유
+      copyfruits.push("orange");
+      console.log(fruits);
+      console.log(copyfruits);
+
+      const copyfruits02 = [...fruits]; // 메모리를 흩뿌림
+      // spread 연산자로 동작
+      copyfruits02.push("mango"); 
+      console.log(fruits);
+      console.log(copyfruits02);
+
+      // promise 약속 이행, 거절 둘중에 하나.. 비동기 문법에 많이 쓰인다.
+      function encreaseAndPrint(num, callback) {
+        // setTimeout() : 일정 시간이 지난 후에 함수 실행
+      }
+
+      // 이벤트 루프 (일단 뒤에 있다가 일반 함수들을 먼저 실행하고 stack이 비워지면 실행한다) ex) fetch
+      setTimeout(function () {
+        console.log("나는 1초뒤에 한번 실행하고 끝납니다.");
+      }, 1000);
+      console.log("나는 setTimeout 아래쪽에 위치하고 있습니다.");
+      // for (let i = 0; 1 < 10; i++) {} // 무한 루프로 찍히는 코드는 setTimeout이 실행될 수 없다.
+
+      // js에 비동기 함수 중 대표는 setTimeout, fetch 등이 있다.
+      // fetch : 네트워크 통신을 비동기로 처리할 때 주로 사용
+    </script>
+  </body>
+</html>

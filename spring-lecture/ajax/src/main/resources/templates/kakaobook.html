@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KaKaoAK</title>
+    <!-- script 연산을 마친 후에 css로 grid를 적용한다. -->
+<!--    <link rel="stylesheet" href="css/grid.css"/>-->
+</head>
+
+<body>
+<div>
+    <div><input type="text" name="Page Count" id="pageCount"></div>
+    <div><input type="text" name="Page Number" id="pageNum"></div>
+    <div>
+        <!--        <button id="btn-login" type="button"> 전송</button>-->
+        <button id="find-book"> 책 검색</button>
+    </div>
+</div>
+<div>
+    <ul id="list"></ul>
+</div>
+<script>
+    // const pageCount = document.querySelector("#pageCount");
+    // const pageNum = document.querySelector("#pageNum");
+    const findBook = document.querySelector("#find-book");
+
+    findBook.addEventListener("click", (e) => {
+        console.log("btnAjax click");
+
+        const pageCountValue = document.getElementById('pageCount').value;
+        console.log(pageCountValue);
+        const pageNumValue = document.getElementById('pageNum').value;
+        console.log(pageNumValue);
+
+        //const params = new URLSearchParams();
+        const list = document.querySelector("#list");
+
+
+        // async await 구조로 변경
+        async function getKakao() {
+            const res = await fetch(
+                    `https://dapi.kakao.com/v3/search/book?query=JAVA&size=${pageCountValue}&page=${pageNumValue}`,
+                    {
+                        method: "get",
+                        headers: {
+                            Authorization: "KakaoAK ae52fdb4ff59f2b9e0be6a14f0be27f4",
+                        }
+                    }
+                ),
+                data = await res.json();
+            const {documents, meta} = data;
+            console.log(documents);
+            console.log(meta);
+
+            // console.log(meta.total_count);
+
+            // let 변수를 사용하는 거면 무조건 초기화를 진행해야 한다.
+            let parsingStr = "";
+            documents.forEach((item, total_count) => {
+                console.log(item);
+                const {title, thumbnail, authors} = item;
+                console.log(title);
+                console.log(thumbnail);
+                console.log(authors);
+                // parsingStr += `<li><p>${title}</p></li>`;
+                // const { title, thumbnail } = item;
+                parsingStr += `<li><img src="${thumbnail}"><p>제목 : ${title}</p><p>저자 : ${authors[0]}</p>
+            <p>부저자 : ${authors[1]}</p></li>`;
+            });
+            list.innerHTML = parsingStr;
+        }
+
+        getKakao();
+    });
+
+
+</script>
+</body>
+</html>

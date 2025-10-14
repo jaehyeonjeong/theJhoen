@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>login</h1>
+<form action="login" method="post">
+    <div><input type="text" name="userID" id="userID"></div>
+    <div><input type="text" name="userPW" id="userPW"></div>
+    <div>
+        <!--        <button id="btn-login" type="button"> 전송</button>-->
+        <button id="btn-login"> 전송</button>
+    </div>
+</form>
+
+<script>
+    const userID = document.querySelector("#userID");
+    const userPW = document.querySelector("#userPW");
+    const btnLogin = document.querySelector("#btn-login");
+    // btnLogin.addEventListener("click", (e) => {
+    //     e.preventDefault(); // 원래 버튼이 form안에 있는 버튼이 가지고 있는 기능을 쓰지 않는다.. 막아버림
+    //     const userIDValue = userID.value;
+    //     const userPWValue = userPW.value;
+    //     console.log(userIDValue + "===" + userPWValue);
+    //
+    //     const sendData = {
+    //         // userID : userID.value,
+    //         // userPW : userPW.value
+    //         userID: userIDValue,
+    //         userPW: userPWValue
+    //     }
+    //
+    //     fetch("login", {
+    //         method: "post",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(sendData)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             console.log(data.isLogin);
+    //             if (data.isLogin) {
+    //                 alert("성공");
+    //             } else {
+    //                 alert("실패");
+    //             }
+    //         })
+    //     // .then(res=>res.text())
+    //     // .then(data=>{
+    //     //     console.log(userID, userPW);
+    //     //     console.log(userIDValue, userPWValue);
+    //     // })
+    //
+    // });
+
+    // async await
+    // async function(e) { await }
+    btnLogin.addEventListener("click", async (e) => {
+            e.preventDefault();
+            const sendData = {
+                userID : userID.value,
+                userPW : userPW.value
+            };
+        const res = await fetch("login", {
+            method : "post",
+            headers : {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify(sendData)
+        });
+        const data = await res.json();
+        const {isLogin} = data;
+        // 객체를 분해해서 결과를 출력
+        console.log(isLogin);
+        if(isLogin) {
+            alert("성공");
+        } else {
+            alert("실패");
+        }
+    });
+
+</script>
+</body>
+</html>

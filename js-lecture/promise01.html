@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise01</title>
+  </head>
+  <body>
+    <script>
+      // promise로 변경하는 경우
+      function increaseAndPrint(num) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const increased = num + 1;
+            console.log(increased);
+            resolve(increased);
+          }, 1000);
+        });
+      }
+      increaseAndPrint(0)
+        .then((num) => increaseAndPrint(num))
+        .then((num) => increaseAndPrint(num))
+        .then((num) => increaseAndPrint(num))
+        .then((num) => increaseAndPrint(num))
+        .then((num) => increaseAndPrint(num))
+        .then(() => {
+          console.log("끝");
+        });
+      function myPromise(isPromise) {
+        return new Promise((resolve, reject) => {
+          if (isPromise) {
+            resolve("성공"); // full filed
+          } else {
+            reject("실패");
+          }
+        });
+      }
+      myPromise(false)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      console.log(myPromise);
+      // pending == fullfield
+      // pending == reject
+
+      // 만약에 내가 찾는 사용자가 있으면 OK,
+      // OK면 로그인 상태인지 아닌지 따지고,
+      // 값을 출력
+      // async await
+
+      // js는 매개변수에다가 함수를 넣을 수 있다.
+      // function increaseAndPrint(num, callback) {
+      //   setTimeout(() => {
+      //     const increased = num + 1;
+      //     console.log(increased);
+      //     callback(increased);
+      //   }, 1000);
+      // }
+
+      // 5번 callback 지옥 : callback hell
+      // increaseAndPrint(0, function (num) {
+      //   increaseAndPrint(num, function (num) {
+      //     increaseAndPrint(num, function (num) {
+      //       increaseAndPrint(num, function (num) {
+      //         increaseAndPrint(num, function (num) {
+      //           console.log("끝");
+      //         });
+      //       });
+      //     });
+      //   });
+      // });
+      // promise가 위에있는 callback 지옥을 해결해준다.
+    </script>
+  </body>
+</html>

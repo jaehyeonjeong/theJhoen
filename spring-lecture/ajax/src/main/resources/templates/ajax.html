@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ajax</h1>
+<p>asynchronous javascript and xml : 비동기 자바 스크립트와 XML</p>
+<form action="ajax" method="post">
+    <div><input type="text" name="userID"></div>
+    <div><input type="text" name="userPW"></div>
+    <div>
+        <button> 전송</button>
+    </div>
+</form>
+
+<!--    id를 명시해야지만 해당 도큐먼트 이벤트 시그널을 보낼 수 있다.-->
+<div>
+    <button id="btn-ajax">ajax 전송</button>
+</div>
+
+<script>
+    // js는 type이 없다.
+    // ts : type script -> java script로 컴파일을 해야한다.
+    let name = "정재현"
+    const PI = 3.14;
+    console.log("hello js");
+    console.log(1 + 1);
+    console.log(name);
+    console.log(PI);
+    // js에서도 객체를 만들 수 있다.
+    const Person = {
+        name: "정다현",
+        age: 28
+    }
+    console.log(Person);
+    console.log(Person.name, Person.age);
+
+    const params = new URLSearchParams();
+    params.append("userID", "definejae234");
+    params.append("userPW", "0123");
+
+    const btnAjax = document.querySelector("#btn-ajax"); // 아이디를 찾아감
+    btnAjax.addEventListener("click", (e) => {
+        console.log("btnAjax click");
+
+        // form 방식, url encoding 방식으로 데이터 전달
+        fetch("ajax?userID=definejae567&userPW=1234456", {
+            method: "post",
+            // header를 굳이 적지 않아도 된다.
+            headers: {
+                // 디폴트 : 기본적인 폼 방식
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            // body:params
+        })
+
+        //{}는 자바에서 object로 사용하기 위함
+        const sendData = {
+            userID: "정재현",
+            userPW: "56781234",
+            age: 30
+        }
+
+        fetch("ajax02", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // json 형태로 변환
+            // body:JSON.stringify(sendData)
+            body: JSON.stringify(
+                {
+                    userID: "정다현",
+                    userPW: "5678",
+                    age: 404
+                }
+            )
+        })
+
+        // 리엑트와 마찬가지로 요런 방식으로 요청, 응답이 이루어짐
+        fetch("ajax03", { // 주소
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // json 형태로 변환
+            body:JSON.stringify(sendData)
+            // body: JSON.stringify(
+            //     {
+            //         userID: "정다현",
+            //         userPW: "5678",
+            //         age: 404
+            //     }
+            // )
+        })
+            // then의 역할은 서버에서 처리할 데이터를 전송?
+            // 단, fetch.ajax03에 대한 응답으로 출력
+            // 자바 스크립트에서는 람다를 =>(fat arrow) 로 사용한다.
+            .then(res => res.text())
+            .then(data => {
+                console.log("서버에서 온 응답" + data);
+            })
+        // promise // 응답이 처리하는 부분
+
+
+        fetch("ajax04", { // 주소
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // json 형태로 변환
+            body:JSON.stringify(sendData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("서버에서 온 응답" + data.isJoin);
+            })
+    });
+
+
+    // 도큐먼트는 브라우저에서 데이터 결과를 출력함.
+    // document.write("hello js i'm document")
+    // fetch("/ajax", {
+    //     method: "post"
+    // })
+</script>
+</body>
+</html>

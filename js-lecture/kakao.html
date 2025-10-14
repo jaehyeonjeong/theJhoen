@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaKaoAK</title>
+    <!-- script 연산을 마친 후에 css로 grid를 적용한다. -->
+    <link rel="stylesheet" href="./css/grid.min.css" />
+  </head>
+
+  <body>
+    <div>
+      <ul id="list"></ul>
+    </div>
+    <script>
+      //const params = new URLSearchParams();
+      const list = document.querySelector("#list");
+
+      // async await 구조로 변경
+      async function getKakao() {
+        const res = await fetch(
+            "https://dapi.kakao.com/v3/search/book?query=JAVA&size=20&page=2",
+            {
+              headers: {
+                Authorization: "KakaoAK ae52fdb4ff59f2b9e0be6a14f0be27f4",
+              },
+            }
+          ),
+          data = await res.json();
+        const { documents, meta } = data;
+        console.log(documents);
+        console.log(meta);
+
+        // console.log(meta.total_count);
+
+        // let 변수를 사용하는 거면 무조건 초기화를 진행해야 한다.
+        let parsingStr = "";
+        documents.forEach((item, total_count) => {
+          console.log(item);
+          const { title, thumbnail, authors } = item;
+          console.log(title);
+          console.log(thumbnail);
+          console.log(authors);
+          // parsingStr += `<li><p>${title}</p></li>`;
+          // const { title, thumbnail } = item;
+          parsingStr += `<li><img src="${thumbnail}"><p>제목 : ${title}</p><p>저자 : ${authors[0]}</p>
+            <p>부저자 : ${authors[1]}</p></li>`;
+        });
+        list.innerHTML = parsingStr;
+      }
+
+      getKakao();
+
+      // async await 구조로 변경
+      // async function getKakao() {
+      //   const res = await fetch(
+      //       "https://dapi.kakao.com/v2/search/image?query=터미네이터",
+      //       {
+      //         headers: {
+      //           Authorization: "KakaoAK ae52fdb4ff59f2b9e0be6a14f0be27f4",
+      //         },
+      //       }
+      //     ),
+      //     data = await res.json();
+      //   const { documents, meta } = data;
+      //   console.log(documents);
+      //   console.log(meta);
+      //   let parsingStr = "";
+      //   // documents에서 li컨텐츠를 뽑고 parsingStr에 누적
+      //   documents.forEach((item, idx) => {
+      //     // console.log(item);
+      //     const { thumbnail_url } = item;
+      //     parsingStr += `<li><img src="${thumbnail_url}"></li>`;
+      //   });
+      //   // console.log(parsingStr);
+      //   // 누적된 parsingStr을 list에 넣고 html에 적용
+      //   list.innerHTML = parsingStr;
+      // }
+
+      // getKakao();
+
+      // fetch("https://dapi.kakao.com/v2/search/image?query=정재현", {
+      //   headers: {
+      //     Authorization: "KakaoAK ae52fdb4ff59f2b9e0be6a14f0be27f4",
+      //   },
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data);
+      //     console.log(data.documents);
+      //     const { documents, meta } = data;
+      //     console.log(documents);
+      //     console.log(meta);
+
+      //     let parsingStr = "";
+      //     documents.forEach((item, idx) => {
+      //       // console.log(item);
+      //       const { thumbnail_url } = item;
+      //       parsingStr += `<li><img src="${thumbnail_url}"></li>`;
+      //     });
+      //     list.innerHTML = parsingStr;
+
+      //     // 다 했으면 async await 구조로 변경한 후 css로 grid 형태로 변경하기
+      //   });
+    </script>
+  </body>
+</html>
