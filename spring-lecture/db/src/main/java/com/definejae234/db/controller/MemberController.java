@@ -63,7 +63,8 @@ public class MemberController {
 
 
     @GetMapping("/member/{id}/delete")
-    public String memberDelete(@PathVariable("id") int id, Model model){
+    public String memberDelete(@PathVariable("id") int id,
+                               Model model){
         // edit.html 출력
         Member findedMember = memberRepository.findById(id);
         model.addAttribute("findMember",findedMember);

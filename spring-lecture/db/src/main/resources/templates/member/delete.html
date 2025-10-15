@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
     <title>삭제</title>
 </head>
 <body>
-    <h1>해당 속성을 삭제하시겠습니까</h1>
+    <h1>해당 속성을 삭제하기 위해 아래의 userID와 userPW를 맞게 입력하세요</h1>
+
+<!--    <div>userID : <input type="text" name="userID" ></div>-->
+<!--    <div>userPW : <input type="text" name="userPW" ></div>-->
 
     <form action="../member/delete" th:action="@{/member/delete}" method="post">
         <div><input type="hidden" name="id" th:value="${findMember.id}"></div>
-        <button>예</button>
+<!--        <div>userID : <input type="text" name="userID"></div>-->
+        <div>userPW : <input type="password" name="userPW"></div>
+        <button>회원 삭제</button>
     </form>
 
-    <form action="../member/delete" th:action="@{/member/delete}" method="post">
-        <button>아니요</button>
-    </form>
+<!--    <form action="../member/delete" th:action="@{/member/delete}" method="post">-->
+<!--        <button>아니요</button>-->
+<!--    </form>-->
 
 </body>
 </html>

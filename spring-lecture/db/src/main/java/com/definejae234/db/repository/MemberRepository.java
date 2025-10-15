@@ -41,11 +41,14 @@ public class MemberRepository {
     }
 
     // 데이터 입력 쿼리
-    // insert, update, delete : DML(Select 제외)일 경우 int를 return
+    // insert, update, delete : DML(Select 제외)일 경우 int를 return 중요합니다.
     public int save(Member member) {
         // PrepareStatement
-        String sql = "insert into member (id, userID, userName, userEmail) values(member_seq.nextval,?,?,?)";
-        return jdbctemplate.update(sql, member.getUserID(), member.getUserName(), member.getUserEmail());
+        String sql = "insert into member (id, userID, userPW, userName, userEmail) values(member_seq.nextval,?,?,?,?)";
+        if(member.getUserPW().isEmpty()) {
+            member.setUserPW("1234");
+        }
+        return jdbctemplate.update(sql, member.getUserID(), member.getUserPW(), member.getUserName(), member.getUserEmail());
     }
 
     public int update(Member member) {
@@ -55,8 +58,11 @@ public class MemberRepository {
     }
 
     public int delete(Member member) {
-        String sql = "delete from member where id=?";
+        String sql = "delete from member where id=? AND userPW=?";
         System.out.println("MemberRepository.deleteID = " + member.getId());
-        return jdbctemplate.update(sql, member.getId());
+//        System.out.println("MemberRepository.deleteUserID = " + member.getUserID());
+        System.out.println("MemberRepository.deleteUserPW = " + member.getUserPW());
+//        return jdbctemplate.update(sql, member.getId(), member.getUserID(), member.getUserPW());
+        return jdbctemplate.update(sql, member.getId(), member.getUserPW());
     }
 }
