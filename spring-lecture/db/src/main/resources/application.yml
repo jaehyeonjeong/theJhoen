@@ -1,0 +1,18 @@
+#spring.application.name=db
+
+server:
+  port: 8081
+spring:
+  application:
+    name: db
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+#      ??? db ?? ????
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: springjae234
+    password: 1234

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <h1> members </h1>
+    <ul>
+<!--        memberList는 MemberController 자바 파일에서 정의한 memberList 변수에서 item으로 재정의 후 html에 붙임-->
+        <li th:each="item:${memberList}">
+            <span th:text="${item.id}"></span>
+            <span th:text="${item.userID}"></span>
+            <span th:text="${item.userName}"></span>
+            <span th:text="${item.userEmail}"></span>
+        </li>
+    </ul>
+</body>
+</html>
