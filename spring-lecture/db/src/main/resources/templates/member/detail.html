@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
+    <title>조회 결과 </title>
+</head>
+<body>
+    <h1>detail 번호 : <span th:text="${findMember.id}"></span> 번 <br></h1>
+    <div>
+        사용자 아이디 : <span th:text="${findMember.userID}"></span> <br>
+        사용자 이름 : <span th:text="${findMember.userName}"></span> <br>
+        사용자 이메일 : <span th:text="${findMember.userEmail}"></span> <br>
+    </div>
+</body>
+</html>

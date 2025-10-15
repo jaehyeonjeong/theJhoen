@@ -27,8 +27,16 @@ public class MemberRepository {
     public List<Member> findAll() {
         String sql = "SELECT * FROM MEMBER";
         //SQL 쿼리 결과(ResultSet)를 지정된 Java 클래스의 인스턴스로 변환
+        // query : 복수 건 조외
         List<Member> memberList = jdbctemplate.query(sql, new BeanPropertyRowMapper<>(Member.class));
 
         return memberList;
+    }
+
+    // 조회는 여기에서
+    public Member findById(int id) {
+        String sql = "SELECT * FROM MEMBER WHERE ID = ?";
+        // queryForObject : 단수 건 조외
+        return jdbctemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Member.class), id);
     }
 }

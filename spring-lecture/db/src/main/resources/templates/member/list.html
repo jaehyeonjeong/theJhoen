@@ -6,15 +6,18 @@
     <title></title>
 </head>
 <body>
-    <h1> members </h1>
-    <ul>
-<!--        memberList는 MemberController 자바 파일에서 정의한 memberList 변수에서 item으로 재정의 후 html에 붙임-->
-        <li th:each="item:${memberList}">
+<h1> members </h1>
+<ul>
+    <!--        memberList는 MemberController 자바 파일에서 정의한 memberList 변수에서 item으로 재정의 후 html에 붙임-->
+    <li th:each="item:${memberList}">
+<!--        아이디 같은 노출이 되지 말아야하는 정보는 쓰면 안됨!!!-->
+        <a href="" th:href="@{../member/detail/{id}(id=${item.id})}">
             <span th:text="${item.id}"></span>
             <span th:text="${item.userID}"></span>
             <span th:text="${item.userName}"></span>
             <span th:text="${item.userEmail}"></span>
-        </li>
-    </ul>
+        </a>
+    </li>
+</ul>
 </body>
 </html>
