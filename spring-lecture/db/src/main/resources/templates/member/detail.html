@@ -11,5 +11,14 @@
         사용자 이름 : <span th:text="${findMember.userName}"></span> <br>
         사용자 이메일 : <span th:text="${findMember.userEmail}"></span> <br>
     </div>
+<div>
+<!--    <a href="../member/edit" th:href="@{|/member/${findMember.id}/edit|}">수정</a>-->
+    <a href="../member/edit" th:href="@{/member/{id}/edit(id=${findMember.id})}">수정</a>
+</div>
+
+<div>
+<!--    <a href="../member/delete" th:href="@{|/member/${findMember.id}/delete|}">삭제</a>-->
+    <a href="../member/delete" th:href="@{/member/{id}/delete(id=${findMember.id})}">삭제</a>
+</div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>수정</h1>
+
+    <form action="../member/edit" th:action="@{/member/edit}" method="post">
+<!--        name이랑 변수명의 대소문자를 구분해야하는데 븅시 같이 햇갈리지 마라-->
+        <div><input type="hidden" name="id" th:value="${findMember.id}"></div>
+        <div><input type="text" name="userID" th:value="${findMember.userID}" readonly></div>
+        <div><input type="text" name="userName" th:value="${findMember.userName}"></div>
+        <div><input type="text" name="userEmail" th:value="${findMember.userEmail}"></div>
+        <div>
+            <!--        버튼 입력 시 form action 발동-->
+            <button>회원 정보 수정</button>
+        </div>
+    </form>
+</body>
+</html>
