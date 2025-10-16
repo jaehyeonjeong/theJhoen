@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <h1>도서 기입란</h1>
+<div class="w-2xl m-auto mt-5 mb-5">
     <form action="../board/write" method="post" th:object="${boardDto}">
-        <div><input type="text" th:field="*{title}" placeholder="title"></div>
-        <div><input type="text" th:field="*{content}" placeholder="content"></div>
-        <div><input type="text" th:field="*{writer}" placeholder="writer"></div>
+        <h1 class="text-3xl font-bold mb-5">도서 기입란</h1>
+        <div class="mb-2"><input type="text" th:field="*{title}" class="input validator w-full" placeholder="title"></div>
+        <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="validator-hint visible text-error mb-2"></div>
+
+        <div class="mb-2"><input type="text" th:field="*{content}" class="input validator w-full" placeholder="content"></div>
+        <div th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="validator-hint visible text-error mb-2"></div>
+
+        <div class="mb-2"><input type="text" th:field="*{writer}" class="input validator w-full" placeholder="writer"></div>
+        <div th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}" class="validator-hint visible text-error mb-2"></div>
+
 <!--        <div><input type="text" th:field="*{regDate}" placeholder="regDate"></div>-->
-        <div><input type="text" th:field="*{password}" placeholder="password"></div>
-        <div><button>도서 기입</button></div>
+        <div class="mb-2"><input type="password" th:field="*{password}" class="input validator w-full" placeholder="password"></div>
+        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="validator-hint visible text-error mb-2"></div>
+        <div><button class="btn btn-primary">도서 기입</button></div>
     </form>
+</div>
 </body>
 </html>
 
