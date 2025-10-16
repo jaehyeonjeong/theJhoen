@@ -21,6 +21,6 @@
     </select>
 
     <delete id="deleteBoard" parameterType="BoardDto">
-        delete from BOARD where id = #{id}
+        delete from BOARD where id = #{id} and password = #{password}
     </delete>
 </mapper>

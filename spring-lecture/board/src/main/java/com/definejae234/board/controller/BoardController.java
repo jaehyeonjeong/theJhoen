@@ -67,6 +67,8 @@ public class BoardController {
     @PostMapping("/delete")
     public String deleteBoardProcess(@ModelAttribute BoardDto boardDto){
         int result = boardDao.deleteBoard(boardDto);
+        System.out.println("deleteBoardProcess : " + boardDto.getId() + ", " + boardDto.getPassword());
+        System.out.println(result);
         return "redirect:../board/list";
     }
 }
