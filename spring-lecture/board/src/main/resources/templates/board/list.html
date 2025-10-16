@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="item:${boardDtoList}">
+        <span th:text="${item.id}"></span>
+        <span th:text="${item.title}"></span>
+        <span th:text="${item.writer}"></span>
+        <span th:text="${item.regDate}"></span>
+        <span th:text="${item.hit}"></span>
+    </li>
+</ul>
+</body>
+</html>

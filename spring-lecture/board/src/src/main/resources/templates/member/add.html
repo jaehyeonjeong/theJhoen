@@ -24,7 +24,7 @@
 <!--    <div th:if="${#fields.hasErrors('userID')}" th:errors="*{userID}" class="error"></div>-->
 
 <!--    비밀번호는 정책상 지워짐-->
-        <div class="mb-2"><input type="password"  th:field="*{userPW}" class="input validator w-full" placeholder="USER PW"></div >
+    <div class="mb-2"><input type="password"  th:field="*{userPW}" class="input validator w-full" placeholder="USER PW"></div >
     <div th:if="${#fields.hasErrors('userPW')}" th:errors="*{userPW}" class="validator-hint visible text-error"></div>
 
     <div class="mb-2"><input type="text"  th:field="*{userName}" class="input validator w-full" placeholder="USER NAME"></div>

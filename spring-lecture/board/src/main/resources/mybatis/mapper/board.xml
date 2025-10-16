@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.definejae234.board.dao.BoardDao">
+<!--    select\ 할떄만 resultType="com.definejae234.board.dto.BoardDto"-->
+
+<!--    속성값들을 boarddto에 맞춘다-->
+    <insert id="writeBoard" parameterType="BoardDto">
+        insert into board(id, title, content, writer, regdate, hit, password) values
+        (board_seq.nextval, #{title}, #{content}, #{writer}, sysdate, 1, #{password})
+    </insert>
+
+    <select id="findAll" resultType="BoardDto">
+        select * from board order by id
+    </select>
+</mapper>

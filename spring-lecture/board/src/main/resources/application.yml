@@ -1,0 +1,21 @@
+#spring.application.name=validation
+spring:
+  application:
+    name: board
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: springjae234
+    password: 1234
+server:
+  port: 8083
+mybatis:
+  config-location: classpath:mybatis/config/config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: com.definejae234.board.dto
+#  type-aliases-package: com.definejae234.board.dto.** <- dto 하위 데이터들을 찾아줌
