@@ -8,6 +8,11 @@
 <h1>로그인</h1>
 <!--HTML 미숙... 왜 form 안에다가 input type을 넣지 않은 것인가...-->
 <form action="../member/login" method="post" th:object="${loginDto}">
+    <div th:if="${#fields.hasGlobalErrors()}">
+        <p th:each="error:${#fields.globalErrors()}" th:text="${error}">
+
+        </p>
+    </div>
     <div><input type="text" th:field="*{userID}"></div>
     <div th:if="${#fields.hasErrors('userID')}" th:errors="*{userID}" class="error"></div>
     <div><input type="password" th:field="*{userPW}"></div>
@@ -16,8 +21,5 @@
         <button>로그인</button>
     </div>
 </form>
-
-
-
 </body>
 </html>

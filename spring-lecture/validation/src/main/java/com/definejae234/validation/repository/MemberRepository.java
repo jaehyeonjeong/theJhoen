@@ -3,6 +3,7 @@ package com.definejae234.validation.repository;
 import com.definejae234.validation.dto.LoginDto;
 import com.definejae234.validation.dto.MemberDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,8 +17,14 @@ public class MemberRepository {
     public MemberDto findById(LoginDto loginDto) {
         String sql = "select * from member where userid = ? and userpw = ?";
 //        System.out.println("memberRepository.findById() : " +);
-        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(MemberDto.class),
-                loginDto.getUserID(),
-                loginDto.getUserPW());
+        try{
+            return jdbcTemplate.queryForObject(
+                    sql,
+                    new BeanPropertyRowMapper<>(MemberDto.class),
+                    loginDto.getUserID(),
+                    loginDto.getUserPW());
+        } catch  (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 }

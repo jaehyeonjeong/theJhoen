@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        .error{
-            color: #f00;
-            font-size: 15px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!--    <style>-->
+<!--        .error{-->
+<!--            color: #f00;-->
+<!--            font-size: 15px;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
 <h1>add1</h1>
 <form action="../member/add" method="post" th:object="${memberDto}">
 <!--    field를 사용할 때 햇갈리지 말아야 할 것은 '$'가 아니라 '*'기호를 사용해야한다.-->
-    <div><input type="text"  th:field="*{userID}"></div>
-    <div th:if="${#fields.hasErrors('userID')}" class="error">에러메세지</div>
+    <div><input type="text"  th:field="*{userID}" class="input"></div>
+    <div th:if="${#fields.hasErrors('userID')}" th:errors="*{userID}" class="validator-hint"></div>
 <!--    <div th:if="${#fields.hasErrors('userID')}" th:errors="*{userID}" class="error"></div>-->
 
 <!--    비밀번호는 정책상 지워짐-->
-    <div><input type="password"  th:field="*{userPW}"></div >
-    <div th:if="${#fields.hasErrors('userPW')}" th:errors="*{userPW}" class="error"></div>
+    <div><input type="password"  th:field="*{userPW}" class="input"></div >
+    <div th:if="${#fields.hasErrors('userPW')}" th:errors="*{userPW}" class="validator-hint"></div>
 
-    <div><input type="text"  th:field="*{userName}"></div>
-    <div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">.</div>
+    <div><input type="text"  th:field="*{userName}" class="input"></div>
+    <div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}" class="validator-hint">.</div>
 
 
-    <div><input type="text"  th:field="*{userEmail}"></div>
-    <div th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}"></div>
+    <div><input type="text"  th:field="*{userEmail}" class="input"></div>
+    <div th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}" class="validator-hint"></div>
     <div>
-        <button>확인</button>
+        <button class="btn btn-primary">확인</button>
     </div>
 </form>
 </body>

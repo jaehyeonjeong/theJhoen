@@ -29,8 +29,8 @@ public class MemberController {
     // 바인딩 리절트는 검증하는 객체 뒤에 달기
     public String addProcess(@Valid @ModelAttribute MemberDto memberDto,
                              BindingResult bindingResult,
-                             Model model){
-        if(bindingResult.hasErrors()){
+                             Model model) {
+        if (bindingResult.hasErrors()) {
             System.out.println(memberDto);
             model.addAttribute("msg", true);
             return "member/add";
@@ -41,12 +41,12 @@ public class MemberController {
     }
 
     @GetMapping("/{id}/detail")
-    public String detail(@PathVariable("id") int id){
+    public String detail(@PathVariable("id") int id) {
         return "member/detail";
     }
 
     @GetMapping("/login")
-    public String login(Model model){
+    public String login(Model model) {
         // 검증을 위한 Dto 생성후 Attribute 추가
         model.addAttribute("loginDto", new LoginDto());
         return "member/login";
@@ -57,14 +57,22 @@ public class MemberController {
     // 브라우저를 타도 member/login이라는 텍스트만 나옴
     public String loginProcess(@Valid @ModelAttribute LoginDto loginDto,
                                BindingResult bindingResult,
-                               Model model){
-        if(bindingResult.hasErrors()){
+                               Model model) {
+        if (bindingResult.hasErrors()) {
             System.out.println(loginDto);
             model.addAttribute("msg", true);
             // 브라우저에 로그인 페이지로 전환
             return "member/login";
         }
         MemberDto loginMember = memberRepository.findById(loginDto);
+
+        if (loginMember == null) {
+            // 글로벌 에러 globalErrors
+            bindingResult.reject(   // 거부
+                    "error.user",
+                    "아이디 및 패스워드가 맞지 않습니다.");
+            return "member/login";
+        }
 
         System.out.println(loginDto);
         return loginMember.toString();
