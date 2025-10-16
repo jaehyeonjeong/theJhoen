@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
+    <title>Title</title>
+</head>
+<body>
+<h1>로그인</h1>
+<!--HTML 미숙... 왜 form 안에다가 input type을 넣지 않은 것인가...-->
+<form action="../member/login" method="post" th:object="${loginDto}">
+    <div><input type="text" th:field="*{userID}"></div>
+    <div th:if="${#fields.hasErrors('userID')}" th:errors="*{userID}" class="error"></div>
+    <div><input type="password" th:field="*{userPW}"></div>
+    <div th:if="${#fields.hasErrors('userPW')}" th:errors="*{userPW}" class="error"></div>
+    <div>
+        <button>로그인</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>
