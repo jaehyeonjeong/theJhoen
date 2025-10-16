@@ -48,10 +48,25 @@ public class BoardController {
     }
 
     // list에 있는 데이터의 detail을 출력
-//    @GetMapping("/board/detail/{id}")
-//    public String memberList(@PathVariable("id") int id, Model model){
-//        BoardDto findBoard = boardDao.findById(id);
-//        model.addAttribute("findBoard",findBoard);
-//        return "board/detail";
-//    }
+    @GetMapping("/detail/{id}")
+    public String boarderList(@PathVariable("id") int id, Model model){
+        BoardDto findedBoard = boardDao.findById(id);
+        model.addAttribute("findBoard",findedBoard);
+        return "board/detail";
+    }
+
+    // 삭제할 아이디를 찾는 Get 컨트롤을 구현
+    @GetMapping("/{id}/delete")
+    public String deleteBoard(@PathVariable("id") int id, Model model){
+        BoardDto findedBoard = boardDao.findById(id);
+        model.addAttribute("findBoard",findedBoard);
+        return "board/delete";
+    }
+
+    // post를 통해서 db데이터 삭제후 리스트의 내용을 출력
+    @PostMapping("/delete")
+    public String deleteBoardProcess(@ModelAttribute BoardDto boardDto){
+        int result = boardDao.deleteBoard(boardDto);
+        return "redirect:../board/list";
+    }
 }

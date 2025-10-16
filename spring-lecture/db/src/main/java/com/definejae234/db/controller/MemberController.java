@@ -66,7 +66,7 @@ public class MemberController {
     public String memberDelete(@PathVariable("id") int id,
                                Model model){
         // edit.html 출력
-        Member findedMember = memberRepository.findById(id);
+        Member findedMember = memberRepository.findById(id  );
         model.addAttribute("findMember",findedMember);
         return "member/delete";
     }

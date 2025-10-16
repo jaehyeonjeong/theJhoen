@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<ul>
-    <li th:each="item:${boardDtoList}">
-<!--        <a href="" th:href="@{../board/detail/{id}(id=${item.id})}>-->
+<ul class="list bg-base-100 rounded-box shadow-md">
+    <li class="list-row" th:each="item:${boardDtoList}">
+        <a href="" th:href="@{../board/detail/{id}(id=${item.id})}">
             <span th:text="${item.id}"></span>
             <span th:text="${item.title}"></span>
             <span th:text="${item.writer}"></span>
             <span th:text="${item.regDate}"></span>
             <span th:text="${item.hit}"></span>
-<!--        </a>-->
+        </a>
     </li>
 </ul>
 <div>
-    <a href="../board/write">도서 기입</a>
+    <a href="../board/write" class="link link-accent">도서 기입</a>
 </div>
+
 </body>
 </html>

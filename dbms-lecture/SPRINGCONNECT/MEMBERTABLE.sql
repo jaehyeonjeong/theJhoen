@@ -93,6 +93,14 @@ CREATE TABLE BOARD (
 	PASSWORD VARCHAR2(100) 
 );
 
+insert into board(id, title, content, writer, regdate, hit, password) values
+        (board_seq.nextval, '장발장', '테스트 입니다.', 'TEST USER', SYSDATE, 1, '1234');
+
+SELECT * FROM BOARD;
+
+
+delete from BOARD where id='2';
+
 
 
 

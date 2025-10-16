@@ -15,7 +15,12 @@
         select * from board order by id
     </select>
 
-    <select id="findDetail" resultType="BoardDto">
-        select * from board where id
+<!--    단수 일때는 소괄호를 넣지 않아도 되는듯-->
+    <select id="findById" resultType="BoardDto">
+        select * from board where id = #{id}
     </select>
+
+    <delete id="deleteBoard" parameterType="BoardDto">
+        delete from BOARD where id = #{id}
+    </delete>
 </mapper>

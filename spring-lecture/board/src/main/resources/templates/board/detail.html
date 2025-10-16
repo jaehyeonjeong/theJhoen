@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
     <title>조회 결과 </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<h1>detail 번호 : <span th:text="${findBoard.id}"></span> 번 <br></h1>
-<div>
-    사용자 아이디 : <span th:text="${findMember.userID}"></span> <br>
-</div>
+<h1 class="text-3xl font-bold mb-5">도서 번호 : <span th:text="${findBoard.id}"></span> 번 <br></h1>
+<div>도서 이름 : <span th:text="${findBoard.title}"></span></div>
+<div>도서 내용 : <span th:text="${findBoard.content}"></span></div>
+<div>도서 저자 : <span th:text="${findBoard.writer}"></span></div>
+<div>도서 출판일 : <span th:text="${findBoard.regDate}"></span></div>
+<div>도서 순위 : <span th:text="${findBoard.hit}"></span></div>
+
 <!--<div>-->
 <!--    &lt;!&ndash;    <a href="../member/edit" th:href="@{|/member/${findMember.id}/edit|}">수정</a>&ndash;&gt;-->
 <!--    <a href="../member/edit" th:href="@{/member/{id}/edit(id=${findMember.id})}">수정</a>-->
 <!--</div>-->
 
-<!--<div>-->
-<!--    &lt;!&ndash;    <a href="../member/delete" th:href="@{|/member/${findMember.id}/delete|}">삭제</a>&ndash;&gt;-->
-<!--    <a href="../member/delete" th:href="@{/member/{id}/delete(id=${findMember.id})}">삭제</a>-->
-<!--</div>-->
+<div>
+    <!--    <a href="../member/delete" th:href="@{|/member/${findMember.id}/delete|}">삭제</a>-->
+    <a href="../board/delete" class="link link-accent" th:href="@{/board/{id}/delete(id=${findBoard.id})}">도서 삭제</a>
+</div>
+
 </body>
 </html>
