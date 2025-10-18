@@ -14,4 +14,7 @@ public interface BoardDao {
 
     // 삭제는 writeBoard와 마찬가지로 int 타입으로 반환하기 떄문에 타입을 int로 해야한다.
     int deleteBoard(BoardDto boardDto);
+
+    // 수정도 int type
+    int updateBoard(BoardDto boardDto);
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="https://www.thymeleaf.org">
+    <title>edit browser</title>
+</head>
+<body>
+<h1> edit </h1>
+<form action="../board/edit" th:action="@{/board/edit}" method="post">
+    <div><input type="hidden" name="id" th:value="${findBoard.id}"></div>
+    <div><input type="text" name="title" th:value="${findBoard.title}"></div>
+    <div><input type="text" name="content" th:value="${findBoard.content}"></div>
+    <div><input type="text" name="writer" th:value="${findBoard.writer}"></div>
+    <div><input type="text" name="hit" th:value="${findBoard.hit}"></div>
+
+    <div><button>도서정보 수정</button></div>
+</form>
+
+
+</body>
+</html>

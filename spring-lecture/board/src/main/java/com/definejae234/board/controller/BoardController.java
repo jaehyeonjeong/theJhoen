@@ -71,4 +71,21 @@ public class BoardController {
         System.out.println(result);
         return "redirect:../board/list";
     }
+
+    // update 항목
+    @GetMapping("/{id}/edit")
+    public String boardEdit(@PathVariable("id") int id, Model model){
+        // edit.html 출력
+        BoardDto findedBoard = boardDao.findById(id);
+        model.addAttribute("findBoard",findedBoard);
+        return "board/edit";
+    }
+
+    @PostMapping("/edit")
+    public String boardEditProcess(@ModelAttribute BoardDto board){
+        int result = boardDao.updateBoard(board);
+        System.out.println("BoardController.boardEditProcess = " + result);
+        return "redirect:../board/list";
+    }
+
 }

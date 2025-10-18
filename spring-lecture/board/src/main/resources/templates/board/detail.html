@@ -15,10 +15,10 @@
 <div>도서 출판일 : <span th:text="${findBoard.regDate}"></span></div>
 <div>도서 순위 : <span th:text="${findBoard.hit}"></span></div>
 
-<!--<div>-->
-<!--    &lt;!&ndash;    <a href="../member/edit" th:href="@{|/member/${findMember.id}/edit|}">수정</a>&ndash;&gt;-->
-<!--    <a href="../member/edit" th:href="@{/member/{id}/edit(id=${findMember.id})}">수정</a>-->
-<!--</div>-->
+<div>
+    <!--    <a href="../member/edit" th:href="@{|/member/${findMember.id}/edit|}">수정</a>-->
+    <a href="../board/edit" class="link link-accent"  th:href="@{/board/{id}/edit(id=${findBoard.id})}">도서 수정</a>
+</div>
 
 <div>
     <!--    <a href="../member/delete" th:href="@{|/member/${findMember.id}/delete|}">삭제</a>-->
