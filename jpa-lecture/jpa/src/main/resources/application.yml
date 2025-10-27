@@ -1,0 +1,43 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: jpa
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: springjae234
+    password: 1234
+  security:
+    user:
+      name: 0306jh
+      password: 1234
+      roles: ADMIN
+  #mybatis:
+  #  config-location: classpath:mybatis/config/config.xml
+  #  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  #  type-aliases-package: com.jjang051.board02.dto
+  #  error / warn / info / debug / trace
+  logging:
+  level:
+    org.springframework: info
+    org.hibernate.sql : debug
+    root: info
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+#      create의 주의점은 기존의 데이터가 날라간다.
+      ddl-auto: update
+#      ddl-auto: create
+#      ddl-auto: none : 실무에서 많이 사용
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
